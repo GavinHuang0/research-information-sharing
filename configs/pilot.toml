@@ -1,0 +1,25 @@
+# Pilot grids are design choices. Expand repetitions before inference.
+[simulation]
+n_periods = 550
+max_assets = 60
+anchor_assets = 5
+factor_rho = 0.5
+measurement_noise = 1.0
+measurement_correlation = 0.0
+outcome_noise = 1.0
+outcome_correlation = 0.0
+
+[experiment]
+seeds = [0, 1, 2, 3, 4]
+measurement_assets = [5, 20, 60]
+outcome_assets = [1, 5, 20, 60]
+heterogeneity = [0.0, 0.5, 1.5]
+predictor_quality = ["informative", "noisy", "irrelevant"]
+factor_counts = [1, 2, 4]
+ridge_penalties = [0.01, 0.1, 1.0, 10.0]
+lasso_penalties = [0.001, 0.01, 0.1]
+pooling_penalties = [0.01, 0.1, 1.0, 10.0, 100.0]
+initial_train = 300
+validation_size = 60
+test_size = 100
+refit_every = 25

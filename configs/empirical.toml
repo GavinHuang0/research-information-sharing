@@ -1,0 +1,17 @@
+# Local daily-return CSV supplied by the researcher; see docs/data.md.
+[data]
+units = "percent"
+log_offset = 1e-8
+min_week_obs = 3
+
+[experiment]
+measurement_assets = [5, 20, 48]
+outcome_assets = [1, 5, 20, 48]
+factor_counts = [1, 2, 4]
+ridge_penalties = [0.01, 0.1, 1.0, 10.0]
+lasso_penalties = [0.001, 0.01, 0.1]
+pooling_penalties = [0.01, 0.1, 1.0, 10.0, 100.0]
+initial_train = 260
+validation_size = 52
+test_size = 104
+refit_every = 13

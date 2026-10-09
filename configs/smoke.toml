@@ -1,0 +1,23 @@
+# Small reproducibility and pipeline check; never substantive evidence.
+[simulation]
+n_periods = 170
+max_assets = 12
+anchor_assets = 4
+factor_rho = 0.5
+measurement_noise = 1.0
+outcome_noise = 1.0
+
+[experiment]
+seeds = [0, 1]
+measurement_assets = [4, 12]
+outcome_assets = [1, 12]
+heterogeneity = [0.0, 1.0]
+predictor_quality = ["informative"]
+factor_counts = [1, 2]
+ridge_penalties = [0.1, 10.0]
+lasso_penalties = [0.01, 0.1]
+pooling_penalties = [0.1, 10.0]
+initial_train = 100
+validation_size = 25
+test_size = 20
+refit_every = 10
