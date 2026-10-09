@@ -1,6 +1,7 @@
 # Local daily-return CSV supplied by the researcher; see docs/data.md.
 [data]
-units = "percent"
+# Automated French downloader writes decimal returns.
+units = "decimal"
 log_offset = 1e-8
 min_week_obs = 3
 

@@ -19,3 +19,4 @@ proposal/*.log
 proposal/*.out
 proposal/*.toc
 proposal/*.pdf
+!proposal/proposal.pdf

@@ -1,4 +1,60 @@
-# Local data and weekly forecast samples
+# Data retrieval and weekly forecast samples
+
+## Download on your computer
+
+The downloader retrieves the official [French daily 48-industry CSV archive](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/48_Industry_Portfolios_Daily_CSV.zip). It selects value-weighted returns by default, writes a validated **decimal-return** CSV, preserves the original ZIP, and records provenance. The source is the [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html); its [industry definitions and construction](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_48_ind_port.html) describe the portfolio universe. Retain the provider's accompanying documentation and use conditions.
+
+These commands run on your computer and create files there. The Codex workspace used to prepare this repository is a separate cloud environment. A cloud filesystem path does not place data on your personal computer. Its current network allowlist also excludes the Dartmouth download host.
+
+For a new checkout on macOS or Linux, with Python 3.11 or later:
+
+```bash
+git clone https://github.com/GavinHuang0/research-information-sharing.git
+cd research-information-sharing
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-lock.txt
+python -m pip install --no-deps --no-build-isolation -e .
+python -m factorcast download-data --weighting value
+```
+
+The repository is private, so Git must already be authenticated to your GitHub account. If you already have a checkout, update it with `git pull --ff-only` and continue with setup/download. Python 3.12 matches the pinned dependency environment.
+
+On Windows PowerShell, after cloning and entering the repository:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
+.\.venv\Scripts\python.exe -m pip install --no-deps --no-build-isolation -e .
+.\.venv\Scripts\python.exe -m factorcast download-data --weighting value
+```
+
+No virtual-environment activation is required with these explicit Windows paths. The downloader prints the raw ZIP path, prepared CSV path, and provenance JSON path. Each invocation creates a new snapshot; an existing snapshot is never replaced. Raw files are stored beneath `data/raw/` and prepared files beneath `data/processed/`, both ignored by Git. Set `--raw-dir` and `--processed-dir` to choose another local destination, and `--weighting equal` for the equal-weighted daily table. `--json` prints machine-readable paths and metadata.
+
+If your network blocks automatic retrieval, download the [official ZIP](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/48_Industry_Portfolios_Daily_CSV.zip) through your browser, then prepare it without a network request:
+
+```bash
+python -m factorcast download-data --archive "/path/to/48_Industry_Portfolios_Daily_CSV.zip" --weighting value
+```
+
+On Windows, use `.\.venv\Scripts\python.exe -m factorcast` and your downloaded ZIP's Windows path. The offline adapter performs the same selection, validation, and unit conversion. This is also the way to prepare an archived source snapshot later without downloading a revised history.
+
+Use the printed prepared CSV path with the empirical runner:
+
+```bash
+python -m factorcast empirical --config configs/empirical.toml \
+  --returns "<prepared CSV path>" --target Food --output results/industry-food
+```
+
+The downloader's output already contains decimal returns: retain `units = "decimal"` in this configuration. Review [experiment_plan.md](experiment_plan.md), select the intended calendar sample, and adjust split sizes before interpreting this run as research evidence.
+
+## Retrieval validation and provenance
+
+The adapter distinguishes daily value- and equal-weighted sections, validates 48 unique industry columns and chronological daily rows, and converts the source's `-99.99` and `-999` missing-value sentinels into missing cells **before** converting percentage returns to decimal units. It leaves missing observations missing. A missing or malformed table produces an error rather than a guessed dataset. It records source URL, acquisition mode, timestamps, raw and prepared hashes, ZIP member name, weighting, source notes, units, date span, and missingness. Preserve that provenance JSON alongside the CSV; experiment outputs separately record the exact supplied CSV hash and units.
+
+The raw archive and CSV decoding have explicit size bounds, and CSV members are read directly without extracting archive paths. Network retrieval preserves standard proxy settings and TLS certificate verification. Code checks use realistic test fixtures and mocked downloads; accessing the live source still depends on the network where you run the command.
+
+## Other local CSV inputs
 
 The empirical input is a local CSV with one `date` column and one daily close-to-close return column per asset or industry. Preserve a fixed asset order and use unique asset names. For example:
 
@@ -10,9 +66,9 @@ date,Agric,Food,Soda
 
 Dates must be unique, strictly increasing, timezone-free calendar dates. ISO `YYYY-MM-DD` is recommended; compact `YYYYMMDD` also parses. The loader does not silently sort, deduplicate, impute, or identify return units. Call `load_daily_returns(path, units="decimal")` for values such as `0.01`, or `units="percent"` for values such as `1.0`; both return decimal returns. Empty or recognized missing numeric cells remain missing. Nonnumeric values, infinities, and the known `-99.99`/`-999` missing-value sentinels are rejected. Convert those sentinels explicitly to empty cells during preparation and document that conversion.
 
-## French 48-industry manual adapter
+## French 48-industry manual adapter (alternative)
 
-One accessible starting point is the [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html), specifically the daily 48-industry portfolio returns. Download the original archive yourself, retain its documentation, and extract the intended daily return table into the schema above. State whether the selected portfolios are value-weighted or equal-weighted. Remove textual headings and any unrelated tables, rename the date column to `date`, convert sentinel values to empty cells, retain chronological daily rows, and record the exact first and last date. The source returns are typically reported in percent: verify the original documentation and explicitly pass `units="percent"`. The repository does not contain a live downloader or redistribute source returns; consult the source's use conditions before sharing data.
+The automatic adapter is recommended. If preparing a CSV manually instead, retain the original archive and its documentation, identify the daily value- or equal-weighted table, remove headings and unrelated tables, rename the date column to `date`, explicitly replace sentinels with empty cells, and record the date span. A manually prepared CSV retaining the provider's percentage units requires `units="percent"`; use `units="decimal"` only after conversion. Actual source returns are not committed to this repository.
 
 The industry portfolios are observable proxies for asset information; they are not the model's latent factors. Their squared daily returns supply a close-to-close weekly variance proxy, not intraday realized variance. Diversification within portfolios, industry composition changes, and coverage differences limit interpretation. A comparison across 48 industries measures panel composition and size in this particular proxy universe; extending it to individual stocks or other markets requires a separate source and experiment. The provider rebuilds historical files; record the downloaded version and hash rather than assume an unchanged history. French-library documentation also distinguishes the FIZ and CIZ source formats around January 2025; retain the accompanying methodology notes and identify any sample crossing that transition.
 

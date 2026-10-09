@@ -2,7 +2,7 @@
 
 This project studies two ways that additional asset data can improve a forecast: by measuring common signals more accurately, and by helping estimate how those signals predict a particular asset's future outcome. Those roles need not favor the same assets. The main research question is when choosing them separately improves prediction and economic decisions. Choosing the number or subset of predictive components is a supporting question.
 
-The independent [research proposal](proposal/proposal.tex) develops the motivation, limited analytical benchmarks, testable hypotheses, literature positioning, economic application, and path from empirical exploration to mathematical results. Its bibliography is [references.bib](proposal/references.bib). This repository contains an initial experiment package; its synthetic checks are pipeline validation, not research findings.
+The concise [research proposal PDF](proposal/proposal.pdf) develops the research motivation, testable hypotheses, economic relevance, and path toward theory. Its independent [LaTeX source](proposal/proposal.tex) and [bibliography](proposal/references.bib) are included. The detailed protocol is in [docs/experiment_plan.md](docs/experiment_plan.md). This repository contains an initial experiment package; its synthetic checks are pipeline validation, not research findings.
 
 Factor forecasts restrict a direct linear predictor to a learned subspace. They may offer useful finite-sample regularization and combine noisy measurements, but cannot improve the unrestricted population optimum simply by transforming the inputs. Direct ridge, elastic net, and supervised PLS are therefore essential comparisons. Larger measurement panels at a fixed factor dimension do not inherently increase the number of target regression coefficients. Pooling outcomes adds a separate bias–variance decision when forecasting relationships differ.
 
@@ -48,23 +48,29 @@ The implemented models are:
 
 PCA and both predictor and score scaling use training observations only. Coefficient-sharing comparisons reuse the same representation. Partial-pooling penalties use normalized loss to avoid unintentionally changing shrinkage when more outcome donors enter. Lasso selection is basis-dependent and does not establish the market's true factor count. In the empirical runner, all fitted models include unpenalized target own-history controls; pooled factor models retain each donor's own controls. Direct and PLS models partial those controls out using training projections.
 
-The current donor grid uses fixed nested prefixes, including the target. Joint selection is optimal only in the practical sense of minimizing historical validation loss over this finite candidate grid. It does not discover arbitrary asset subsets or provide a proved oracle guarantee. The proposal describes richer donor rankings, weighting, residual channels, and theory as future research.
+The current donor grid uses fixed nested prefixes, including the target. Joint selection minimizes historical validation loss over this finite candidate grid. Richer donor rankings, weighting, residual channels, and oracle guarantees are future research described in the experiment plan.
 
 ## Use local return data
 
-Prepare a local daily-return CSV with a `date` column and named asset columns. Read [docs/data.md](docs/data.md) for units, missingness, source provenance, and the manual French 48-industry adapter. The repository does not include or download market data.
+Download and prepare the official French daily 48-industry returns on your computer:
+
+```bash
+python -m factorcast download-data --weighting value
+```
+
+The command preserves a dated raw ZIP, prepares a decimal-return CSV, and records hashes, weighting, coverage, and sentinel conversion in provenance. It prints the output paths and never replaces an existing snapshot. Copy the printed CSV path into the empirical command below. If automatic download is blocked, use `--archive /path/to/48_Industry_Portfolios_Daily_CSV.zip` to prepare a browser-downloaded official archive. [docs/data.md](docs/data.md) provides Mac/Linux and Windows setup instructions and the direct source link. Actual datasets remain local and are ignored by Git.
 
 ```bash
 factorcast empirical --config configs/empirical.toml \
-  --returns data/processed/industry_daily.csv --target Food \
+  --returns "<prepared CSV path printed by download-data>" --target Food \
   --output results/industry-food
 ```
 
-Adapt panel counts and split sizes to the supplied dataset. `units = "percent"` in the example configuration explicitly converts source values to decimal returns. The target is moved to the first position; other columns retain CSV order. This order determines the initial nested donor grid and is saved in provenance. Establish or randomize panel order in a declared way rather than choosing it after inspecting test performance.
+Adapt panel counts, split sizes, and the declared calendar sample to the supplied dataset. The prepared downloader CSV uses `units = "decimal"` in the example configuration. For other local CSVs with a `date` column and named asset columns, explicitly declare decimal or percent units. The target is moved to the first position; other columns retain CSV order. This order determines the initial nested donor grid and is saved in provenance. Establish or randomize panel order before inspecting test performance. The current config evaluates a fixed block after its initial history, rather than automatically evaluating the latest dates; see the experiment plan before a substantive run.
 
 The response is next calendar week's `log(sum(daily_decimal_return**2) + c)`. Local predictors use current and trailing four- and twelve-week means of the log proxy. This is a weekly close-to-close return-variation proxy, rather than intraday realized variance or an observed latent conditional variance. Missing calendar weeks remain missing; no interpolation or future filling occurs. Every comparison uses the same complete-case dates from the full supplied panel. Report coverage loss and recognize that this conservative retrospective sample may depend on future response availability.
 
-The initializer reports log-proxy MSE. Positive variance-scale forecasts, QLIKE, economic utility, variance targeting, transaction costs, and full covariance modeling remain planned analyses in the proposal. Exponentiating a log forecast alone does not estimate mean variance. Industry portfolios also require an investability assessment before a trading application.
+The initializer reports log-proxy MSE. Positive variance-scale forecasts, QLIKE, economic utility, variance targeting, transaction costs, and full covariance modeling remain planned analyses in the experiment plan. Exponentiating a log forecast alone does not estimate mean variance. Industry portfolios also require an investability assessment before a trading application.
 
 ## Evaluation and saved artifacts
 
@@ -79,16 +85,17 @@ Each run saves:
 - `diagnostics.csv`: held-out factor alignment error in simulation, using a mapping fitted on historical true factors only.
 - `metadata.json`: exact configuration, dependency versions, code/configuration hashes, Git revision and dirty state, and local-data provenance.
 
-Forecast-level records support later paired comparisons and date-block inference. The initializer does not supply empirical confidence intervals or multiple-model-search corrections. Oracle and conditional-mean losses exist only for synthetic data. Raw/processed datasets, generated results, and LaTeX build products are ignored by Git.
+Forecast-level records support later paired comparisons and date-block inference. The initializer does not supply empirical confidence intervals or multiple-model-search corrections. Oracle and conditional-mean losses exist only for synthetic data. Raw/processed datasets, generated results, and temporary LaTeX build products are ignored by Git; the proposal PDF is committed for convenient reading.
 
 ## Repository layout and proposal build
 
 ```text
-proposal/             Independent LaTeX proposal and bibliography
-src/factorcast/        Simulation, data/features, models, chronological evaluation, CLI
+proposal/             Concise proposal PDF, independent LaTeX source, bibliography
+src/factorcast/        Retrieval, simulation, data/features, models, evaluation, CLI
 configs/              Smoke, exploratory simulation, and empirical TOML grids
 tests/                Data timing, leakage, pooling, and paired-simulation checks
 docs/data.md          Input schema, source preparation, and proxy interpretation
+docs/experiment_plan.md  Detailed experimental protocol and planned extensions
 data/raw/             Local source files, ignored by Git
 data/processed/       Local adapted files, ignored by Git
 results/              Generated forecasts and provenance, ignored by Git
