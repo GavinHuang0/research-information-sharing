@@ -103,6 +103,30 @@ class FrenchRetrievalTests(unittest.TestCase):
             self.assertNotEqual(repeated.raw_archive_path.parent, result.raw_archive_path.parent)
             self.assertEqual(result.raw_archive_path.read_bytes(), archive)
 
+    def test_official_crcrlf_exports_match_ordinary_line_endings(self) -> None:
+        text = fixture_text()
+        ordinary_archive = zip_fixture(text)
+        crcrlf_archive = zip_fixture(text.replace("\n", "\r\r\n"))
+        for weighting in ("value", "equal"):
+            with self.subTest(weighting=weighting):
+                ordinary, ordinary_metadata = retrieval._parse_archive_bytes(
+                    ordinary_archive, weighting=weighting
+                )
+                normalized, normalized_metadata = retrieval._parse_archive_bytes(
+                    crcrlf_archive, weighting=weighting
+                )
+                self.assertTrue(normalized.equals(ordinary))
+                self.assertEqual(normalized_metadata["source_line_ending_normalization"], {
+                    "action": "CRCRLF_to_CRLF_in_decoded_text",
+                    "replacements": text.count("\n"),
+                })
+                self.assertEqual(
+                    ordinary_metadata["source_line_ending_normalization"]["replacements"], 0
+                )
+                self.assertEqual(
+                    normalized_metadata["provider_notes"], ordinary_metadata["provider_notes"]
+                )
+
     def test_mocked_official_download_has_fixed_url_timeout_and_preserved_opener(self) -> None:
         archive = zip_fixture()
         opener = Mock()
@@ -163,8 +187,12 @@ class FrenchRetrievalTests(unittest.TestCase):
 
     def test_internal_blank_cannot_silently_truncate_daily_observations(self) -> None:
         text = fixture_text().replace("20200103,-0.10", "\n20200103,-0.10", 1)
-        with self.assertRaisesRegex(ValueError, "Unexpected internal blank"):
-            retrieval._parse_archive_bytes(zip_fixture(text), weighting="value")
+        for line_ending in ("\n", "\r\r\n"):
+            with self.subTest(line_ending=repr(line_ending)):
+                with self.assertRaisesRegex(ValueError, "Unexpected internal blank"):
+                    retrieval._parse_archive_bytes(
+                        zip_fixture(text.replace("\n", line_ending)), weighting="value"
+                    )
 
     def test_blanks_before_eof_or_copyright_footer_are_accepted(self) -> None:
         selected_section = fixture_text().split("\n\n  Average Equal")[0]

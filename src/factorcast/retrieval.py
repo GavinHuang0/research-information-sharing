@@ -137,6 +137,11 @@ def _parse_archive_bytes(archive_bytes: bytes, *, weighting: str) -> tuple[pd.Da
     except UnicodeDecodeError:
         text = member_bytes.decode("cp1252")
         encoding = "cp1252"
+    # Some official exports use CRCRLF. csv.reader treats the extra CR as
+    # a blank record, so normalize only that sequence in the decoded copy.
+    # Real blank lines remain intact, and the source archive stays unchanged.
+    crcrlf_count = text.count("\r\r\n")
+    text = text.replace("\r\r\n", "\r\n")
     requested = "Value" if weighting == "value" else "Equal"
     sections: list[tuple[int, str]] = []
     provider_notes: list[str] = []
@@ -224,6 +229,10 @@ def _parse_archive_bytes(archive_bytes: bytes, *, weighting: str) -> tuple[pd.Da
         "zip_member_name": member_name,
         "zip_member_bytes": len(member_bytes),
         "source_text_encoding": encoding,
+        "source_line_ending_normalization": {
+            "action": "CRCRLF_to_CRLF_in_decoded_text",
+            "replacements": crcrlf_count,
+        },
         "source_section": section_title,
         "weighting": weighting,
         "source_units": "percent",

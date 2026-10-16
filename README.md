@@ -50,23 +50,19 @@ PCA and both predictor and score scaling use training observations only. Coeffic
 
 The current donor grid uses fixed nested prefixes, including the target. Joint selection minimizes historical validation loss over this finite candidate grid. Richer donor rankings, weighting, residual channels, and oracle guarantees are future research described in the experiment plan.
 
-## Use local return data
+## Use the committed return data
 
-Download and prepare the official French daily 48-industry returns on your computer:
-
-```bash
-python -m factorcast download-data --weighting value
-```
-
-The command preserves a dated raw ZIP, prepares a decimal-return CSV, and records hashes, weighting, coverage, and sentinel conversion in provenance. It prints the output paths and never replaces an existing snapshot. Copy the printed CSV path into the empirical command below. If automatic download is blocked, use `--archive /path/to/48_Industry_Portfolios_Daily_CSV.zip` to prepare a browser-downloaded official archive. [docs/data.md](docs/data.md) provides Mac/Linux and Windows setup instructions and the direct source link. Actual datasets remain local and are ignored by Git.
+The repository includes a dated snapshot of the official French daily 48-industry returns: the original ZIP, value- and equal-weighted decimal-return CSVs, and provenance. The [data catalog](data/README.md) identifies the source, coverage, files, and hashes. A fresh clone includes these inputs; no additional download is required. Use the value-weighted CSV for the first experiment:
 
 ```bash
 factorcast empirical --config configs/empirical.toml \
-  --returns "<prepared CSV path printed by download-data>" --target Food \
+  --returns data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv --target Food \
   --output results/industry-food
 ```
 
-Adapt panel counts, split sizes, and the declared calendar sample to the supplied dataset. The prepared downloader CSV uses `units = "decimal"` in the example configuration. For other local CSVs with a `date` column and named asset columns, explicitly declare decimal or percent units. The target is moved to the first position; other columns retain CSV order. This order determines the initial nested donor grid and is saved in provenance. Establish or randomize panel order before inspecting test performance. The current config evaluates a fixed block after its initial history, rather than automatically evaluating the latest dates; see the experiment plan before a substantive run.
+This command is an example for a later forecast run; adding the data snapshot does not run an experiment. Adapt panel counts, split sizes, and the declared calendar sample to the supplied dataset. The prepared CSV uses `units = "decimal"` in the example configuration. For other local CSVs with a `date` column and named asset columns, explicitly declare decimal or percent units. The target is moved to the first position; other columns retain CSV order. This order determines the initial nested donor grid and is saved in provenance. Establish or randomize panel order before inspecting test performance. The current config evaluates a fixed block after its initial history, rather than automatically evaluating the latest dates; see the experiment plan before a substantive run.
+
+To acquire an optional newer snapshot, run `python -m factorcast download-data --weighting value`. The downloader preserves the raw ZIP, prepares a decimal-return CSV, records provenance, and never replaces an existing snapshot. Its general output paths remain ignored until a snapshot is deliberately curated and added to the catalog. [docs/data.md](docs/data.md) provides setup, download, and offline preparation instructions.
 
 The response is next calendar week's `log(sum(daily_decimal_return**2) + c)`. Local predictors use current and trailing four- and twelve-week means of the log proxy. This is a weekly close-to-close return-variation proxy, rather than intraday realized variance or an observed latent conditional variance. Missing calendar weeks remain missing; no interpolation or future filling occurs. Every comparison uses the same complete-case dates from the full supplied panel. Report coverage loss and recognize that this conservative retrospective sample may depend on future response availability.
 
@@ -85,7 +81,7 @@ Each run saves:
 - `diagnostics.csv`: held-out factor alignment error in simulation, using a mapping fitted on historical true factors only.
 - `metadata.json`: exact configuration, dependency versions, code/configuration hashes, Git revision and dirty state, and local-data provenance.
 
-Forecast-level records support later paired comparisons and date-block inference. The initializer does not supply empirical confidence intervals or multiple-model-search corrections. Oracle and conditional-mean losses exist only for synthetic data. Raw/processed datasets, generated results, and temporary LaTeX build products are ignored by Git; the proposal PDF is committed for convenient reading.
+Forecast-level records support later paired comparisons and date-block inference. The initializer does not supply empirical confidence intervals or multiple-model-search corrections. Oracle and conditional-mean losses exist only for synthetic data. Curated raw and processed data snapshots are committed to Git with their provenance. Uncurated downloader outputs, generated results, and temporary LaTeX build products remain ignored; the proposal PDF is committed for convenient reading.
 
 ## Repository layout and proposal build
 
@@ -96,8 +92,9 @@ configs/              Smoke, exploratory simulation, and empirical TOML grids
 tests/                Data timing, leakage, pooling, and paired-simulation checks
 docs/data.md          Input schema, source preparation, and proxy interpretation
 docs/experiment_plan.md  Detailed experimental protocol and planned extensions
-data/raw/             Local source files, ignored by Git
-data/processed/       Local adapted files, ignored by Git
+data/README.md        Dataset catalog, snapshot coverage, and provenance links
+data/raw/             Curated original source snapshots; other downloads ignored
+data/processed/       Curated decimal-return inputs; other prepared files ignored
 results/              Generated forecasts and provenance, ignored by Git
 ```
 

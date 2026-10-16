@@ -1,0 +1,49 @@
+industry_number,industry_code,industry_name
+1,Agric,Agriculture
+2,Food,Food Products
+3,Soda,Candy & Soda
+4,Beer,Beer & Liquor
+5,Smoke,Tobacco Products
+6,Toys,Recreation
+7,Fun,Entertainment
+8,Books,Printing and Publishing
+9,Hshld,Consumer Goods
+10,Clths,Apparel
+11,Hlth,Healthcare
+12,MedEq,Medical Equipment
+13,Drugs,Pharmaceutical Products
+14,Chems,Chemicals
+15,Rubbr,Rubber and Plastic Products
+16,Txtls,Textiles
+17,BldMt,Construction Materials
+18,Cnstr,Construction
+19,Steel,Steel Works Etc
+20,FabPr,Fabricated Products
+21,Mach,Machinery
+22,ElcEq,Electrical Equipment
+23,Autos,Automobiles and Trucks
+24,Aero,Aircraft
+25,Ships,"Shipbuilding, Railroad Equipment"
+26,Guns,Defense
+27,Gold,Precious Metals
+28,Mines,Non-Metallic and Industrial Metal Mining
+29,Coal,Coal
+30,Oil,Petroleum and Natural Gas
+31,Util,Utilities
+32,Telcm,Communication
+33,PerSv,Personal Services
+34,BusSv,Business Services
+35,Comps,Computers
+36,Chips,Electronic Equipment
+37,LabEq,Measuring and Control Equipment
+38,Paper,Business Supplies
+39,Boxes,Shipping Containers
+40,Trans,Transportation
+41,Whlsl,Wholesale
+42,Rtail,Retail
+43,Meals,"Restaurants, Hotels, Motels"
+44,Banks,Banking
+45,Insur,Insurance
+46,RlEst,Real Estate
+47,Fin,Trading
+48,Other,Almost Nothing

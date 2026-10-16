@@ -1,0 +1,7 @@
+# Preserve checksum-verified research inputs on every operating system.
+data/**/*.csv text eol=lf
+data/**/*.json text eol=lf
+*.zip binary
+# Preparation provenance includes byte fingerprints of these Python sources.
+scripts/*.py text eol=lf
+src/factorcast/retrieval.py text eol=lf

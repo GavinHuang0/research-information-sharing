@@ -1,0 +1,25 @@
+{
+  "dataset_id": "kenneth-french/48-industry-daily",
+  "retrieval_mode": "official_https_download",
+  "schema_version": 1,
+  "snapshot_date": "2026-10-16",
+  "snapshot_date_timezone": "America/New_York",
+  "sources": [
+    {
+      "bytes": 4098912,
+      "downloaded_at_utc": "2026-10-16T20:46:15.349082+00:00",
+      "path": "data/raw/kenneth-french/48-industry-daily/2026-10-16/48_Industry_Portfolios_Daily_CSV.zip",
+      "sha256": "95b65f678bfe12bedd32d60495b017482311de91c0e1f467d56762535e5e56e5",
+      "timestamp_basis": "original_local_write_time_after_official_https_download",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/48_Industry_Portfolios_Daily_CSV.zip"
+    },
+    {
+      "bytes": 9551,
+      "downloaded_at_utc": "2026-10-16T20:47:38.902014+00:00",
+      "path": "data/raw/kenneth-french/48-industry-daily/2026-10-16/Siccodes48.zip",
+      "sha256": "f37edffc024fe7b91b794dd933244430da2de212df2549dc448c0dfcca45d740",
+      "timestamp_basis": "original_local_write_time_after_official_https_download",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Siccodes48.zip"
+    }
+  ]
+}

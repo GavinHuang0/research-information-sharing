@@ -8,8 +8,14 @@ dist/
 .DS_Store
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/kenneth-french/
+data/raw/kenneth-french/*
+!data/raw/kenneth-french/48-industry-daily/
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/kenneth-french/
+data/processed/kenneth-french/*
+!data/processed/kenneth-french/48-industry-daily/
 results/*
 !results/.gitkeep
 proposal/*.aux
