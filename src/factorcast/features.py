@@ -12,6 +12,35 @@ from .data import validate_daily_returns
 
 
 @dataclass(frozen=True)
+class WeeklyFeaturePanels:
+    """Calendar-preserving weekly features from daily decimal returns.
+
+    Volatility is the square root of the weekly sum of squared returns, without
+    annualization. Histories are trailing arithmetic means of log variance,
+    including the current week, and require every week in the window. Counts
+    describe observed daily inputs even when too few exist for a valid proxy.
+    """
+
+    variance: pd.DataFrame
+    volatility: pd.DataFrame
+    log_variance: pd.DataFrame
+    log_variance_mean_4w: pd.DataFrame
+    log_variance_mean_12w: pd.DataFrame
+    observed_daily_counts: pd.DataFrame
+
+    def as_dict(self) -> dict[str, pd.DataFrame]:
+        """Return the six named panels without copying their data."""
+        return {
+            "variance": self.variance,
+            "volatility": self.volatility,
+            "log_variance": self.log_variance,
+            "log_variance_mean_4w": self.log_variance_mean_4w,
+            "log_variance_mean_12w": self.log_variance_mean_12w,
+            "observed_daily_counts": self.observed_daily_counts,
+        }
+
+
+@dataclass(frozen=True)
 class ForecastDataset:
     """One common sample shared by every forecast method.
 
@@ -54,6 +83,32 @@ def weekly_variance(returns: pd.DataFrame, *, min_week_obs: int = 3) -> pd.DataF
     return returns.pow(2).resample("W-FRI", closed="right", label="right").sum(min_count=min_week_obs)
 
 
+def build_weekly_feature_panels(
+    returns: pd.DataFrame,
+    *,
+    log_offset: float = 1e-8,
+    min_week_obs: int = 3,
+) -> WeeklyFeaturePanels:
+    """Construct weekly proxies and causal histories without dropping any week.
+
+    Friday-ending weeks are right-closed and right-labeled. Partial endpoint
+    weeks follow the same minimum-observation rule as all other weeks. Missing
+    values are never filled, and wholly absent weeks have zero daily counts.
+    """
+    if not np.isfinite(log_offset) or log_offset <= 0:
+        raise ValueError("log_offset must be finite and strictly positive.")
+    variance = weekly_variance(returns, min_week_obs=min_week_obs)
+    log_variance = np.log(variance + log_offset)
+    return WeeklyFeaturePanels(
+        variance=variance,
+        volatility=np.sqrt(variance),
+        log_variance=log_variance,
+        log_variance_mean_4w=log_variance.rolling(4, min_periods=4).mean(),
+        log_variance_mean_12w=log_variance.rolling(12, min_periods=12).mean(),
+        observed_daily_counts=returns.resample("W-FRI", closed="right", label="right").count(),
+    )
+
+
 def build_weekly_dataset(
     returns: pd.DataFrame,
     *,
@@ -69,14 +124,15 @@ def build_weekly_dataset(
     controls. Dates with holes are discarded only after creating calendar-aligned
     lags, so deletion never turns a later week into the next-week response.
     """
-    if not np.isfinite(log_offset) or log_offset <= 0:
-        raise ValueError("log_offset must be finite and strictly positive.")
-    weekly = weekly_variance(returns, min_week_obs=min_week_obs)
+    panels = build_weekly_feature_panels(
+        returns, log_offset=log_offset, min_week_obs=min_week_obs
+    )
+    weekly = panels.variance
     if target not in weekly.columns:
         raise ValueError(f"Target {target!r} is not an asset column.")
-    log_weekly = np.log(weekly + log_offset)
+    log_weekly = panels.log_variance
     next_week = log_weekly.shift(-1)
-    histories = [log_weekly.rolling(window, min_periods=window).mean() for window in (1, 4, 12)]
+    histories = [log_weekly, panels.log_variance_mean_4w, panels.log_variance_mean_12w]
     X_all = log_weekly.to_numpy(dtype=float)
     Y_all = next_week.to_numpy(dtype=float)
     local_all = np.stack([frame.to_numpy(dtype=float) for frame in histories], axis=2)

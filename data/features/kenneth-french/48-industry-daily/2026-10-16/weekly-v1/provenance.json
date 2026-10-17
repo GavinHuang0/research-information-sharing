@@ -1,0 +1,230 @@
+{
+  "dataset_id": "kenneth-french/48-industry-daily",
+  "definitions": {
+    "annualization": "none",
+    "available_at": "after_origin_Friday_close_in_fixed_source_snapshot",
+    "calendar_policy": "retain_all_intervening_and_partial_endpoint_calendar_weeks",
+    "centering": "none",
+    "endpoint_policy": "same_minimum_count_rule_as_other_weeks; final_incomplete_week_may_have_only_counts",
+    "features": {
+      "log_variance": {
+        "filename": "log_weekly_variance.csv",
+        "formula": "log_weekly_variance_plus_offset",
+        "units": "log_decimal_return_squared"
+      },
+      "log_variance_mean_12w": {
+        "filename": "mean_log_variance_12w.csv",
+        "formula": "arithmetic_mean_log_variance_current_and_previous_11_weeks",
+        "units": "log_decimal_return_squared"
+      },
+      "log_variance_mean_4w": {
+        "filename": "mean_log_variance_4w.csv",
+        "formula": "arithmetic_mean_log_variance_current_and_previous_3_weeks",
+        "units": "log_decimal_return_squared"
+      },
+      "observed_daily_counts": {
+        "filename": "observed_daily_counts.csv",
+        "formula": "count_nonmissing_source_daily_returns",
+        "units": "observations"
+      },
+      "variance": {
+        "filename": "weekly_variance.csv",
+        "formula": "sum_daily_decimal_returns_squared",
+        "units": "decimal_return_squared"
+      },
+      "volatility": {
+        "filename": "weekly_volatility.csv",
+        "formula": "sqrt_weekly_variance",
+        "units": "decimal_return"
+      }
+    },
+    "frequency": "W-FRI",
+    "history_windows_weeks": [
+      1,
+      4,
+      12
+    ],
+    "interval": "(previous_Friday,current_Friday]",
+    "log_offset": 1e-08,
+    "logarithm": "natural",
+    "minimum_observed_daily_returns": 3,
+    "missingness_policy": "no_fill_no_interpolation; insufficient_count_measures_are_missing",
+    "note": "Close-to-close return-variation proxies, not intraday realized variance or latent conditional variance. Historic Saturday observations are included, so counts can exceed five.",
+    "rolling_window": "current_week_and_preceding_calendar_weeks_require_complete_window",
+    "scaling_or_fitted_transforms": "none"
+  },
+  "feature_version": "weekly-v1",
+  "files": [
+    {
+      "bytes": 2656044,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/value_weighted/weekly_variance.csv",
+      "sha256": "4f59f493fb8dfd3c9fe5f99dd560ee551fa98fd1ae92f5eafa5febe3378fb80e"
+    },
+    {
+      "bytes": 3905270,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/value_weighted/weekly_volatility.csv",
+      "sha256": "d9f68d6a439f208f8bae34b3349d41cf00fc11fd6f8dab3117012aeaa3d7ca67"
+    },
+    {
+      "bytes": 3646360,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/value_weighted/log_weekly_variance.csv",
+      "sha256": "12705cea2c87914741e217ee42ee23403027c187c2be03e8363f325cd1911e5a"
+    },
+    {
+      "bytes": 3640616,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/value_weighted/mean_log_variance_4w.csv",
+      "sha256": "1e594d9ffc5dbd303f2297a6e0000be4fc9e2fb9590afc8ae9100032f96cde66"
+    },
+    {
+      "bytes": 3625061,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/value_weighted/mean_log_variance_12w.csv",
+      "sha256": "f0b31091428a852a597280e6bbafd91506ef78a60c94d995e97dc903967bfc4f"
+    },
+    {
+      "bytes": 559676,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/value_weighted/observed_daily_counts.csv",
+      "sha256": "7b3c25c2012ea4b22585e94b5029d080203ff780e51fc59ee5498e3eb9143895"
+    },
+    {
+      "bytes": 2651224,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/equal_weighted/weekly_variance.csv",
+      "sha256": "388bcc9bf7f3f810672c2b5893a6e2a27e57d0048a8abc5efae896c81f315a19"
+    },
+    {
+      "bytes": 3911100,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/equal_weighted/weekly_volatility.csv",
+      "sha256": "103617068d3467e6503c6d2f3d01088728eb0caf11f48ae021ec8b3de23e8838"
+    },
+    {
+      "bytes": 3646201,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/equal_weighted/log_weekly_variance.csv",
+      "sha256": "3d99432db696e940f4666cfc7c1fca9ebcdbd16200b5c5741a2b097e17446b0e"
+    },
+    {
+      "bytes": 3640128,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/equal_weighted/mean_log_variance_4w.csv",
+      "sha256": "4662f626d8cf41a0461f024d469a039570e82e068a6de838f04c8eb8a45c9538"
+    },
+    {
+      "bytes": 3625017,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/equal_weighted/mean_log_variance_12w.csv",
+      "sha256": "e616c09ec78d1ed0ecde3c867a4a75a205fc6ecd3c3e9ada0326c4a84fbdbbd8"
+    },
+    {
+      "bytes": 559676,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/equal_weighted/observed_daily_counts.csv",
+      "sha256": "7b3c25c2012ea4b22585e94b5029d080203ff780e51fc59ee5498e3eb9143895"
+    },
+    {
+      "bytes": 6632,
+      "path": "data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/coverage.csv",
+      "sha256": "dd211733557e62b0f00c66dac121b729dcbbf8fca9c0d98d9cfdaa9178f526f5"
+    }
+  ],
+  "forecast_usage": {
+    "forecast_target": "next_calendar_week_log_variance_created_separately_by_build_weekly_dataset",
+    "future_outcomes_in_feature_files": false,
+    "measurement_predictors": "current_log_weekly_variance_of_selected_industries",
+    "own_history_controls": "current_log_weekly_variance_and_trailing_4w_12w_means_for_each_outcome_industry",
+    "signed_return_predictors": false,
+    "standardization_and_PCA": "fit_on_training_observations_only_at_forecast_time"
+  },
+  "industry_labels": {
+    "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/industry_labels.csv",
+    "sha256": "373cf2a37f1dfd909f0e69b9dc1ee309de45225b13577d5aea02d82c9b2abbb2"
+  },
+  "input_provenance": {
+    "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json",
+    "sha256": "7843fdf47a51489d4fb9b6ff2089222bb31695a51c4ceb6e0d8fcf822b028c9e"
+  },
+  "inputs": [
+    {
+      "bytes": 9190339,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv",
+      "sha256": "5ea6269369a30c3274eb930f386c4a1f1f67619cb66013fa83c21f2ecee0ab6f",
+      "weighting": "value"
+    },
+    {
+      "bytes": 9171931,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv",
+      "sha256": "72b10111b3c8cd8d253edb8f17c6c7abd8ad87cabad7f7cc517ce39fac3d6232",
+      "weighting": "equal"
+    }
+  ],
+  "preparation": {
+    "code": [
+      {
+        "path": "scripts/prepare_weekly_features.py",
+        "sha256_lf": "0c70d8afd9832e574eae3398fc56c7114d1d1a858574c65ae455d2af56238345"
+      },
+      {
+        "path": "src/factorcast/features.py",
+        "sha256_lf": "5a66d4d978d9175873b904306ad84a268593215277f77e16e547aea1e323a963"
+      },
+      {
+        "path": "src/factorcast/data.py",
+        "sha256_lf": "ab58d230603314a8fbead8ae37926797ca0242906d40050c717ce4c0b9230119"
+      }
+    ],
+    "command": "python scripts/prepare_weekly_features.py --snapshot-date 2026-10-16 --min-week-obs 3 --log-offset 1e-08 --feature-version weekly-v1",
+    "float_format": "%.12g",
+    "line_ending": "LF",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3"
+    },
+    "python": "3.12.14",
+    "text_encoding": "utf-8"
+  },
+  "prepared_at_utc": "2026-10-17T16:55:41.392053+00:00",
+  "reports": {
+    "equal": {
+      "all_current_available": {
+        "first_week_end": "1969-07-04",
+        "last_week_end": "2026-08-28",
+        "weeks": 2982
+      },
+      "all_histories_available": {
+        "first_week_end": "1969-09-19",
+        "last_week_end": "2026-08-28",
+        "weeks": 2960
+      },
+      "calendar_weeks": 5228,
+      "first_calendar_week_daily_obs_max": 2,
+      "first_calendar_week_daily_obs_min": 0,
+      "first_week_end": "1926-07-02",
+      "industries": 48,
+      "last_calendar_week_daily_obs_max": 1,
+      "last_calendar_week_daily_obs_min": 1,
+      "last_week_end": "2026-09-04",
+      "observed_daily_counts_max": 6,
+      "source_first_date": "1926-07-01",
+      "source_last_date": "2026-08-31"
+    },
+    "value": {
+      "all_current_available": {
+        "first_week_end": "1969-07-04",
+        "last_week_end": "2026-08-28",
+        "weeks": 2982
+      },
+      "all_histories_available": {
+        "first_week_end": "1969-09-19",
+        "last_week_end": "2026-08-28",
+        "weeks": 2960
+      },
+      "calendar_weeks": 5228,
+      "first_calendar_week_daily_obs_max": 2,
+      "first_calendar_week_daily_obs_min": 0,
+      "first_week_end": "1926-07-02",
+      "industries": 48,
+      "last_calendar_week_daily_obs_max": 1,
+      "last_calendar_week_daily_obs_min": 1,
+      "last_week_end": "2026-09-04",
+      "observed_daily_counts_max": 6,
+      "source_first_date": "1926-07-01",
+      "source_last_date": "2026-08-31"
+    }
+  },
+  "schema_version": 1,
+  "source_snapshot_date": "2026-10-16"
+}

@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 from factorcast.data import load_daily_returns
-from factorcast.features import build_weekly_dataset, weekly_variance
+from factorcast.features import build_weekly_dataset, build_weekly_feature_panels, weekly_variance
 
 
 def daily_panel(weeks: int = 40) -> pd.DataFrame:
@@ -61,6 +61,49 @@ class DailyDataTests(unittest.TestCase):
 
 
 class WeeklyFeatureTests(unittest.TestCase):
+    def test_feature_panels_distinguish_volatility_variance_and_log_histories(self) -> None:
+        returns = daily_panel(weeks=14)
+        offset = 1e-8
+        panels = build_weekly_feature_panels(returns, log_offset=offset)
+        self.assertEqual(set(panels.as_dict()), {
+            "variance", "volatility", "log_variance", "log_variance_mean_4w",
+            "log_variance_mean_12w", "observed_daily_counts",
+        })
+        expected_variance = 5 * (np.arange(14) + 1) ** 2 * 0.001**2
+        np.testing.assert_allclose(panels.variance["A"], expected_variance)
+        np.testing.assert_allclose(panels.volatility["A"], np.sqrt(expected_variance))
+        np.testing.assert_allclose(panels.volatility.pow(2), panels.variance)
+        np.testing.assert_allclose(panels.log_variance["A"], np.log(expected_variance + offset))
+        self.assertAlmostEqual(
+            panels.log_variance_mean_4w["A"].iloc[3], np.log(expected_variance[:4] + offset).mean()
+        )
+        self.assertNotAlmostEqual(
+            panels.log_variance_mean_4w["A"].iloc[3], np.log(expected_variance[:4].mean() + offset)
+        )
+        self.assertAlmostEqual(
+            panels.log_variance_mean_12w["A"].iloc[11], np.log(expected_variance[:12] + offset).mean()
+        )
+        self.assertTrue(panels.log_variance_mean_4w.iloc[:3].isna().all().all())
+        self.assertTrue(panels.log_variance_mean_12w.iloc[:11].isna().all().all())
+        self.assertTrue((panels.observed_daily_counts == 5).all().all())
+        for frame in panels.as_dict().values():
+            self.assertTrue(frame.index.equals(panels.variance.index))
+            self.assertEqual(list(frame.columns), ["A", "B"])
+
+    def test_partial_endpoint_and_absent_weeks_keep_counts_and_calendar(self) -> None:
+        returns = daily_panel(weeks=5).loc["2020-01-08":"2020-02-04"].copy()
+        returns.loc[pd.Timestamp("2020-01-08"), "B"] = np.nan
+        returns = returns.loc[~returns.index.isin(pd.date_range("2020-01-20", "2020-01-24"))]
+        panels = build_weekly_feature_panels(returns)
+        self.assertTrue(panels.variance.index.equals(pd.date_range("2020-01-10", periods=5, freq="W-FRI")))
+        np.testing.assert_array_equal(panels.observed_daily_counts["A"], [3, 5, 0, 5, 2])
+        np.testing.assert_array_equal(panels.observed_daily_counts["B"], [2, 5, 0, 5, 2])
+        self.assertAlmostEqual(panels.variance["A"].iloc[0], 3 * 0.001**2)
+        self.assertTrue(np.isnan(panels.variance["B"].iloc[0]))
+        self.assertTrue(panels.variance.iloc[[2, 4]].isna().all().all())
+        self.assertTrue(panels.volatility.iloc[[2, 4]].isna().all().all())
+        self.assertTrue(panels.log_variance_mean_4w.isna().all().all())
+
     def test_variance_min_observations_and_no_fill(self) -> None:
         returns = daily_panel()
         returns.loc[returns.index[:3], "A"] = np.nan
@@ -108,6 +151,13 @@ class WeeklyFeatureTests(unittest.TestCase):
         baseline = build_weekly_dataset(returns, target="A")
         changed = returns.copy()
         changed.loc[changed.index > cutoff] *= 7
+        original_panels = build_weekly_feature_panels(returns)
+        changed_panels = build_weekly_feature_panels(changed)
+        for name, original in original_panels.as_dict().items():
+            with self.subTest(panel=name):
+                pd.testing.assert_frame_equal(
+                    original.loc[:cutoff], changed_panels.as_dict()[name].loc[:cutoff]
+                )
         perturbed = build_weekly_dataset(changed, target="A")
         mask = baseline.origin_dates <= cutoff
         self.assertTrue(baseline.origin_dates.equals(perturbed.origin_dates))

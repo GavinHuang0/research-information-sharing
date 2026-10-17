@@ -1,0 +1,97 @@
+weighting,industry_code,industry_name,valid_variance_weeks,missing_variance_weeks,first_valid_week,last_valid_week,valid_history_4w_weeks,valid_history_12w_weeks
+value,Agric,Agriculture,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Food,Food Products,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Soda,Candy & Soda,3295,1933,1963-07-05,2026-08-28,3289,3273
+value,Beer,Beer & Liquor,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Smoke,Tobacco Products,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Toys,Recreation,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Fun,Entertainment,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Books,Printing and Publishing,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Hshld,Consumer Goods,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Clths,Apparel,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Hlth,Healthcare,2982,2246,1969-07-04,2026-08-28,2976,2960
+value,MedEq,Medical Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Drugs,Pharmaceutical Products,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Chems,Chemicals,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Rubbr,Rubber and Plastic Products,4964,264,1930-07-04,2026-08-28,4952,4920
+value,Txtls,Textiles,5224,4,1926-07-09,2026-08-28,5215,5191
+value,BldMt,Construction Materials,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Cnstr,Construction,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Steel,Steel Works Etc,5224,4,1926-07-09,2026-08-28,5215,5191
+value,FabPr,Fabricated Products,3295,1933,1963-07-05,2026-08-28,3289,3273
+value,Mach,Machinery,5224,4,1926-07-09,2026-08-28,5215,5191
+value,ElcEq,Electrical Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Autos,Automobiles and Trucks,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Aero,Aircraft,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Ships,"Shipbuilding, Railroad Equipment",5224,4,1926-07-09,2026-08-28,5215,5191
+value,Guns,Defense,3295,1933,1963-07-05,2026-08-28,3289,3273
+value,Gold,Precious Metals,3295,1933,1963-07-05,2026-08-28,3289,3273
+value,Mines,Non-Metallic and Industrial Metal Mining,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Coal,Coal,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Oil,Petroleum and Natural Gas,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Util,Utilities,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Telcm,Communication,5224,4,1926-07-09,2026-08-28,5215,5191
+value,PerSv,Personal Services,5172,56,1927-07-08,2026-08-28,5163,5139
+value,BusSv,Business Services,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Comps,Computers,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Chips,Electronic Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+value,LabEq,Measuring and Control Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Paper,Business Supplies,5063,165,1929-07-05,2026-08-28,5047,5007
+value,Boxes,Shipping Containers,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Trans,Transportation,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Whlsl,Wholesale,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Rtail,Retail,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Meals,"Restaurants, Hotels, Motels",5224,4,1926-07-09,2026-08-28,5215,5191
+value,Banks,Banking,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Insur,Insurance,5224,4,1926-07-09,2026-08-28,5215,5191
+value,RlEst,Real Estate,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Fin,Trading,5224,4,1926-07-09,2026-08-28,5215,5191
+value,Other,Almost Nothing,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Agric,Agriculture,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Food,Food Products,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Soda,Candy & Soda,3295,1933,1963-07-05,2026-08-28,3289,3273
+equal,Beer,Beer & Liquor,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Smoke,Tobacco Products,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Toys,Recreation,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Fun,Entertainment,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Books,Printing and Publishing,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Hshld,Consumer Goods,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Clths,Apparel,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Hlth,Healthcare,2982,2246,1969-07-04,2026-08-28,2976,2960
+equal,MedEq,Medical Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Drugs,Pharmaceutical Products,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Chems,Chemicals,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Rubbr,Rubber and Plastic Products,4964,264,1930-07-04,2026-08-28,4952,4920
+equal,Txtls,Textiles,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,BldMt,Construction Materials,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Cnstr,Construction,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Steel,Steel Works Etc,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,FabPr,Fabricated Products,3295,1933,1963-07-05,2026-08-28,3289,3273
+equal,Mach,Machinery,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,ElcEq,Electrical Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Autos,Automobiles and Trucks,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Aero,Aircraft,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Ships,"Shipbuilding, Railroad Equipment",5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Guns,Defense,3295,1933,1963-07-05,2026-08-28,3289,3273
+equal,Gold,Precious Metals,3295,1933,1963-07-05,2026-08-28,3289,3273
+equal,Mines,Non-Metallic and Industrial Metal Mining,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Coal,Coal,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Oil,Petroleum and Natural Gas,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Util,Utilities,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Telcm,Communication,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,PerSv,Personal Services,5172,56,1927-07-08,2026-08-28,5163,5139
+equal,BusSv,Business Services,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Comps,Computers,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Chips,Electronic Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,LabEq,Measuring and Control Equipment,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Paper,Business Supplies,5063,165,1929-07-05,2026-08-28,5047,5007
+equal,Boxes,Shipping Containers,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Trans,Transportation,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Whlsl,Wholesale,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Rtail,Retail,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Meals,"Restaurants, Hotels, Motels",5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Banks,Banking,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Insur,Insurance,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,RlEst,Real Estate,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Fin,Trading,5224,4,1926-07-09,2026-08-28,5215,5191
+equal,Other,Almost Nothing,5224,4,1926-07-09,2026-08-28,5215,5191

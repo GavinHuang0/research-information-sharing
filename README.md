@@ -64,7 +64,11 @@ This command is an example for a later forecast run; adding the data snapshot do
 
 To acquire an optional newer snapshot, run `python -m factorcast download-data --weighting value`. The downloader preserves the raw ZIP, prepares a decimal-return CSV, records provenance, and never replaces an existing snapshot. Its general output paths remain ignored until a snapshot is deliberately curated and added to the catalog. [docs/data.md](docs/data.md) provides setup, download, and offline preparation instructions.
 
-The response is next calendar week's `log(sum(daily_decimal_return**2) + c)`. Local predictors use current and trailing four- and twelve-week means of the log proxy. This is a weekly close-to-close return-variation proxy, rather than intraday realized variance or an observed latent conditional variance. Missing calendar weeks remain missing; no interpolation or future filling occurs. Every comparison uses the same complete-case dates from the full supplied panel. Report coverage loss and recognize that this conservative retrospective sample may depend on future response availability.
+Current empirical predictors are the current week's **log variance proxies across industries**, plus each outcome industry's own current, four-week, and twelve-week log-variance histories. The response is the next calendar week's log variance proxy. Signed raw returns and macro variables are not currently model inputs.
+
+Saved [weekly feature panels](data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md) now include variance, volatility, log variance, the two trailing means, and daily observation counts for both return weightings. Each panel has 5,228 calendar weeks by 48 industries. Volatility is `sqrt(sum(daily_decimal_return**2))`, without annualization; log variance is `log(sum(daily_decimal_return**2) + 1e-8)`. The empirical CLI still accepts daily returns and reconstructs the same features using the shared feature builder. Verify the saved exports with `python scripts/prepare_weekly_features.py --snapshot-date 2026-10-16 --verify`.
+
+These are weekly close-to-close return-variation proxies, rather than intraday realized variance or observed latent conditional variance. Missing calendar weeks remain missing; no interpolation or future filling occurs. Every comparison uses the same complete-case dates from the full supplied panel. Report coverage loss and recognize that this conservative retrospective sample may depend on future response availability.
 
 The initializer reports log-proxy MSE. Positive variance-scale forecasts, QLIKE, economic utility, variance targeting, transaction costs, and full covariance modeling remain planned analyses in the experiment plan. Exponentiating a log forecast alone does not estimate mean variance. Industry portfolios also require an investability assessment before a trading application.
 
@@ -81,7 +85,7 @@ Each run saves:
 - `diagnostics.csv`: held-out factor alignment error in simulation, using a mapping fitted on historical true factors only.
 - `metadata.json`: exact configuration, dependency versions, code/configuration hashes, Git revision and dirty state, and local-data provenance.
 
-Forecast-level records support later paired comparisons and date-block inference. The initializer does not supply empirical confidence intervals or multiple-model-search corrections. Oracle and conditional-mean losses exist only for synthetic data. Curated raw and processed data snapshots are committed to Git with their provenance. Uncurated downloader outputs, generated results, and temporary LaTeX build products remain ignored; the proposal PDF is committed for convenient reading.
+Forecast-level records support later paired comparisons and date-block inference. The initializer does not supply empirical confidence intervals or multiple-model-search corrections. Oracle and conditional-mean losses exist only for synthetic data. Curated raw, processed, and weekly feature snapshots are committed to Git with their provenance. Uncurated downloader outputs, generated results, and temporary LaTeX build products remain ignored; the proposal PDF is committed for convenient reading.
 
 ## Repository layout and proposal build
 
@@ -90,11 +94,13 @@ proposal/             Concise proposal PDF, independent LaTeX source, bibliograp
 src/factorcast/        Retrieval, simulation, data/features, models, evaluation, CLI
 configs/              Smoke, exploratory simulation, and empirical TOML grids
 tests/                Data timing, leakage, pooling, and paired-simulation checks
+scripts/              Reproduce and verify curated daily and weekly feature snapshots
 docs/data.md          Input schema, source preparation, and proxy interpretation
 docs/experiment_plan.md  Detailed experimental protocol and planned extensions
 data/README.md        Dataset catalog, snapshot coverage, and provenance links
 data/raw/             Curated original source snapshots; other downloads ignored
 data/processed/       Curated decimal-return inputs; other prepared files ignored
+data/features/        Versioned weekly features, coverage, and provenance, tracked by Git
 results/              Generated forecasts and provenance, ignored by Git
 ```
 

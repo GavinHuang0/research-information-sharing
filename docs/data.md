@@ -17,6 +17,20 @@ A checkout includes the curated **2026-10-16 French daily 48-industry snapshot**
 
 These curated files are tracked in Git and stored in GitHub. General downloader output remains ignored until deliberately selected for inclusion; generated experiment results remain ignored. Preserve older curated snapshots when adding a new one because the provider can revise history. The catalog provides the offline preparation and verification commands; `.gitattributes` preserves prepared text line endings for stable checksums across operating systems.
 
+## Saved weekly features and current predictors
+
+The tracked [weekly-v1 feature snapshot](../data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md) contains six panels for each of `value_weighted/` and `equal_weighted/`: `weekly_variance.csv`, `weekly_volatility.csv`, `log_weekly_variance.csv`, `mean_log_variance_4w.csv`, `mean_log_variance_12w.csv`, and `observed_daily_counts.csv`. The feature root also contains `coverage.csv` and `provenance.json`. Each panel preserves 5,228 Friday-ending calendar weeks and the original 48-industry order; missing values remain empty. Together these exports occupy about 36.1 MB.
+
+The empirical model uses the current week's panel of industry log variances and each outcome industry's own current, trailing four-week, and trailing twelve-week log-variance controls to forecast its next week's log variance. Signed raw returns and macro data are not currently predictors. The empirical CLI reads the daily CSV and rebuilds features with the same `build_weekly_feature_panels` function used for these exports; it does not read the saved weekly CSVs directly.
+
+Verify the committed features without replacing them:
+
+```bash
+python scripts/prepare_weekly_features.py --snapshot-date 2026-10-16 --verify
+```
+
+Creation uses `python scripts/prepare_weekly_features.py --snapshot-date 2026-10-16` and refuses to overwrite the existing feature snapshot. Use a new snapshot date for new inputs or a new `--feature-version` for a changed specification. On Windows, substitute `.\.venv\Scripts\python.exe` for `python`. The saved panels do not select an experiment date range, target industry, or forecast model. The final calendar label, September 4, 2026, contains just one daily observation per industry and therefore has missing variance and volatility under the three-observation rule; August 28, 2026 is the last valid measure week.
+
 ## Setup and optional fresh downloads
 
 The downloader retrieves the official [French daily 48-industry CSV archive](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/48_Industry_Portfolios_Daily_CSV.zip). It selects value-weighted returns by default, writes a validated **decimal-return** CSV, preserves the original ZIP, and records provenance. The source is the [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html); its [industry definitions and construction](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_48_ind_port.html) describe the portfolio universe. Retain the provider's accompanying documentation and use conditions.
@@ -98,7 +112,9 @@ Store downloaded originals under `data/raw/` and adapted inputs under `data/proc
 
 `weekly_variance(returns, min_week_obs=3)` sums squared **decimal** daily returns in Friday-ending calendar weeks (`W-FRI`). Each asset needs at least the configured number of observed daily returns; a three-day holiday week can therefore be retained with the default. The threshold is a measurement choice and should be reported and checked in sensitivity analysis. A week with too few returns remains missing, and completely absent weeks remain in the calendar grid. There is no forward or backward fill. Partial endpoint weeks are treated by the same count rule; the input period should be chosen and reported deliberately.
 
-`build_weekly_dataset(returns, target="Food", log_offset=1e-8, min_week_obs=3)` forms `q = log(V + c)` using the declared fixed positive offset `c`. This initializer uses `1e-8` in decimal-return-squared units. It is a convention, not a value estimated from the test period; alternate offsets should be declared in sensitivity runs. The three own-history controls are `q_t`, the mean of `q` over the last four calendar weeks through `t`, and the mean over the last twelve weeks through `t`. These are arithmetic means of **log** proxies, not logs of mean variance. Every week in a history must be observed.
+`build_weekly_feature_panels(returns, log_offset=1e-8, min_week_obs=3)` retains the full calendar grid and returns variance, volatility `sqrt(V)` without annualization, log variance `q = log(V + c)`, the trailing four- and twelve-week means of `q`, and observed daily counts. All weeks are right-closed and right-labeled. Counts include observed daily inputs even when there are too few for a valid measure, and are zero for wholly absent weeks. The six DataFrames are available through named attributes and `as_dict()`; their exact names and export mapping are documented in the [feature snapshot](../data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md).
+
+`build_weekly_dataset(returns, target="Food", log_offset=1e-8, min_week_obs=3)` reuses this feature builder and aligns the next calendar week's response. The fixed positive offset `1e-8` is in decimal-return-squared units. It is a convention, not a value estimated from the test period; alternate offsets should be declared in sensitivity runs. The three own-history controls are `q_t`, the mean of `q` over the last four calendar weeks through `t`, and the mean over the last twelve weeks through `t`. These are arithmetic means of **log** proxies, not logs of mean variance. Every week in a history must be observed.
 
 The dataset has the following API:
 
