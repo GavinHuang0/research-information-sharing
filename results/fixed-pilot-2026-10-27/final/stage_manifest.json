@@ -1,0 +1,10 @@
+{
+  "completed_at_utc": "2026-10-27T04:15:25.490157+00:00",
+  "files": {
+    "aggregate_summary.csv": "7788c67a63027e864ac9cb44c2226b8785c72cec2376722067a4fa8e072f9777",
+    "predictions.csv.gz": "70689316c5d4b97dd2f174ee7025158ef7fa356fdbb014e5871709b6fc967ee9",
+    "target_summary.csv": "93d5b67e6c9948d233ec03118c90a49ebba0b41a180bfb966afdf53a386998db",
+    "timing.json": "c4019caf0cb5c5cea868cedec41a944954409c10214340cf1c323c8c84c56389",
+    "tuning.jsonl.gz": "b1519f49ac0c01f705eff6d88dafdf1491c532f4aad879d5d5c9ff8323c9aab5"
+  }
+}

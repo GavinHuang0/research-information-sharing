@@ -11,4 +11,6 @@ results/**/*.csv text eol=lf
 results/**/*.json text eol=lf
 results/**/*.md text eol=lf
 results/**/*.txt text eol=lf
+results/**/*.toml text eol=lf
+results/**/*.log binary
 *.gz binary

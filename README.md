@@ -54,6 +54,8 @@ The current donor grid uses fixed nested prefixes, including the target. Joint s
 
 The first executed empirical study uses the [fixed S6 protocol](docs/fixed_pilot_protocol.md) and [fixed configuration](configs/fixed_pilot.toml). The six targets and common small panel are exactly Food, Mach, Banks, Oil, Util, and Hlth. This study uses explicit memberships, two PCs, 18 distinct policies, chronological development through 2021, and a separately frozen 2022–2024 evaluation. It does not use the starter runner's CSV prefixes, adaptive design search, or PC-count search.
 
+The [completed first pilot report](results/fixed-pilot-2026-10-27/README.md) contains all comparisons, per-target losses, figures, frozen selection records, forecast-level predictions, and timing audits.
+
 Install `requirements-analysis-lock.txt` for the pinned scientific and plotting environment, then run these stages in order with a new output directory:
 
 ```bash

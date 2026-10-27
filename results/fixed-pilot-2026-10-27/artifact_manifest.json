@@ -1,0 +1,185 @@
+{
+  "files": [
+    {
+      "bytes": 9723,
+      "path": "results/fixed-pilot-2026-10-27/calendar.json",
+      "sha256": "1010db1ec98e8ea591d02c31140954fe8687361f0e61014255a314b2227a4573"
+    },
+    {
+      "bytes": 1259,
+      "path": "results/fixed-pilot-2026-10-27/config.toml",
+      "sha256": "6965995b470c074cb4554d7757b86f8a733986fdcc1c1182785fe2d8810ccfd9"
+    },
+    {
+      "bytes": 6958,
+      "path": "results/fixed-pilot-2026-10-27/development/aggregate_summary.csv",
+      "sha256": "bf3a49194a2f8e526c46b25ed426bfb9b500a7207f0b8a2b5ac06b9752a425b9"
+    },
+    {
+      "bytes": 7096770,
+      "path": "results/fixed-pilot-2026-10-27/development/predictions.csv.gz",
+      "sha256": "541854a12df0c84b0ea91b823ffaf0d49110bbb8b2c1edeb6abb30d575c8c61a"
+    },
+    {
+      "bytes": 541,
+      "path": "results/fixed-pilot-2026-10-27/development/stage_manifest.json",
+      "sha256": "b63b77ae9aa6f61b1aaf7fd96e3922e2cea30d207df6ef0eedc35cfc1c713f9a"
+    },
+    {
+      "bytes": 45561,
+      "path": "results/fixed-pilot-2026-10-27/development/target_summary.csv",
+      "sha256": "6704005240cd2fee3fbd34f9f7adb0dd0acc1d641cc98a074873b955bfcfd07a"
+    },
+    {
+      "bytes": 207,
+      "path": "results/fixed-pilot-2026-10-27/development/timing.json",
+      "sha256": "197dace56fce873262f11bd495b175e8356a98ee99797cc0795f28295987ef7c"
+    },
+    {
+      "bytes": 642030,
+      "path": "results/fixed-pilot-2026-10-27/development/tuning.jsonl.gz",
+      "sha256": "1fa354f0d16185e1aa9ca030a9174aa6b8ebd6d2f37eca8f33351ca2b79609be"
+    },
+    {
+      "bytes": 1097,
+      "path": "results/fixed-pilot-2026-10-27/development_audit.json",
+      "sha256": "a3361b5568d299b7f2e53ad7498f51796c8612782f961350fa4f764dba040a9c"
+    },
+    {
+      "bytes": 27075,
+      "path": "results/fixed-pilot-2026-10-27/development_execution.log",
+      "sha256": "1c79e821d3b50fa8f413053acbcb710924c8217bcbe2b9df563a22006b7be118"
+    },
+    {
+      "bytes": 6744,
+      "path": "results/fixed-pilot-2026-10-27/final/aggregate_summary.csv",
+      "sha256": "7788c67a63027e864ac9cb44c2226b8785c72cec2376722067a4fa8e072f9777"
+    },
+    {
+      "bytes": 1262375,
+      "path": "results/fixed-pilot-2026-10-27/final/predictions.csv.gz",
+      "sha256": "70689316c5d4b97dd2f174ee7025158ef7fa356fdbb014e5871709b6fc967ee9"
+    },
+    {
+      "bytes": 541,
+      "path": "results/fixed-pilot-2026-10-27/final/stage_manifest.json",
+      "sha256": "59d4eaee7dbd325a1c1bf89e713079b5bdbb2526b8fb7b9131db110a2f30b793"
+    },
+    {
+      "bytes": 44195,
+      "path": "results/fixed-pilot-2026-10-27/final/target_summary.csv",
+      "sha256": "93d5b67e6c9948d233ec03118c90a49ebba0b41a180bfb966afdf53a386998db"
+    },
+    {
+      "bytes": 204,
+      "path": "results/fixed-pilot-2026-10-27/final/timing.json",
+      "sha256": "c4019caf0cb5c5cea868cedec41a944954409c10214340cf1c323c8c84c56389"
+    },
+    {
+      "bytes": 123031,
+      "path": "results/fixed-pilot-2026-10-27/final/tuning.jsonl.gz",
+      "sha256": "b1519f49ac0c01f705eff6d88dafdf1491c532f4aad879d5d5c9ff8323c9aab5"
+    },
+    {
+      "bytes": 4694,
+      "path": "results/fixed-pilot-2026-10-27/final_audit.json",
+      "sha256": "c93ca9b7810f53c434154ea7b40b1ff7f497923cc88dcc23525e44a64918215e"
+    },
+    {
+      "bytes": 5247,
+      "path": "results/fixed-pilot-2026-10-27/final_execution.log",
+      "sha256": "e880d8dd5c5b9c5a378ca720c2e0569eed05e519b40b90b118db9e91a3988e0b"
+    },
+    {
+      "bytes": 14763,
+      "path": "results/fixed-pilot-2026-10-27/frozen_procedure.json",
+      "sha256": "db9fd3e55cc4ff09aa4ce30ab71cd208489ec0c4c7de0e9f82abbdc5b9f09265"
+    },
+    {
+      "bytes": 3128,
+      "path": "results/fixed-pilot-2026-10-27/metadata.json",
+      "sha256": "ec1aaa6c0735acaaa570092d7678ee0f0fd4a27576ac736630082bfa114d1965"
+    },
+    {
+      "bytes": 2953,
+      "path": "results/fixed-pilot-2026-10-27/policies.json",
+      "sha256": "0a1c809239a90220c4db9204dd8c9ef956625b6ee5b15c13f9921273768e2a1a"
+    },
+    {
+      "bytes": 14973,
+      "path": "results/fixed-pilot-2026-10-27/protocol.md",
+      "sha256": "1902e2dbc4a9b84e46e49ea35f756790069648b95eb6350e236d49423d2a2a01"
+    },
+    {
+      "bytes": 10672,
+      "path": "results/fixed-pilot-2026-10-27/README.md",
+      "sha256": "c3ab2b2e86bc506c62b20bec25beede1f258fb5ca90b98a37c152aa7b82d718c"
+    },
+    {
+      "bytes": 89,
+      "path": "results/fixed-pilot-2026-10-27/report_execution.log",
+      "sha256": "69ea820f733fd373a150085b5274bcb47eb16c9f5f0ff2519d7cdcf82aa5bb96"
+    },
+    {
+      "bytes": 21977,
+      "path": "results/fixed-pilot-2026-10-27/reports/aggregate_relative_improvement.pdf",
+      "sha256": "7483a5e9d8dac70521fb979dd55254ccfe9413fef4fa2553e3eecabf33568b0d"
+    },
+    {
+      "bytes": 273088,
+      "path": "results/fixed-pilot-2026-10-27/reports/aggregate_relative_improvement.png",
+      "sha256": "0c2c60c0b38a188cf8d161d9ff7e51675b700430ec15cc4405d22d3e1eaeff2e"
+    },
+    {
+      "bytes": 13475,
+      "path": "results/fixed-pilot-2026-10-27/reports/aggregate_summary.csv",
+      "sha256": "22824382955a4b924669360b632204ec8ce8d1cb599ab0079200c961d5d59cee"
+    },
+    {
+      "bytes": 28971,
+      "path": "results/fixed-pilot-2026-10-27/reports/factor_mechanisms.pdf",
+      "sha256": "f88780c737ad6293f9f6a779db4f6f979c9f6362547b45bafc345a695a0bcb2b"
+    },
+    {
+      "bytes": 132085,
+      "path": "results/fixed-pilot-2026-10-27/reports/factor_mechanisms.png",
+      "sha256": "eeec94dfc32a5207dd55cc7519ea24372c238dd62de54d7abc0bdf127f5a8c60"
+    },
+    {
+      "bytes": 59176,
+      "path": "results/fixed-pilot-2026-10-27/reports/final_cumulative_paired_loss.pdf",
+      "sha256": "64f45c373b117799b8365b5d7ae37dbbd019972e33e2fea3af47a5d63cfb2b3b"
+    },
+    {
+      "bytes": 735714,
+      "path": "results/fixed-pilot-2026-10-27/reports/final_cumulative_paired_loss.png",
+      "sha256": "2433a232dabbe540f19aa6f31b007babd8721e9ddcc95718dae616e73eeedc50"
+    },
+    {
+      "bytes": 33542,
+      "path": "results/fixed-pilot-2026-10-27/reports/final_target_improvement.pdf",
+      "sha256": "93bc2b3c7041578aefd3796f3018d8f9f926bb30f19b9cd043ab90d7d0cc807d"
+    },
+    {
+      "bytes": 297181,
+      "path": "results/fixed-pilot-2026-10-27/reports/final_target_improvement.png",
+      "sha256": "0ccf370c45bad8fed464df9c7018c455ad9c4aa2ec4cc4bad5b8e5467d2a64c5"
+    },
+    {
+      "bytes": 160,
+      "path": "results/fixed-pilot-2026-10-27/reports/selected_policies.json",
+      "sha256": "6a623126f6b9820f6aafd9c8062c117eb2783888876d3402c532dee19ef94995"
+    },
+    {
+      "bytes": 89575,
+      "path": "results/fixed-pilot-2026-10-27/reports/target_summary.csv",
+      "sha256": "34b6867f6c89ee962c7ba8c45a8c32db432ad76afa59a910a8b95671cdfebb98"
+    },
+    {
+      "bytes": 9062,
+      "path": "results/fixed-pilot-2026-10-27/validation.txt",
+      "sha256": "ef995e7c4c92b6e1c82af4381be335461e5d12c517ca09f29929d177e337980f"
+    }
+  ],
+  "schema_version": 1
+}

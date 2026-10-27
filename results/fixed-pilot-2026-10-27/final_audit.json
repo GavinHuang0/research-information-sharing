@@ -1,0 +1,149 @@
+{
+  "audit_kind": "independent_saved_terminal_artifacts_no_model_fitting",
+  "checks": [
+    "exact_named_memberships",
+    "same_dates_all_cells",
+    "response_reconstruction_from_daily_returns",
+    "fixed_pair_refit_schedule",
+    "all_historical_cutoffs",
+    "boundary_refit1131_identical_to_development_fit_selection",
+    "penalty_grid_and_argmin",
+    "loss_recalculation",
+    "all_target_and_equalmeanratio_aggregates",
+    "frozen_winners_selected_from_primary_development_only",
+    "all_frozen_code_config_input_and_development_hashes",
+    "all_final_stage_manifest_hashes",
+    "frozen_manifest_identical_to_preterminal_commit",
+    "frozen_commit_precedes_direct_logged_final_start"
+  ],
+  "final_completed_at_utc": "2026-10-27T04:15:25.490157+00:00",
+  "final_execution_log_sha256": "e880d8dd5c5b9c5a378ca720c2e0569eed05e519b40b90b118db9e91a3988e0b",
+  "final_model_run_start_inferred_from_completion_minus_elapsed": "2026-10-27T04:14:52.392225+00:00",
+  "final_stage_started_at_utc": "2026-10-27T04:14:51.672943+00:00",
+  "first_response": "2022-01-07",
+  "forecast_dates_per_cell": 156,
+  "frozen_commit": "b2161f6b5e5293de48e461b8a1b56bb7e693ffc7",
+  "frozen_commit_time": "2026-10-27T00:14:47-04:00",
+  "last_response": "2024-12-27",
+  "mechanism_results": [
+    {
+      "broad_measurement_partial_S": 0.9555258229923896,
+      "broad_measurement_partial_all": 0.9547749523701007,
+      "broad_measurement_pooled_S": 0.9588489901026923,
+      "broad_measurement_pooled_all": 0.9572673304886407,
+      "broad_measurement_ridge": 0.9711058784580061,
+      "broad_measurement_separate": 0.9588032211687226,
+      "small_measurement_separate": 0.9821191726893984,
+      "weighting": "value"
+    },
+    {
+      "broad_measurement_partial_S": 0.9858590245827078,
+      "broad_measurement_partial_all": 0.9865335396406784,
+      "broad_measurement_pooled_S": 0.9859064375849932,
+      "broad_measurement_pooled_all": 0.983437517349531,
+      "broad_measurement_ridge": 0.9762107430311193,
+      "broad_measurement_separate": 0.9880908950021271,
+      "small_measurement_separate": 0.9940367749368542,
+      "weighting": "equal"
+    }
+  ],
+  "policies": 18,
+  "prediction_rows": 33696,
+  "selected_aggregate_MSE_ratios": {
+    "equal": 0.983437517349531,
+    "value": 0.9572673304886407
+  },
+  "selected_target_results": [
+    {
+      "MSE_ratio": 1.029541049538531,
+      "improvement_percent": -2.9541049538531094,
+      "target": "Banks",
+      "weighting": "equal"
+    },
+    {
+      "MSE_ratio": 0.9547340588672006,
+      "improvement_percent": 4.526594113279936,
+      "target": "Food",
+      "weighting": "equal"
+    },
+    {
+      "MSE_ratio": 0.9984901632839702,
+      "improvement_percent": 0.15098367160297776,
+      "target": "Hlth",
+      "weighting": "equal"
+    },
+    {
+      "MSE_ratio": 0.9684698536519274,
+      "improvement_percent": 3.1530146348072607,
+      "target": "Mach",
+      "weighting": "equal"
+    },
+    {
+      "MSE_ratio": 0.9900723154925959,
+      "improvement_percent": 0.9927684507404111,
+      "target": "Oil",
+      "weighting": "equal"
+    },
+    {
+      "MSE_ratio": 0.9593176632629604,
+      "improvement_percent": 4.068233673703958,
+      "target": "Util",
+      "weighting": "equal"
+    },
+    {
+      "MSE_ratio": 0.974842088458722,
+      "improvement_percent": 2.5157911541278,
+      "target": "Banks",
+      "weighting": "value"
+    },
+    {
+      "MSE_ratio": 0.9497671226303694,
+      "improvement_percent": 5.023287736963056,
+      "target": "Food",
+      "weighting": "value"
+    },
+    {
+      "MSE_ratio": 0.9940219166849512,
+      "improvement_percent": 0.5978083315048788,
+      "target": "Hlth",
+      "weighting": "value"
+    },
+    {
+      "MSE_ratio": 0.9289513324088032,
+      "improvement_percent": 7.104866759119677,
+      "target": "Mach",
+      "weighting": "value"
+    },
+    {
+      "MSE_ratio": 0.9409204639855355,
+      "improvement_percent": 5.907953601446447,
+      "target": "Oil",
+      "weighting": "value"
+    },
+    {
+      "MSE_ratio": 0.9551010587634621,
+      "improvement_percent": 4.489894123653793,
+      "target": "Util",
+      "weighting": "value"
+    }
+  ],
+  "start_timestamp_caveat": "Direct stage_started event from final_execution.log confirms the frozen commit precedes terminal execution; the separate completion-minus-elapsed value is an approximation including post-fit output-writing time.",
+  "status": "passed",
+  "targets": [
+    "Food",
+    "Mach",
+    "Banks",
+    "Oil",
+    "Util",
+    "Hlth"
+  ],
+  "tuning_rows": 2808,
+  "weightings": [
+    "value",
+    "equal"
+  ],
+  "winners": {
+    "factor": "factor_pooled__M-all__O-all",
+    "overall": "factor_pooled__M-all__O-all"
+  }
+}
