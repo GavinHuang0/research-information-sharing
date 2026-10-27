@@ -1,0 +1,42 @@
+{
+  "audit_kind": "independent_saved_development_artifacts_no_model_fitting",
+  "checks": [
+    "exact_named_membership_every_tuning_row",
+    "common_dates_all_cells",
+    "raw_daily_response_recalculation",
+    "fixed_pair_refit_schedule",
+    "historical_training_and_validation_cutoffs",
+    "declared_penalty_grid_and_argmin",
+    "squared_and_absolute_error_recalculation",
+    "all_target_MSEs",
+    "equal_mean_target_MSE_ratios",
+    "primary_value_only_winners",
+    "input_code_config_and_development_hashes",
+    "freeze_before_final_outputs"
+  ],
+  "final_directory_absent": true,
+  "first_response": "2005-04-08",
+  "forecast_dates_per_cell": 874,
+  "last_response": "2021-12-31",
+  "policies": 18,
+  "prediction_rows": 188784,
+  "status": "passed",
+  "targets": [
+    "Food",
+    "Mach",
+    "Banks",
+    "Oil",
+    "Util",
+    "Hlth"
+  ],
+  "tuning_rows": 14688,
+  "weightings": [
+    "value",
+    "equal"
+  ],
+  "winners": {
+    "factor": "factor_pooled__M-all__O-all",
+    "overall": "factor_pooled__M-all__O-all"
+  },
+  "winning_primary_development_score": 0.9656675655172814
+}

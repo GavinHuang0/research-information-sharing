@@ -5,3 +5,10 @@ data/**/*.json text eol=lf
 # Preparation provenance includes byte fingerprints of these Python sources.
 scripts/*.py text eol=lf
 src/factorcast/retrieval.py text eol=lf
+# Frozen experiment checksums must survive Windows and Unix checkouts.
+configs/fixed_pilot.toml text eol=lf
+results/**/*.csv text eol=lf
+results/**/*.json text eol=lf
+results/**/*.md text eol=lf
+results/**/*.txt text eol=lf
+*.gz binary

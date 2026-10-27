@@ -1,0 +1,53 @@
+{
+  "aggregation": "equal_mean_of_six_target_MSE_ratios_to_local_history",
+  "fingerprint": {
+    "code_sha256_lf": {
+      "docs/fixed_pilot_protocol.md": "1902e2dbc4a9b84e46e49ea35f756790069648b95eb6350e236d49423d2a2a01",
+      "requirements-analysis-lock.txt": "b31eb3010807afdb2b1cd61802a417065ad1955a46333be3753db8eb6c689325",
+      "requirements-lock.txt": "250b752b39ba71f6b256a916b33ca8a8b4dba91c13083d711095b6e900ef36af",
+      "scripts/run_fixed_pilot.py": "7feb84c22fd0ed1ed779f07d0018aae29337e9c92ff3a591e97b0eabc245cece",
+      "src/factorcast/__init__.py": "c09da4796c766bbe6addb2692cd8e95eca8873a236e1b034ea34344ed96a1a3f",
+      "src/factorcast/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "src/factorcast/cli.py": "f69aa1286be93059c68e578a6132fc68c40b091d6726975274dd8bce990b3e0e",
+      "src/factorcast/data.py": "ab58d230603314a8fbead8ae37926797ca0242906d40050c717ce4c0b9230119",
+      "src/factorcast/evaluation.py": "8a01aafc5e440b9786d7b923e56b2b5b8a9d0fe4e3b405d14be3f4cbd6e575ac",
+      "src/factorcast/experiments.py": "4ac5401b3acc7a463f44b2656c0069ea0c40a46f54f1b23dccfd462e08b8a2fb",
+      "src/factorcast/features.py": "5a66d4d978d9175873b904306ad84a268593215277f77e16e547aea1e323a963",
+      "src/factorcast/models.py": "8f4ec4bb06531843970a343ffc089ca1ee1d84af066c8acc5ecbc919709fdfab",
+      "src/factorcast/pilot.py": "1157955785f981a868a84a644fd14312cb3374592685abaf3fc7a565daa70dc5",
+      "src/factorcast/pilot_reporting.py": "9b25c9ffa1cdd7d296820f61ea01600abd4b39444e1d51fadcae233dfe74397e",
+      "src/factorcast/retrieval.py": "774252b581a98324a21acf867d110c38291b081efeec6a25f64b702e504a227f",
+      "src/factorcast/simulation.py": "06157570e07fafe08eabed4602721512ad74b263882d75e1d2d8d62f010f7d5e"
+    },
+    "config_sha256": "6965995b470c074cb4554d7757b86f8a733986fdcc1c1182785fe2d8810ccfd9",
+    "versions": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.0"
+    }
+  },
+  "git_commit": "07edc7696bcd4a41dee0f80c94929c54f6ef93b6",
+  "git_dirty": true,
+  "inputs": {
+    "equal": {
+      "bytes": 9171931,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv",
+      "sha256": "72b10111b3c8cd8d253edb8f17c6c7abd8ad87cabad7f7cc517ce39fac3d6232"
+    },
+    "provenance": {
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json",
+      "sha256": "7843fdf47a51489d4fb9b6ff2089222bb31695a51c4ceb6e0d8fcf822b028c9e"
+    },
+    "value": {
+      "bytes": 9190339,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv",
+      "sha256": "5ea6269369a30c3274eb930f386c4a1f1f67619cb66013fa83c21f2ecee0ab6f"
+    }
+  },
+  "outcome_loss": "mean held-out per-week target squared log-variance error; no fitted errors, donor errors, or penalties",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "started_at_utc": "2026-10-27T04:11:05.987764+00:00"
+}
