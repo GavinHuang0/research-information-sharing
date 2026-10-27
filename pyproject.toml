@@ -9,6 +9,9 @@ description = "Experiments on measurement panels and coefficient sharing in fact
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.24,<3", "pandas>=2,<4", "scipy>=1.10,<2", "scikit-learn>=1.3,<2"]
 
+[project.optional-dependencies]
+analysis = ["matplotlib>=3.10,<4"]
+
 [project.scripts]
 factorcast = "factorcast.cli:main"
 

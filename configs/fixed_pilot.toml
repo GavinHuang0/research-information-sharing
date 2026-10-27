@@ -1,0 +1,35 @@
+# Frozen first empirical pilot: explicit memberships, no random panels or adaptive design.
+[design]
+targets = ["Food", "Mach", "Banks", "Oil", "Util", "Hlth"]
+small_panel = ["Food", "Mach", "Banks", "Oil", "Util", "Hlth"]
+primary_weighting = "value"
+robustness_weighting = "equal"
+
+[data]
+value_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv"
+equal_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv"
+provenance = "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json"
+units = "decimal"
+log_offset = 1e-8
+min_week_obs = 3
+
+[calendar]
+origin_start = "2000-01-01"
+response_end = "2024-12-31"
+final_response_start = "2022-01-01"
+
+[experiment]
+initial_train = 260
+validation_size = 52
+refit_every = 13
+factor_count = 2
+ridge_penalties = [0.01, 0.1, 1.0, 10.0]
+elasticnet_penalties = [0.001, 0.01, 0.1]
+pooling_penalties = [0.01, 0.1, 1.0, 10.0, 100.0]
+
+[selection]
+loss = "target_log_variance_MSE"
+aggregation = "equal_mean_of_six_target_MSE_ratios_to_local_history"
+development_winner = "single_policy_minimizing_primary_value_aggregate"
+policy_tie_break = "lexicographic_policy_id"
+penalty_tie_break = "first_declared_penalty"

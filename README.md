@@ -52,6 +52,18 @@ The current donor grid uses fixed nested prefixes, including the target. Joint s
 
 ## Use the committed return data
 
+The first executed empirical study uses the [fixed S6 protocol](docs/fixed_pilot_protocol.md) and [fixed configuration](configs/fixed_pilot.toml). The six targets and common small panel are exactly Food, Mach, Banks, Oil, Util, and Hlth. This study uses explicit memberships, two PCs, 18 distinct policies, chronological development through 2021, and a separately frozen 2022–2024 evaluation. It does not use the starter runner's CSV prefixes, adaptive design search, or PC-count search.
+
+Install `requirements-analysis-lock.txt` for the pinned scientific and plotting environment, then run these stages in order with a new output directory:
+
+```bash
+python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/fixed-pilot-2026-10-27 --stage development
+python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/fixed-pilot-2026-10-27 --stage final
+python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/fixed-pilot-2026-10-27 --stage report
+```
+
+The development stage writes the selected procedure and all primary candidate scores before any final forecasts are generated. The final stage verifies unchanged code/configuration/data and preserves the original refit schedule across the boundary. Predictions and tuning logs are gzip-compressed; summaries and figures keep development/final and value/equal weighting separate. Use another output path to reproduce an existing archived run. On Windows call `.\.venv\Scripts\python.exe` instead of `python`.
+
 The repository includes a dated snapshot of the official French daily 48-industry returns: the original ZIP, value- and equal-weighted decimal-return CSVs, and provenance. The [data catalog](data/README.md) identifies the source, coverage, files, and hashes. A fresh clone includes these inputs; no additional download is required. Use the value-weighted CSV for the first experiment:
 
 ```bash

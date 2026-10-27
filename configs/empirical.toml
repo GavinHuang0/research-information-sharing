@@ -1,3 +1,5 @@
+# Legacy exploratory starter, not the first fixed S6 pilot.
+# Use configs/fixed_pilot.toml with scripts/run_fixed_pilot.py for that study.
 # Local daily-return CSV supplied by the researcher; see docs/data.md.
 [data]
 # Automated French downloader writes decimal returns.

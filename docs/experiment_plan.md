@@ -1,5 +1,7 @@
 # First experiments: factor measurement and coefficient sharing
 
+**Executed fixed pilot:** the authoritative first empirical design is [fixed_pilot_protocol.md](fixed_pilot_protocol.md), with [configs/fixed_pilot.toml](../configs/fixed_pilot.toml). It fixes S = {Food, Mach, Banks, Oil, Util, Hlth} as both evaluation targets and the common small panel, uses M in {S, all48} and O in {target, S, all48}, and excludes adaptive donor/factor-count search. The older initializer grids and prefix-panel discussion below describe the broader experimental toolkit, not the fixed pilot's memberships or calendar. The fixed protocol supersedes those starter choices for this run.
+
 This operational plan accompanies the concise [research proposal](../proposal/proposal.pdf). It specifies what to run and how to distinguish mechanisms. Existing Python functionality is identified below; research extensions are planned work rather than reported findings.
 
 ## Objective and comparisons
