@@ -1,13 +1,12 @@
-.PHONY: all clean
+.PHONY: all check clean
 
 all: proposal.pdf
 
-# Use standard TeX Live tools; BibTeX resolves the standalone bibliography.
-proposal.pdf: proposal.tex references.bib
-	pdflatex -interaction=nonstopmode -halt-on-error proposal.tex
-	bibtex proposal
-	pdflatex -interaction=nonstopmode -halt-on-error proposal.tex
-	pdflatex -interaction=nonstopmode -halt-on-error proposal.tex
+proposal.pdf: progress.md report-template.tex repo-links.lua ../scripts/build_progress_report.py
+	python ../scripts/build_progress_report.py
+
+check:
+	python ../scripts/build_progress_report.py --check
 
 clean:
-	rm -f proposal.aux proposal.bbl proposal.blg proposal.log proposal.out proposal.pdf
+	python -c "print('No compiler products are stored in proposal/.')"

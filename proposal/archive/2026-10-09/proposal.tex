@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[round,authoryear]{natbib}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={When Does a Larger Asset Panel Improve Forecasts?},
+ pdfsubject={Research proposal on factor measurement and forecast-coefficient sharing}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Oset}{\mathcal{O}}
+\title{When Does a Larger Asset Panel Improve Forecasts?\\
+\large Factor Measurement and Forecast-Coefficient Sharing}
+\author{Research proposal}
+\date{October 9, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A larger asset panel can help reveal common economic conditions without providing appropriate examples of how those conditions predict a particular asset's future risk. This project separates the assets used to estimate factors from the assets used to share forecasting coefficients. Its main objective is to understand when these two uses of information complement or conflict with one another, and whether choosing them separately improves economically useful forecasts. Predictive component selection is a supporting objective. The research begins with a clear rationale and conditional hypotheses, proceeds through controlled simulations and a volatility-forecasting application, and then develops theory for mechanisms supported by the evidence.
+\end{abstract}
+
+\section{Research question and purpose}
+Cross-sectional data can address two distinct difficulties in forecasting. Common economic conditions are imperfectly measured by any single asset, while an individual asset's history may be too short to estimate a rich forecasting relationship reliably. Other assets can supply additional measurements of the common state or additional observations for estimating that relationship. The first use requires informative measurements; the second requires sufficiently similar predictive responses. An asset can be useful for one role and unhelpful for the other.
+
+The main question is therefore how information should be shared between \emph{factor measurement} and \emph{forecast-coefficient estimation}. A broad panel may produce more reliable factors, yet a narrow group of comparable assets may be preferable for estimating the target's predictive slopes. Choosing both roles jointly could improve forecasts and reveal why the same panel benefits some targets but harms others. A supporting question concerns how many components, or which subset of components, should enter the forecast. The number of common factors in the predictor panel need not equal its useful predictive dimension: a dominant component can be irrelevant to the target, while a weaker component can carry important predictive information.
+
+A stylized system makes the distinction explicit:
+\begin{equation}
+\begin{aligned}
+ x_{jt}&=\ell_j'f_t+u_{jt}, &&j\in\M,\\
+ y_{i,t+h}&=a_i+b_i'z_{it}+\theta_i'f_t+\varepsilon_{i,t+h}.
+\end{aligned} \label{eq:system}
+\end{equation}
+Here $\M$ is the measurement panel, $f_t$ is a latent common state, and $z_{it}$ contains the target's available own-history predictors. The loading $\ell_j$ describes how an asset measures the state; the slope $\theta_i$ describes how that state predicts the target. These need not be similar across the same assets. A separate outcome-donor set $\Oset$ determines which assets' forecasting relationships contribute to estimating $\theta_i$. Sharing can range from target-specific slopes to common slopes, with partial pooling between them. Shared coefficients must use the same factor coordinates.
+
+This distinction also clarifies what must be demonstrated. At a fixed forecast dimension, expanding a measurement panel while retaining target-specific slopes does not automatically increase the number of forecasting coefficients. Under ideal informative-measurement assumptions, additional assets can help without an opposing coefficient cost. A meaningful tradeoff must arise from an identifiable mechanism, such as heterogeneous pooled slopes, correlated measurement noise, irrelevant common shocks, instability, or additional fitted dimensions. The project will investigate these mechanisms rather than presume a universally optimal interior panel size.
+
+\section{Why factors, and where a contribution may lie}
+Factors offer a structural restriction for finite-sample prediction. For centered predictors, a linear score map and factor forecast satisfy
+\begin{equation}
+ \widehat f_t=W'x_t,\qquad
+ \widehat y_{t+h}=\theta'W'x_t=\beta'x_t,
+ \qquad \beta=W\theta\in\operatorname{col}(W). \label{eq:restriction}
+\end{equation}
+With the same information and local controls, unrestricted linear prediction contains this class, and unrestricted measurable functions contain it as well. Compression cannot improve the population optimum over a larger function class. An invertible transformation preserves ordinary least-squares fitted projections; retaining all identifiable principal-component directions gives the corresponding direct-regression fit. Factors consequently have no intrinsic population information advantage.
+
+Their case is that a stable, low-dimensional common signal can be learned from many noisy measurements, leaving relatively few target coefficients to estimate. This can reduce estimation variance when histories are short and predictor panels are large, at the price of discarding useful directions. A reusable representation can also support comparisons across assets. Direct regularization may capture the same benefit or outperform it, making well-tuned ridge, elastic net, and supervised dimension reduction essential benchmarks. Component sparsity is basis-dependent, so claims about selected components require a declared coordinate system; claims about a predictive subspace need not depend on an arbitrary rotation.
+
+The project builds on principal-component forecasting \citep{stockwatson2002} and targeted predictors \citep{baing2008}. Additional-series effects are already central to \citet{boivinng2006}; the broad question is not new. Close recent work studies pooling versus parameter heterogeneity \citep{pesaranetal2026}, selective transfer for volatility forecasting \citep{telleretal2026}, and factor-augmented sparse transfer \citep{fujiang2025}. The proposed contribution is the joint assignment of synchronized time-series observations to measurement and coefficient-sharing roles, evaluated under dependent-data forecasting and economic decision loss. This positioning remains conditional on a fuller literature review, not a claim to be the first selective-pooling or factor-transfer method.
+
+\section{Economic meaning and conditional hypotheses}
+Volatility forecasting provides a concrete economic setting. Industries share financial and economic conditions but differ in cyclicality, operating leverage, and risk persistence. Common-state measurement can therefore benefit from broad coverage while its transmission to future risk remains target-specific. Loading patterns, predetermined industry groupings, and the stability of donor choices can make this distinction interpretable. Predictive associations alone will not identify causal economic shocks.
+
+Better risk forecasts could improve scalar volatility management: an investor can scale exposure to a single asset or a predetermined portfolio toward a risk target. The relevant question is whether improved forecasts reduce risk-targeting error or increase net utility after turnover and transaction costs, a motivation connected to \citet{moreiramuir2017}. Marginal variance forecasts alone do not supply the covariance matrix required for a changing multi-asset optimizer. Economic value must be demonstrated for a specified feasible decision rule rather than inferred from a smaller statistical loss.
+
+Three conditional hypotheses guide the investigation. First, when measurement quality and predictive-slope similarity vary independently, selecting measurement and outcome donors separately should outperform tying their memberships together. Homogeneous panels provide an important case where separation may offer little benefit. Second, informative measurement expansion should help at fixed dimension, with diminishing gains under correlated noise; coefficient pooling should be most useful when target histories are short and predictive heterogeneity is small. Partial sharing may reduce negative transfer, but need not dominate either endpoint. Third, forecast-oriented component selection should improve on variance-explained rules when predictive and dominant directions differ, although direct or supervised methods may perform better still.
+
+The underlying design extends beyond equity volatility. Related regional, macroeconomic, energy, or demand series can help measure a common state while differing in their predictive responses. Each extension would require its own timing conventions, loss function, and decision problem. Generality is a property to investigate through replication, not a claim that one financial specification transfers unchanged.
+
+\section{Empirical investigation followed by theory}
+The first stage establishes these questions, their relationship to existing research, and a reproducible Python foundation. The second stage uses paired simulations to vary measurement quality and coefficient heterogeneity separately, comparing small and broad measurement panels, separate and pooled slopes, partial sharing, component selection, and direct regularization. Known latent factors provide diagnostic comparisons without being feasible forecasts. The initial economic pilot uses daily returns on industry portfolios to construct weekly log sums of squared returns, with available own-history controls. This is a noisy daily-return variation proxy, not intraday realized volatility or an exact latent conditional variance.
+
+Evaluation will use chronological out-of-sample forecasts, with transformations and model choices learned only from earlier observations. It will assess both statistical loss and a predetermined scalar risk-management decision, account for dependence across dates and assets, and report unfavorable as well as favorable comparisons. The independent experiment plan contains the data, benchmark, tuning, and validation specifications; these operational choices support the research question rather than define its motivation.
+
+Theory follows the evidence. Candidate results include conditions under which measurement expansion improves forecast risk, thresholds governing beneficial coefficient sharing, and risk bounds for selecting among a feasible family of donor-role designs. ``Optimal'' would refer to a declared estimator class and risk target, not all forecasting functions or all unknown data-generating processes. Factor and coefficient errors are jointly estimated and can interact; a general risk analysis cannot simply add two independent error terms. Assumptions on factor strength, dependence, stability, and heterogeneity must be made explicit before proofs are pursued.
+
+A useful outcome may show that broad measurement and local coefficients are complementary, that partial pooling makes separate donor selection unnecessary, or that direct regularization absorbs the benefit of the factor restriction. Each possibility would explain when cross-sectional information is economically valuable and where its limits lie. The intended result is an interpretable account of how to share information, supported first by empirical evidence and then by appropriately scoped theory.
+
+\begingroup
+\small
+\setlength{\bibsep}{3pt}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\endgroup
+\end{document}

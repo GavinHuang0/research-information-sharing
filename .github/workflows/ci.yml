@@ -22,9 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt-get update && sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended lmodern
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/build_progress_report.py --check
+      - run: sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-extra texlive-fonts-recommended lmodern
       - run: make -B -C proposal
       - uses: actions/upload-artifact@v4
         with:
-          name: research-proposal-pdf
+          name: research-progress-pdf
           path: proposal/proposal.pdf

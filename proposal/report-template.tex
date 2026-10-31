@@ -1,0 +1,31 @@
+% Progress report template. Body and title are generated from progress.md.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array,calc}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={$title$},pdfsubject={Research progress on factor measurement and forecast sharing}}
+\pdfinfo{/ProgressSourceSHA256 ($source_hash$)}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.3em}
+\setlist{nosep,leftmargin=*}
+\setcounter{secnumdepth}{0}
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{0.8em}{0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\passthrough}[1]{#1}
+\begin{document}
+\begin{center}
+{\Large\bfseries $title$\par}
+\vspace{0.35em}
+{$date$\par}
+\end{center}
+\vspace{0.25em}
+$body$
+\end{document}

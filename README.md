@@ -1,131 +1,99 @@
 # Factor measurement and forecast sharing
 
-This project studies two ways that additional asset data can improve a forecast: by measuring common signals more accurately, and by helping estimate how those signals predict a particular asset's future outcome. Those roles need not favor the same assets. The main research question is when choosing them separately improves prediction and economic decisions. Choosing the number or subset of predictive components is a supporting question.
+This project asks when industries should play different roles in **measuring common conditions** and **estimating how those conditions predict a target's future risk**. A broad measurement panel may be useful even when forecast coefficients should remain target-specific. Separate donor selection is a research hypothesis, not an established result.
 
-The concise [research proposal PDF](proposal/proposal.pdf) develops the research motivation, testable hypotheses, economic relevance, and path toward theory. Its independent [LaTeX source](proposal/proposal.tex) and [bibliography](proposal/references.bib) are included. The detailed protocol is in [docs/experiment_plan.md](docs/experiment_plan.md). This repository contains an initial experiment package; its synthetic checks are pipeline validation, not research findings.
+## Current progress: October 31, 2026
 
-Factor forecasts restrict a direct linear predictor to a learned subspace. They may offer useful finite-sample regularization and combine noisy measurements, but cannot improve the unrestricted population optimum simply by transforming the inputs. Direct ridge, elastic net, and supervised PLS are therefore essential comparisons. Larger measurement panels at a fixed factor dimension do not inherently increase the number of target regression coefficients. Pooling outcomes adds a separate bias–variance decision when forecasting relationships differ.
+- Archived and labeled the French 48-industry daily data, in value- and equal-weighted forms, with raw downloads, industry definitions, coverage, units, and checksums.
+- Constructed reproducible weekly variance/volatility features and causal own-history controls.
+- **Completed Experiment 1:** a fixed six-target pilot with two PCs and 18 prespecified procedures. Development selection was frozen before the 2022-2024 evaluation. Its selected all-48/common-slope factor procedure improved the equal-target MSE ratio by **4.27%** versus own-history regression; equal-weighted robustness improvement was **1.66%**, including a **2.95% deterioration for Banks**.
+- Broader measurement explains most of the main comparison: separate slopes improve 1.79% with six measurement industries and 4.12% with 48. Common slopes across all outcomes raise this to 4.27%. Narrower outcome sharing did not improve the primary aggregate; benefits differ by target.
+- **Experiment 2 is documented but not implemented or run.** It proposes paired bootstrap p-values/intervals and a coefficient-history study. No significance claim has been established, and no bootstrap results have been computed.
 
-## Run a reproducible simulation
+## Reading guide
 
-Python 3.11 or later is required. From the repository root:
+| Reader's purpose | Document |
+| --- | --- |
+| Concise report for the professor | [Current progress in Markdown](proposal/progress.md), [synchronized PDF](proposal/proposal.pdf) |
+| Report source, synchronization, and original proposal | [Proposal/progress folder](proposal/README.md), [original October 9 proposal](proposal/archive/2026-10-09/proposal.pdf) |
+| All experiment records | [Experiment index](experiments/README.md) |
+| What Experiment 1 actually did | [Overview](experiments/01-fixed-s6-pilot/README.md), [precise executed procedure](experiments/01-fixed-s6-pilot/protocol.md) |
+| Experiment 1 findings and caveats | [Interpretation](experiments/01-fixed-s6-pilot/results.md), [full result archive and figures](results/fixed-pilot-2026-10-27/README.md) |
+| Exact procedures proposed for Experiment 2 | [Overview](experiments/02-bootstrap-history/README.md), [detailed protocol](experiments/02-bootstrap-history/protocol.md), [non-executable planning TOML](configs/experiment_02_plan.toml) |
+| Inputs and feature definitions | [Data catalog](data/README.md), [input documentation](docs/data.md), [weekly features](data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md) |
+| Broader research toolkit and legacy grids | [Earlier experiment plan](docs/experiment_plan.md) |
+
+The progress report summarizes the rationale, completed work, findings, and next steps. Detailed protocols belong under `experiments/`; the progress report is not a substitute for those records. Experiment 1's original frozen configuration/protocol and archived outputs remain unchanged.
+
+## Experiment 1: completed fixed S6 pilot
+
+The six evaluation targets and common small panel are exactly **Food, Mach, Banks, Oil, Util, Hlth**. Measurement membership is this named set or all 48 industries; outcome membership is the target, the named six, or all 48. The design uses explicit names rather than CSV prefixes. It excludes random donor selection, adaptive factor-design selection, and factor-count search.
+
+The 18 distinct procedures include separate/common/partial factor slopes, direct ridge and elastic net, two-component PLS, own-history regression, and persistence. Separate-slope outcome cells that give identical target forecasts are counted once. Intercepts and own-history slopes remain industry-specific in pooled models; fitted PCA representations are shared within coefficient comparisons.
+
+The common calendar contains 1,290 aligned predictor/outcome pairs: 260 initialization pairs, 874 development forecast dates, and 156 final forecast dates per target/procedure/weighting. The response-year boundary is 2022. Historical validation uses 52 pairs, and expanding fits update every 13 eligible origins without restarting at the final boundary. Final selection was not changed to the best terminal cell.
+
+The archive includes all six targets and all prespecified comparisons, forecast-level losses, tuning records, code/input hashes, freeze timestamps, 58-test validation, and independent timing/aggregation audits. Its findings are descriptive point estimates, not proof of latent-factor recovery, universal factor superiority, or trading value.
+
+## Experiment 2: planned uncertainty and history study
+
+Part A proposes a stationary bootstrap of saved Experiment 1 losses. Because 2022-2024 results have been inspected, its p-values would be exploratory post-pilot inference.
+
+Part B fixes Experiment 1's selected all-48/common-slope factor policy and varies supervised coefficient histories: **104, 260, 520 pairs, and expanding**. Predictor-only PCA history stays expanding and identical across these comparisons. Own-history, ridge, elastic net, and PLS references receive matched coefficient windows. A common 572-pair start permits 520 inner-training pairs plus 52 validation pairs.
+
+The proposed inference resamples joint date vectors across targets, methods, histories, and both weightings, recomputes target MSE ratios, and uses null-centered one-sided bootstrap p-values. A primary Holm family covers 16 factor-versus-reference comparisons and three direct history comparisons. The protocol fixes block lengths, draw count, seeds, intervals, hypotheses, validation gates, and interpretation limits. It permits unfavorable or inconclusive outcomes rather than requiring significance.
+
+The proposed new evaluation period is January 2025 through the last complete August 2026 week, conditional on verifying that its forecast scores are uninspected and freezing the procedure first. The plan is **not executable by the existing runners**; this update creates no new forecasts or statistical results.
+
+## Data and feature conventions
+
+For each Friday-ending week, `Q = sum(daily_decimal_return**2)`, weekly volatility is `sqrt(Q)` without annualization, and `v = log(Q + 1e-8)`. At least three observed daily returns are required; insufficient weeks remain missing. Own controls are current v and its complete trailing 4- and 12-week means. The response is next calendar week's v. Calendar alignment precedes missing-case filtering, with no filling or interpolation.
+
+These are daily-return variation proxies, not intraday realized variance or directly observed conditional volatility. Source snapshots can contain revised history. All original data, curated features, and the first result archive are tracked in Git; ad hoc downloads and uncurated generated results remain ignored.
+
+## Setup and reproduction
+
+Python 3.12 matches the pinned scientific environment. After creating a virtual environment:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements-lock.txt
-python -m pip install -e .
-factorcast simulate --config configs/smoke.toml --output results/smoke
+python -m pip install -r requirements-analysis-lock.txt
+python -m pip install --no-deps --no-build-isolation -e .
 python -m unittest discover -s tests -v
 ```
 
-If the scientific dependencies are already installed, the source tree also runs without installation:
+Reproduce **Experiment 1 only** in a new output directory; the existing archive is never overwritten:
 
 ```bash
-PYTHONPATH=src python -m factorcast simulate --config configs/smoke.toml --output results/smoke
-PYTHONPATH=src python -m unittest discover -s tests -v
+python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/reproduction-01 --stage development
+python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/reproduction-01 --stage final
+python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/reproduction-01 --stage report
 ```
 
-Use a new output directory for each run: the CLI refuses to overwrite existing results. The smoke configuration is small enough to check the full pipeline. [configs/pilot.toml](configs/pilot.toml) provides a larger exploratory grid; increase independent repetitions and predeclare the final design before drawing substantive conclusions. Setting `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1` can improve performance for these small repeated fits.
+The final/report stages verify the frozen code, configuration, inputs, and development artifacts. On Windows use `.\.venv\Scripts\python.exe` in place of `python`. These commands are documentation, not instructions to execute Experiment 2.
 
-`requirements-lock.txt` records the validated Python 3.12 environment; `pyproject.toml` declares broader compatible dependency ranges. GitHub Actions runs the unit checks and smoke simulation with those pinned versions and builds the proposal separately.
+A small synthetic pipeline check remains available with `factorcast simulate --config configs/smoke.toml --output results/smoke-new`. Synthetic checks are software validation, not additional empirical findings. The legacy `factorcast empirical` starter still uses prefix panels and adaptive searches; it is not the fixed first-pilot runner or a runner for Experiment 2.
 
-The simulator generates a stationary two-factor maximum panel once per seed and scenario. Smaller measurement and outcome panels are prefixes of that same panel, so targets, dates, and shocks stay fixed as asset counts change. Predictor quality and coefficient heterogeneity vary separately. Both factor coordinates are spanned by the initial measurement assets. The target's heterogeneous slope is a seeded draw, rather than being fixed at the donor population mean. It remains fixed across asset counts within a scenario. `measurement_correlation`, `outcome_correlation`, `noisy_multiplier`, and signed `donor_shift` can be changed in the `[simulation]` configuration for additional controlled comparisons.
+## Progress-report synchronization
 
-The implemented models are:
-
-| Method | Information and restriction |
-| --- | --- |
-| Historical mean / empirical persistence and local history | Simple reference forecasts |
-| Shared PCA, separate coefficients | Measurement assets share predictors; outcomes are fitted separately |
-| Shared PCA, common coefficients | Outcome donors share factor slopes; intercepts and local controls remain asset-specific |
-| Shared PCA, partial pooling | Quadratic shrinkage of slopes toward their common mean |
-| PCA followed by lasso | Select predictive coordinates from a declared candidate PC basis |
-| Direct ridge and elastic net | Regularized forecasts from the same raw measurement panel |
-| PLS | Training-response-guided dimension reduction for the target |
-| Oracle factors | Simulation-only regression using true factors; not a feasible empirical forecast |
-| Adaptive factor design | Historical validation chooses both donor counts, factor count, pooling rule, and penalty |
-
-PCA and both predictor and score scaling use training observations only. Coefficient-sharing comparisons reuse the same representation. Partial-pooling penalties use normalized loss to avoid unintentionally changing shrinkage when more outcome donors enter. Lasso selection is basis-dependent and does not establish the market's true factor count. In the empirical runner, all fitted models include unpenalized target own-history controls; pooled factor models retain each donor's own controls. Direct and PLS models partial those controls out using training projections.
-
-The current donor grid uses fixed nested prefixes, including the target. Joint selection minimizes historical validation loss over this finite candidate grid. Richer donor rankings, weighting, residual channels, and oracle guarantees are future research described in the experiment plan.
-
-## Use the committed return data
-
-The first executed empirical study uses the [fixed S6 protocol](docs/fixed_pilot_protocol.md) and [fixed configuration](configs/fixed_pilot.toml). The six targets and common small panel are exactly Food, Mach, Banks, Oil, Util, and Hlth. This study uses explicit memberships, two PCs, 18 distinct policies, chronological development through 2021, and a separately frozen 2022–2024 evaluation. It does not use the starter runner's CSV prefixes, adaptive design search, or PC-count search.
-
-The [completed first pilot report](results/fixed-pilot-2026-10-27/README.md) contains all comparisons, per-target losses, figures, frozen selection records, forecast-level predictions, and timing audits.
-
-Install `requirements-analysis-lock.txt` for the pinned scientific and plotting environment, then run these stages in order with a new output directory:
+`proposal/progress.md` is the single content source. Pandoc and PDFLaTeX generate the current LaTeX and PDF; the original proposal is preserved in an archive.
 
 ```bash
-python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/fixed-pilot-2026-10-27 --stage development
-python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/fixed-pilot-2026-10-27 --stage final
-python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/fixed-pilot-2026-10-27 --stage report
+python scripts/build_progress_report.py
+python scripts/build_progress_report.py --check
 ```
 
-The development stage writes the selected procedure and all primary candidate scores before any final forecasts are generated. The final stage verifies unchanged code/configuration/data and preserves the original refit schedule across the boundary. Predictions and tuning logs are gzip-compressed; summaries and figures keep development/final and value/equal weighting separate. Use another output path to reproduce an existing archived run. On Windows call `.\.venv\Scripts\python.exe` instead of `python`.
+The verification checks source/template/builder/output fingerprints to prevent stale versions. PDF pages are visually reviewed after changes. GitHub Actions validates software and report synchronization and rebuilds the professor-facing PDF.
 
-The repository includes a dated snapshot of the official French daily 48-industry returns: the original ZIP, value- and equal-weighted decimal-return CSVs, and provenance. The [data catalog](data/README.md) identifies the source, coverage, files, and hashes. A fresh clone includes these inputs; no additional download is required. Use the value-weighted CSV for the first experiment:
-
-```bash
-factorcast empirical --config configs/empirical.toml \
-  --returns data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv --target Food \
-  --output results/industry-food
-```
-
-This command is an example for a later forecast run; adding the data snapshot does not run an experiment. Adapt panel counts, split sizes, and the declared calendar sample to the supplied dataset. The prepared CSV uses `units = "decimal"` in the example configuration. For other local CSVs with a `date` column and named asset columns, explicitly declare decimal or percent units. The target is moved to the first position; other columns retain CSV order. This order determines the initial nested donor grid and is saved in provenance. Establish or randomize panel order before inspecting test performance. The current config evaluates a fixed block after its initial history, rather than automatically evaluating the latest dates; see the experiment plan before a substantive run.
-
-To acquire an optional newer snapshot, run `python -m factorcast download-data --weighting value`. The downloader preserves the raw ZIP, prepares a decimal-return CSV, records provenance, and never replaces an existing snapshot. Its general output paths remain ignored until a snapshot is deliberately curated and added to the catalog. [docs/data.md](docs/data.md) provides setup, download, and offline preparation instructions.
-
-Current empirical predictors are the current week's **log variance proxies across industries**, plus each outcome industry's own current, four-week, and twelve-week log-variance histories. The response is the next calendar week's log variance proxy. Signed raw returns and macro variables are not currently model inputs.
-
-Saved [weekly feature panels](data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md) now include variance, volatility, log variance, the two trailing means, and daily observation counts for both return weightings. Each panel has 5,228 calendar weeks by 48 industries. Volatility is `sqrt(sum(daily_decimal_return**2))`, without annualization; log variance is `log(sum(daily_decimal_return**2) + 1e-8)`. The empirical CLI still accepts daily returns and reconstructs the same features using the shared feature builder. Verify the saved exports with `python scripts/prepare_weekly_features.py --snapshot-date 2026-10-16 --verify`.
-
-These are weekly close-to-close return-variation proxies, rather than intraday realized variance or observed latent conditional variance. Missing calendar weeks remain missing; no interpolation or future filling occurs. Every comparison uses the same complete-case dates from the full supplied panel. Report coverage loss and recognize that this conservative retrospective sample may depend on future response availability.
-
-The initializer reports log-proxy MSE. Positive variance-scale forecasts, QLIKE, economic utility, variance targeting, transaction costs, and full covariance modeling remain planned analyses in the experiment plan. Exponentiating a log forecast alone does not estimate mean variance. Industry portfolios also require an investability assessment before a trading application.
-
-## Evaluation and saved artifacts
-
-Each outer refit uses only already-realized predictor/outcome pairs. A historical segment within that window evaluates candidate models, with transformations fitted before the validation segment. The selected pipeline is refitted on the full historical window and applied to later forecast origins. Earlier test outcomes may enter subsequent refits only after realization, as in operational forecasting. The implemented horizon is one nonoverlapping period; longer horizons require explicit outcome-interval purging and additional inference.
-
-Each run saves:
-
-- `predictions.csv`: target forecasts, realized outcomes, origin/response dates when available, donor counts, and per-date loss.
-- `metrics.csv`: loss by method and fixed donor design, separately for each synthetic seed. Adaptive designs are aggregated as one policy, with donor counts marked `-1`.
-- `simulation_summary.csv`: mean loss and Monte Carlo standard error across independent seeds for synthetic runs. A small smoke grid is insufficient for inference.
-- `selections.jsonl`: historical validation loss, chosen configuration, fitted lasso support size, and training cutoffs at each refit.
-- `diagnostics.csv`: held-out factor alignment error in simulation, using a mapping fitted on historical true factors only.
-- `metadata.json`: exact configuration, dependency versions, code/configuration hashes, Git revision and dirty state, and local-data provenance.
-
-Forecast-level records support later paired comparisons and date-block inference. The initializer does not supply empirical confidence intervals or multiple-model-search corrections. Oracle and conditional-mean losses exist only for synthetic data. Curated raw, processed, and weekly feature snapshots are committed to Git with their provenance. Uncurated downloader outputs, generated results, and temporary LaTeX build products remain ignored; the proposal PDF is committed for convenient reading.
-
-## Repository layout and proposal build
+## Repository layout
 
 ```text
-proposal/             Concise proposal PDF, independent LaTeX source, bibliography
-src/factorcast/        Retrieval, simulation, data/features, models, evaluation, CLI
-configs/              Smoke, exploratory simulation, and empirical TOML grids
-tests/                Data timing, leakage, pooling, and paired-simulation checks
-scripts/              Reproduce and verify curated daily and weekly feature snapshots
-docs/data.md          Input schema, source preparation, and proxy interpretation
-docs/experiment_plan.md  Detailed experimental protocol and planned extensions
-data/README.md        Dataset catalog, snapshot coverage, and provenance links
-data/raw/             Curated original source snapshots; other downloads ignored
-data/processed/       Curated decimal-return inputs; other prepared files ignored
-data/features/        Versioned weekly features, coverage, and provenance, tracked by Git
-results/              Generated forecasts and provenance, ignored by Git
+proposal/       Current progress Markdown, generated LaTeX/PDF, historical proposal
+experiments/    Numbered experiment procedures, status, findings, and interpretations
+results/        Immutable curated Experiment 1 archive; other generated runs ignored
+configs/        Executable Experiment 1 settings and explicitly non-executable Exp2 plan
+data/           Curated raw/daily/weekly snapshots, labels, coverage, provenance
+docs/           Input reference and broader/legacy experimental toolkit
+src/factorcast/ Shared feature, model, simulation, fitting, and reporting code
+scripts/        Snapshot/feature preparation, fixed-pilot runner, progress-report build
+tests/          Data, model, chronology, leakage, and aggregation checks
 ```
-
-Build the independent proposal with a standard LaTeX installation:
-
-```bash
-cd proposal
-pdflatex -interaction=nonstopmode -halt-on-error proposal.tex
-bibtex proposal
-pdflatex -interaction=nonstopmode -halt-on-error proposal.tex
-pdflatex -interaction=nonstopmode -halt-on-error proposal.tex
-```
-
-The research sequence is to refine the proposal and literature map, run controlled simulations and a dated-data pilot, then formulate theoretical results around mechanisms that survive those experiments. Negative results about factors or selective sharing are meaningful outcomes.
