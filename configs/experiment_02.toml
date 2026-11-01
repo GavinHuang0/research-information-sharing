@@ -1,0 +1,148 @@
+# Executable Experiment 2 settings, derived without scientific changes from the October 31 plan.
+# Use scripts/run_experiment_02.py; the original planning file remains immutable.
+[plan]
+experiment_id = "02-bootstrap-history"
+status = "implementation_ready_pre_execution"
+executable = true
+protocol = "experiments/02-bootstrap-history/protocol.md"
+independent_audit_required = true
+
+[design]
+targets = ["Food", "Mach", "Banks", "Oil", "Util", "Hlth"]
+small_panel = ["Food", "Mach", "Banks", "Oil", "Util", "Hlth"]
+primary_weighting = "value"
+robustness_weighting = "equal"
+factor_count = 2
+secondary_policy_family = "experiment_1_fixed_18_per_history"
+primary_factor_policy_all_histories = "factor_pooled__M-all__O-all"
+new_global_cell_selection = false
+learned_membership_search = false
+factor_count_search = false
+
+[data]
+snapshot = "2026-10-16"
+value_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv"
+equal_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv"
+provenance = "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json"
+units = "decimal"
+weekly_frequency = "W-FRI"
+log_offset = 1e-8
+min_week_obs = 3
+own_history_weeks = [1, 4, 12]
+shared_complete_case = "all_48_industries_both_weightings_before_subsets"
+source_release_vintage_audit_required = true
+assume_response_year_2025_breakpoint = false
+
+[part_a]
+status = "exploratory_saved_forecast_inference_only"
+source_directory = "results/fixed-pilot-2026-10-27"
+factor_policy = "factor_pooled__M-all__O-all"
+comparators = ["local_history__M-none__O-target", "ridge__M-all__O-target", "elasticnet__M-all__O-target", "pls__M-all__O-target"]
+evaluation_response_start = "2022-01-01"
+evaluation_response_end = "2024-12-31"
+primary_holm_family_size = 4
+robustness_holm_family_size = 4
+new_holdout_claim = false
+
+[part_b.calendar]
+origin_start = "2000-01-01"
+development_response_end = "2024-12-31"
+new_final_response_start = "2025-01-03"
+new_final_response_end = "2026-08-28"
+first_outer_cutoff_pairs = 572
+first_cutoff_reason = "520_inner_coefficient_pairs_plus_52_validation_pairs"
+refit_every_pairs = 13
+refit_anchor = "572_plus_13k_equals_original_260_plus_13k_phase"
+same_evaluation_dates_all_histories = true
+restart_at_final_boundary = false
+uninspected_final_losses_verification_required = true
+
+[part_b.history]
+finite_coefficient_pairs = [104, 260, 520]
+include_expanding_control = true
+validation_pairs = 52
+inner_pca_fit = "all_X_pairs_before_validation_start"
+inner_finite_coefficient_fit = "last_L_pairs_before_validation_start"
+outer_pca_fit = "all_X_pairs_before_outer_cutoff"
+outer_finite_coefficient_fit = "last_L_pairs_before_outer_cutoff"
+pca_representation_shared_across_histories_and_outcome_rules = true
+donor_history = "same_L_as_target"
+own_history_baseline_window = "same_L_as_factor"
+direct_nuisance_scalers_and_coefficients_window = "same_L_as_factor"
+supervised_pls_window = "same_L_as_factor"
+pca_predictor_only_transforms = "expanding_historical_X"
+
+[part_b.tuning]
+ridge_penalties = [0.01, 0.1, 1.0, 10.0]
+elasticnet_penalties = [0.001, 0.01, 0.1]
+elasticnet_l1_ratio = 0.5
+elasticnet_tolerance = 1e-10
+elasticnet_max_iterations = 100000
+pooling_penalties = [0.01, 0.1, 1.0, 10.0, 100.0]
+penalty_score = "historical_target_validation_MSE"
+penalty_tie_break = "first_declared_penalty"
+
+[part_b.comparisons]
+inference_evaluation_stage = "new_final_only"
+development_pvalue_family_planned = false
+factor_policy_all_histories = "factor_pooled__M-all__O-all"
+reference_policies = ["local_history__M-none__O-target", "ridge__M-all__O-target", "elasticnet__M-all__O-target", "pls__M-all__O-target"]
+reference_history = "same_L_as_factor"
+factor_vs_reference_count = 16
+history_tests = ["factor_L104_vs_factor_expanding", "factor_L260_vs_factor_expanding", "factor_L520_vs_factor_expanding"]
+primary_holm_family_size = 19
+robustness_holm_family_size = 19
+final_cell_reselection = false
+equal_weighted_cell_reselection = false
+pooling_history_interactions = "secondary_exploratory"
+
+[inference]
+statistic = "G_equals_1_minus_equal_target_mean_of_factor_MSE_divided_by_named_reference_MSE"
+positive_effect_favors = "factor_or_finite_history_candidate"
+null = "population_ratio_advantage_G_less_than_or_equal_to_zero"
+alternative = "population_ratio_advantage_G_greater_than_zero"
+bootstrap = "paired_joint_date_vector_stationary_bootstrap"
+resampling_unit = "complete_date_vector_all_targets_policies_histories_and_weightings"
+replicates = 9999
+expected_block_length_dates = 13
+sensitivity_block_lengths_dates = [6, 26]
+rng = "numpy_Generator_PCG64"
+seed = 20261031
+reset_seed_per_part_stage_block_setting = true
+reuse_index_matrix_across_weightings = true
+assert_common_date_order_and_index_hash = true
+recompute_numerator_and_denominator_MSE_each_draw = true
+fixed_development_denominators = false
+null_root = "D_b_equals_G_b_minus_G_hat"
+pvalue = "(1_plus_count_D_b_ge_G_hat)/(B_plus_1)"
+interval = "basic_95_marginal_[2Ghat_minus_q975_Gb,2Ghat_minus_q025_Gb]"
+quantile_method = "linear"
+clip_interval_endpoints = false
+invalid_denominator_policy = "deterministic_abort_and_report_no_epsilon_no_draw_dropping"
+studentized = false
+refit_inside_bootstrap = false
+resample_targets_independently = false
+multiplicity = "Holm_step_down"
+alpha = 0.05
+full_pipeline_finite_sample_validity_proven = false
+significance_required_or_expected = false
+
+[validation_gate]
+before_empirical_bootstrap = ["synthetic_stationary_null_and_positive_effect_controls", "ratio_numerator_and_denominator_recomputation", "centered_root_tail_direction", "basic_interval_formula", "ties_and_finite_B_correction", "joint_resampling", "Holm19_and_Holm4", "invalid_denominator_abort"]
+before_new_forecasts = ["exact_L_and_expanding_PCA_windows", "direct_scaler_nuisance_and_PLS_windows", "no_validation_lookahead", "identical_dates", "scheduled_boundary_replay"]
+full_pipeline_calibration_guaranteed_by_tests = false
+
+[reporting]
+all_prespecified_cells = true
+primary_tests = "16_factor_vs_reference_plus_3_direct_history_tests"
+show_raw_and_adjusted_pvalues = true
+show_negative_or_inconclusive_results = true
+show_block_length_sensitivity = true
+equal_weighted_analysis = "separate_robustness_family_not_independent_replication"
+economic_or_latent_variance_claim = false
+
+[execution]
+run_id = "experiment-02-2026-11-01"
+source_plan = "configs/experiment_02_plan.toml"
+authorized_date = "2026-11-01"
+source_planning_commit = "003f07424abed9b65119e771006ea6638a61e750"

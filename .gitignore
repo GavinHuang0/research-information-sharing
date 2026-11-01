@@ -19,6 +19,7 @@ data/processed/kenneth-french/*
 results/*
 !results/.gitkeep
 !results/fixed-pilot-2026-10-27/
+!results/experiment-02-2026-11-01/
 proposal/*.aux
 proposal/*.bbl
 proposal/*.blg
