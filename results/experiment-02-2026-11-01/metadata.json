@@ -1,0 +1,61 @@
+{
+  "bootstrap": "joint stationary-date bootstrap; no model refitting in draws",
+  "fingerprint": {
+    "code_and_protocol_sha256_lf": {
+      "configs/experiment_02_plan.toml": "7bfe85a100fa465aeec15777619e416c298642df2e04d9af5b41bd5f3bb43090",
+      "experiments/02-bootstrap-history/protocol.md": "e2682002177c7aee7655a8360b1c8c58ce77aefaedcf76b3bb43a6b664db9390",
+      "requirements-analysis-lock.txt": "b31eb3010807afdb2b1cd61802a417065ad1955a46333be3753db8eb6c689325",
+      "requirements-lock.txt": "250b752b39ba71f6b256a916b33ca8a8b4dba91c13083d711095b6e900ef36af",
+      "scripts/run_experiment_02.py": "4e94a830a8ef466141152b56a08bad1d7ad21a46cc0f1ed7429747201ea4ee4c",
+      "scripts/validate_bootstrap_synthetic.py": "70500236991b40c3378d6f901e73c333b3b0be5d27c605fab6929abf4f264531",
+      "src/factorcast/__init__.py": "c09da4796c766bbe6addb2692cd8e95eca8873a236e1b034ea34344ed96a1a3f",
+      "src/factorcast/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "src/factorcast/bootstrap.py": "decf2b0e38258779bfaf41dfa6b8066bc0c27ab4a0237cd39887a2e418a5ad33",
+      "src/factorcast/cli.py": "f69aa1286be93059c68e578a6132fc68c40b091d6726975274dd8bce990b3e0e",
+      "src/factorcast/data.py": "ab58d230603314a8fbead8ae37926797ca0242906d40050c717ce4c0b9230119",
+      "src/factorcast/evaluation.py": "8a01aafc5e440b9786d7b923e56b2b5b8a9d0fe4e3b405d14be3f4cbd6e575ac",
+      "src/factorcast/experiments.py": "4ac5401b3acc7a463f44b2656c0069ea0c40a46f54f1b23dccfd462e08b8a2fb",
+      "src/factorcast/features.py": "5a66d4d978d9175873b904306ad84a268593215277f77e16e547aea1e323a963",
+      "src/factorcast/history.py": "0884acfd8320851e65b989692f9f89c911de453a5046ce187dc493806c1b6f19",
+      "src/factorcast/history_reporting.py": "3ab1f0858b9fb002ce70c74a1ceff3c036e4bf5393693ee68d189178df99d254",
+      "src/factorcast/models.py": "8f4ec4bb06531843970a343ffc089ca1ee1d84af066c8acc5ecbc919709fdfab",
+      "src/factorcast/pilot.py": "1157955785f981a868a84a644fd14312cb3374592685abaf3fc7a565daa70dc5",
+      "src/factorcast/pilot_reporting.py": "9b25c9ffa1cdd7d296820f61ea01600abd4b39444e1d51fadcae233dfe74397e",
+      "src/factorcast/retrieval.py": "774252b581a98324a21acf867d110c38291b081efeec6a25f64b702e504a227f",
+      "src/factorcast/simulation.py": "06157570e07fafe08eabed4602721512ad74b263882d75e1d2d8d62f010f7d5e"
+    },
+    "config_sha256_lf": "ebe13cd693dcf176096a07cf3c7b8a90e5f872c0fcfdf9309428ce9256e1605d",
+    "versions": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.0"
+    }
+  },
+  "implementation_commit": "750dd8db936d98813f63a05400bda7bc834ec667",
+  "inputs": {
+    "daily_provenance": {
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json",
+      "sha256": "7843fdf47a51489d4fb9b6ff2089222bb31695a51c4ceb6e0d8fcf822b028c9e"
+    },
+    "equal": {
+      "bytes": 9171931,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv",
+      "sha256": "72b10111b3c8cd8d253edb8f17c6c7abd8ad87cabad7f7cc517ce39fac3d6232"
+    },
+    "experiment_1_final": {
+      "path": "results/fixed-pilot-2026-10-27/final/predictions.csv.gz",
+      "sha256": "70689316c5d4b97dd2f174ee7025158ef7fa356fdbb014e5871709b6fc967ee9"
+    },
+    "value": {
+      "bytes": 9190339,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv",
+      "sha256": "5ea6269369a30c3274eb930f386c4a1f1f67619cb66013fa83c21f2ecee0ab6f"
+    }
+  },
+  "loss": "held-out target squared log-variance errors",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "started_at_utc": "2026-11-01T04:42:55.135229+00:00"
+}

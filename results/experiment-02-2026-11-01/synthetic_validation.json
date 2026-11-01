@@ -1,0 +1,149 @@
+{
+  "elapsed_seconds": 1.6077201999723911,
+  "interpretation": "Rates have Monte Carlo uncertainty and describe only these stationary synthetic losses. They do not prove nominal size/coverage for the full expanding-PCA, rolling/expanding coefficient, tuned, nested forecast pipeline. Report adverse diagnostics without changing the primary block length or selecting a favorable seed.",
+  "not_Holm4_or_Holm19_family_calibration": true,
+  "not_full_learning_pipeline_calibration": true,
+  "scenarios": [
+    {
+      "degenerate_bootstrap_count": 0,
+      "marginal_basic_95_coverage": {
+        "count": 90,
+        "monte_carlo_standard_error": 0.03,
+        "rate": 0.9,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.8256343384950865,
+          0.9447708629393249
+        ]
+      },
+      "mean_estimated_effect": -0.00041989379458081457,
+      "mean_interval_width": 0.1290714426035424,
+      "mean_raw_p_value": 0.48452,
+      "n_dates": 87,
+      "n_targets": 6,
+      "rejection": {
+        "count": 11,
+        "monte_carlo_standard_error": 0.03128897569432403,
+        "rate": 0.11,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.06254196357064568,
+          0.18631296503080313
+        ]
+      },
+      "scenario": "equal_marginal_null",
+      "true_population_ratio_advantage": 0.0
+    },
+    {
+      "degenerate_bootstrap_count": 0,
+      "marginal_basic_95_coverage": {
+        "count": 90,
+        "monte_carlo_standard_error": 0.03,
+        "rate": 0.9,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.8256343384950865,
+          0.9447708629393249
+        ]
+      },
+      "mean_estimated_effect": 0.13893061763669512,
+      "mean_interval_width": 0.11109282017755799,
+      "mean_raw_p_value": 0.0033800000000000006,
+      "n_dates": 87,
+      "n_targets": 6,
+      "rejection": {
+        "count": 99,
+        "monte_carlo_standard_error": 0.009949874371066205,
+        "rate": 0.99,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.9455138038212946,
+          0.9982325679358593
+        ]
+      },
+      "scenario": "shifted_positive",
+      "true_population_ratio_advantage": 0.1392920235749422
+    },
+    {
+      "degenerate_bootstrap_count": 0,
+      "marginal_basic_95_coverage": {
+        "count": 81,
+        "monte_carlo_standard_error": 0.03923009049186606,
+        "rate": 0.81,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.7222115462093562,
+          0.8748524849023126
+        ]
+      },
+      "mean_estimated_effect": -0.007169278219960103,
+      "mean_interval_width": 0.10548360347416144,
+      "mean_raw_p_value": 0.5246999999999999,
+      "n_dates": 156,
+      "n_targets": 6,
+      "rejection": {
+        "count": 6,
+        "monte_carlo_standard_error": 0.023748684174075833,
+        "rate": 0.06,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.027786123963188192,
+          0.1247681544589592
+        ]
+      },
+      "scenario": "equal_marginal_null",
+      "true_population_ratio_advantage": 0.0
+    },
+    {
+      "degenerate_bootstrap_count": 0,
+      "marginal_basic_95_coverage": {
+        "count": 81,
+        "monte_carlo_standard_error": 0.03923009049186606,
+        "rate": 0.81,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.7222115462093562,
+          0.8748524849023126
+        ]
+      },
+      "mean_estimated_effect": 0.13312136862581206,
+      "mean_interval_width": 0.09079057889226866,
+      "mean_raw_p_value": 0.0029800000000000004,
+      "n_dates": 156,
+      "n_targets": 6,
+      "rejection": {
+        "count": 100,
+        "monte_carlo_standard_error": 0.0,
+        "rate": 1.0,
+        "replications": 100,
+        "wilson_95_interval": [
+          0.9630065017930143,
+          1.0
+        ]
+      },
+      "scenario": "shifted_positive",
+      "true_population_ratio_advantage": 0.1392920235749422
+    }
+  ],
+  "scope": "synthetic_stationary_loss_process_single_comparison_diagnostics_only",
+  "settings": {
+    "block_length_selected_from_diagnostics": false,
+    "bootstrap_indices_reused_across_synthetic_replications": true,
+    "bootstrap_replicates": 499,
+    "bootstrap_seed": 20261031,
+    "data_seed_rule": "20261101_plus_n_dates",
+    "expected_block_length": 13,
+    "interval": "basic_two_sided_95_marginal_linear_quantiles",
+    "monte_carlo_replications": 100,
+    "n_dates": [
+      87,
+      156
+    ],
+    "no_empirical_data_or_models": true,
+    "null": "exchangeable_stationary_model_shocks_equal_marginal_loss_means",
+    "numpy_version": "2.3.5",
+    "positive_shift_log_scale": -0.15,
+    "rng": "numpy.Generator(PCG64)",
+    "test": "single_unadjusted_one_sided_p_below_0.05_and_positive_effect"
+  }
+}

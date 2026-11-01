@@ -1,0 +1,128 @@
+[
+  {
+    "measurement_panel": "S",
+    "method": "factor_separate",
+    "n_factors": 2,
+    "outcome_panel": "target",
+    "policy_id": "factor_separate__M-S__O-target"
+  },
+  {
+    "measurement_panel": "S",
+    "method": "factor_pooled",
+    "n_factors": 2,
+    "outcome_panel": "S",
+    "policy_id": "factor_pooled__M-S__O-S"
+  },
+  {
+    "measurement_panel": "S",
+    "method": "factor_pooled",
+    "n_factors": 2,
+    "outcome_panel": "all",
+    "policy_id": "factor_pooled__M-S__O-all"
+  },
+  {
+    "measurement_panel": "S",
+    "method": "factor_partial",
+    "n_factors": 2,
+    "outcome_panel": "S",
+    "policy_id": "factor_partial__M-S__O-S"
+  },
+  {
+    "measurement_panel": "S",
+    "method": "factor_partial",
+    "n_factors": 2,
+    "outcome_panel": "all",
+    "policy_id": "factor_partial__M-S__O-all"
+  },
+  {
+    "measurement_panel": "S",
+    "method": "ridge",
+    "n_factors": 0,
+    "outcome_panel": "target",
+    "policy_id": "ridge__M-S__O-target"
+  },
+  {
+    "measurement_panel": "S",
+    "method": "elasticnet",
+    "n_factors": 0,
+    "outcome_panel": "target",
+    "policy_id": "elasticnet__M-S__O-target"
+  },
+  {
+    "measurement_panel": "S",
+    "method": "pls",
+    "n_factors": 2,
+    "outcome_panel": "target",
+    "policy_id": "pls__M-S__O-target"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "factor_separate",
+    "n_factors": 2,
+    "outcome_panel": "target",
+    "policy_id": "factor_separate__M-all__O-target"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "factor_pooled",
+    "n_factors": 2,
+    "outcome_panel": "S",
+    "policy_id": "factor_pooled__M-all__O-S"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "factor_pooled",
+    "n_factors": 2,
+    "outcome_panel": "all",
+    "policy_id": "factor_pooled__M-all__O-all"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "factor_partial",
+    "n_factors": 2,
+    "outcome_panel": "S",
+    "policy_id": "factor_partial__M-all__O-S"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "factor_partial",
+    "n_factors": 2,
+    "outcome_panel": "all",
+    "policy_id": "factor_partial__M-all__O-all"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "ridge",
+    "n_factors": 0,
+    "outcome_panel": "target",
+    "policy_id": "ridge__M-all__O-target"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "elasticnet",
+    "n_factors": 0,
+    "outcome_panel": "target",
+    "policy_id": "elasticnet__M-all__O-target"
+  },
+  {
+    "measurement_panel": "all",
+    "method": "pls",
+    "n_factors": 2,
+    "outcome_panel": "target",
+    "policy_id": "pls__M-all__O-target"
+  },
+  {
+    "measurement_panel": "none",
+    "method": "local_history",
+    "n_factors": 0,
+    "outcome_panel": "target",
+    "policy_id": "local_history__M-none__O-target"
+  },
+  {
+    "measurement_panel": "none",
+    "method": "persistence",
+    "n_factors": 0,
+    "outcome_panel": "target",
+    "policy_id": "persistence__M-none__O-target"
+  }
+]
