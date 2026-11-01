@@ -1,0 +1,47 @@
+{
+  "development_files": {
+    "aggregate_summary.csv": "e245b277e078b404a257b0c3ab66591b9bb07d9118e6b2792977584a8c29cef0",
+    "predictions.csv.gz": "f2c65297cbd241f3815912dcf1d5e22725ad1609794ed684ec3838ed7a0ba239",
+    "started.json": "a9137f1c7fdd8e5c6322c5a0b145fa72559da5e483d463b292d8635933824bd7",
+    "target_summary.csv": "1baae135a683955235029328b18db855464443f1a839fd5495593148211c5ebd",
+    "timing.json": "8724203cfb91cb0b312d8dc3cbb795dcbf47cc9349d5edc0d1c276e115531ba7",
+    "tuning.jsonl.gz": "89e1740557f168df06ded7dd0a387e457003421b5434fc4833390867fad6a239"
+  },
+  "final_selection_permitted": false,
+  "fingerprint": {
+    "code_and_protocol_sha256_lf": {
+      "configs/experiment_02_plan.toml": "7bfe85a100fa465aeec15777619e416c298642df2e04d9af5b41bd5f3bb43090",
+      "experiments/02-bootstrap-history/protocol.md": "e2682002177c7aee7655a8360b1c8c58ce77aefaedcf76b3bb43a6b664db9390",
+      "requirements-analysis-lock.txt": "b31eb3010807afdb2b1cd61802a417065ad1955a46333be3753db8eb6c689325",
+      "requirements-lock.txt": "250b752b39ba71f6b256a916b33ca8a8b4dba91c13083d711095b6e900ef36af",
+      "scripts/run_experiment_02.py": "4e94a830a8ef466141152b56a08bad1d7ad21a46cc0f1ed7429747201ea4ee4c",
+      "scripts/validate_bootstrap_synthetic.py": "70500236991b40c3378d6f901e73c333b3b0be5d27c605fab6929abf4f264531",
+      "src/factorcast/__init__.py": "c09da4796c766bbe6addb2692cd8e95eca8873a236e1b034ea34344ed96a1a3f",
+      "src/factorcast/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "src/factorcast/bootstrap.py": "decf2b0e38258779bfaf41dfa6b8066bc0c27ab4a0237cd39887a2e418a5ad33",
+      "src/factorcast/cli.py": "f69aa1286be93059c68e578a6132fc68c40b091d6726975274dd8bce990b3e0e",
+      "src/factorcast/data.py": "ab58d230603314a8fbead8ae37926797ca0242906d40050c717ce4c0b9230119",
+      "src/factorcast/evaluation.py": "8a01aafc5e440b9786d7b923e56b2b5b8a9d0fe4e3b405d14be3f4cbd6e575ac",
+      "src/factorcast/experiments.py": "4ac5401b3acc7a463f44b2656c0069ea0c40a46f54f1b23dccfd462e08b8a2fb",
+      "src/factorcast/features.py": "5a66d4d978d9175873b904306ad84a268593215277f77e16e547aea1e323a963",
+      "src/factorcast/history.py": "0884acfd8320851e65b989692f9f89c911de453a5046ce187dc493806c1b6f19",
+      "src/factorcast/history_reporting.py": "3ab1f0858b9fb002ce70c74a1ceff3c036e4bf5393693ee68d189178df99d254",
+      "src/factorcast/models.py": "8f4ec4bb06531843970a343ffc089ca1ee1d84af066c8acc5ecbc919709fdfab",
+      "src/factorcast/pilot.py": "1157955785f981a868a84a644fd14312cb3374592685abaf3fc7a565daa70dc5",
+      "src/factorcast/pilot_reporting.py": "9b25c9ffa1cdd7d296820f61ea01600abd4b39444e1d51fadcae233dfe74397e",
+      "src/factorcast/retrieval.py": "774252b581a98324a21acf867d110c38291b081efeec6a25f64b702e504a227f",
+      "src/factorcast/simulation.py": "06157570e07fafe08eabed4602721512ad74b263882d75e1d2d8d62f010f7d5e"
+    },
+    "config_sha256_lf": "ebe13cd693dcf176096a07cf3c7b8a90e5f872c0fcfdf9309428ce9256e1605d",
+    "versions": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.0"
+    }
+  },
+  "frozen_at_utc": "2026-11-01T04:52:12.998098+00:00",
+  "no_new_final_scores_computed": true,
+  "primary_policy": "factor_pooled__M-all__O-all"
+}

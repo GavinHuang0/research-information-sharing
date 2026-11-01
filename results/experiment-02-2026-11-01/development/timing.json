@@ -1,0 +1,17 @@
+{
+  "blocks": 112,
+  "elapsed_seconds": 404.8826248999685,
+  "histories": [
+    "104",
+    "260",
+    "520",
+    "expanding"
+  ],
+  "pca_fits": 448,
+  "per_weighting_seconds": {
+    "equal": 203.0819866999518,
+    "value": 201.8003363001626
+  },
+  "prediction_rows": 620352,
+  "tuning_rows": 48384
+}

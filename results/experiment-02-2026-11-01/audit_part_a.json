@@ -1,0 +1,356 @@
+{
+  "audit": "independent_Part_A_saved_output_recomputation",
+  "audited_at_utc": "2026-11-01T04:46:50.026031+00:00",
+  "blocks": [
+    13,
+    6,
+    26
+  ],
+  "bootstrap_replicates": 9999,
+  "checks": [
+    "frozen_manifest_identical_to_commit_c48482a",
+    "freeze_commit_precedes_partA_started_event",
+    "all_frozen_code_config_input_hashes",
+    "all_PartA_stage_manifest_hashes",
+    "shared_exact_indices_all_targets_methods_weightings",
+    "all_observed_ratio_effects",
+    "both_denominators_recomputed_per_draw",
+    "all_centered_root_tail_counts_and_plusone_pvalues",
+    "all_basic95_interval_endpoints_and_extrema",
+    "all_Holm4_adjustments_and_rejection_indicators",
+    "all36_Experiment1_manifest_files_unchanged"
+  ],
+  "dates_per_comparison": 156,
+  "freeze_commit": "c48482afbb6796b59519b9fad036415b4352b87b",
+  "freeze_commit_at_utc": "2026-11-01T04:43:10+00:00",
+  "index_matrices_reconstructed_exactly": 3,
+  "interpretation": [
+    "At primary b13 only value-weighted factor versus own-history has a favorable Holm4 rejection; none of the three value direct-method comparisons reject, and no equal-weighted comparison rejects.",
+    "This adjusted-rejection pattern is unchanged at b6 and b26. Marginal intervals can exclude zero without the corresponding Holm family rejecting: e.g. value ridge and equal own-history at b26.",
+    "PartA remains post-pilot exploratory. Adverse finite-sample synthetic diagnostics mean nominal calibration and family-wise size are not established; small adjusted pvalues are not a full-pipeline inferential guarantee."
+  ],
+  "part_a_started_at_utc": "2026-11-01T04:43:14.148590+00:00",
+  "results": [
+    {
+      "basic_95_interval_pct": [
+        1.713718765152525,
+        6.916947545173155
+      ],
+      "block_length": 13,
+      "effect_pct": 4.273266951135934,
+      "holm_p": 0.0028,
+      "raw_p": 0.0006999999999999,
+      "reference": "local_history__M-none__O-target",
+      "reject_adjusted": true,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.0682910555340272,
+        2.9399285155170243
+      ],
+      "block_length": 13,
+      "effect_pct": 1.4166664301647924,
+      "holm_p": 0.0914999999999999,
+      "raw_p": 0.0304999999999999,
+      "reference": "ridge__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.1964256498658896,
+        3.9263168312728816
+      ],
+      "block_length": 13,
+      "effect_pct": 1.848496611651118,
+      "holm_p": 0.0914999999999999,
+      "raw_p": 0.0393,
+      "reference": "elasticnet__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.948227434110601,
+        3.5542793993996344
+      ],
+      "block_length": 13,
+      "effect_pct": 1.1789211266685862,
+      "holm_p": 0.1406999999999999,
+      "raw_p": 0.1406999999999999,
+      "reference": "pls__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.135194948450483,
+        3.867480482522988
+      ],
+      "block_length": 13,
+      "effect_pct": 1.6562482650469,
+      "holm_p": 0.1487999999999999,
+      "raw_p": 0.0371999999999999,
+      "reference": "local_history__M-none__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -2.1703729363692297,
+        0.7123363991061625
+      ],
+      "block_length": 13,
+      "effect_pct": -0.770160177425283,
+      "holm_p": 1.0,
+      "raw_p": 0.8428999999999999,
+      "reference": "ridge__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -2.4088882753931027,
+        1.2004348026988354
+      ],
+      "block_length": 13,
+      "effect_pct": -0.6361328439616453,
+      "holm_p": 1.0,
+      "raw_p": 0.7436,
+      "reference": "elasticnet__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -1.8804332235969567,
+        2.0046670201268517
+      ],
+      "block_length": 13,
+      "effect_pct": 0.0300400338597017,
+      "holm_p": 1.0,
+      "raw_p": 0.4822,
+      "reference": "pls__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        1.4870966020929384,
+        7.136710731378996
+      ],
+      "block_length": 6,
+      "effect_pct": 4.273266951135934,
+      "holm_p": 0.002,
+      "raw_p": 0.0005,
+      "reference": "local_history__M-none__O-target",
+      "reject_adjusted": true,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.1981242122694425,
+        3.0193632376249524
+      ],
+      "block_length": 6,
+      "effect_pct": 1.4166664301647924,
+      "holm_p": 0.1310999999999999,
+      "raw_p": 0.0437,
+      "reference": "ridge__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.3787454512487193,
+        3.974341196194594
+      ],
+      "block_length": 6,
+      "effect_pct": 1.848496611651118,
+      "holm_p": 0.1310999999999999,
+      "raw_p": 0.0514999999999999,
+      "reference": "elasticnet__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -1.2392867335972502,
+        3.7837341491522936
+      ],
+      "block_length": 6,
+      "effect_pct": 1.1789211266685862,
+      "holm_p": 0.1756,
+      "raw_p": 0.1756,
+      "reference": "pls__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.4014518782648732,
+        4.022407029397192
+      ],
+      "block_length": 6,
+      "effect_pct": 1.6562482650469,
+      "holm_p": 0.2384,
+      "raw_p": 0.0596,
+      "reference": "local_history__M-none__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -2.309834308924559,
+        0.8049577348156457
+      ],
+      "block_length": 6,
+      "effect_pct": -0.770160177425283,
+      "holm_p": 1.0,
+      "raw_p": 0.822,
+      "reference": "ridge__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -2.50688115837736,
+        1.2595056448769804
+      ],
+      "block_length": 6,
+      "effect_pct": -0.6361328439616453,
+      "holm_p": 1.0,
+      "raw_p": 0.7331999999999999,
+      "reference": "elasticnet__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -2.1679715264724866,
+        2.2064011161062997
+      ],
+      "block_length": 6,
+      "effect_pct": 0.0300400338597017,
+      "holm_p": 1.0,
+      "raw_p": 0.4839999999999999,
+      "reference": "pls__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        1.9889258247377248,
+        6.61841889345291
+      ],
+      "block_length": 26,
+      "effect_pct": 4.273266951135934,
+      "holm_p": 0.0004,
+      "raw_p": 0.0001,
+      "reference": "local_history__M-none__O-target",
+      "reject_adjusted": true,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        0.08592784851425,
+        2.784260373748546
+      ],
+      "block_length": 26,
+      "effect_pct": 1.4166664301647924,
+      "holm_p": 0.0531,
+      "raw_p": 0.0177,
+      "reference": "ridge__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.0156917510500356,
+        3.8499971730941014
+      ],
+      "block_length": 26,
+      "effect_pct": 1.848496611651118,
+      "holm_p": 0.0531,
+      "raw_p": 0.0262,
+      "reference": "elasticnet__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        -0.6578786478348391,
+        3.351919268474629
+      ],
+      "block_length": 26,
+      "effect_pct": 1.1789211266685862,
+      "holm_p": 0.1126999999999999,
+      "raw_p": 0.1126999999999999,
+      "reference": "pls__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "value"
+    },
+    {
+      "basic_95_interval_pct": [
+        0.0809694609841239,
+        3.6063524168637215
+      ],
+      "block_length": 26,
+      "effect_pct": 1.6562482650469,
+      "holm_p": 0.08,
+      "raw_p": 0.02,
+      "reference": "local_history__M-none__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -1.9577280049942785,
+        0.6576873668786932
+      ],
+      "block_length": 26,
+      "effect_pct": -0.770160177425283,
+      "holm_p": 1.0,
+      "raw_p": 0.8657,
+      "reference": "ridge__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -2.2695783910635576,
+        1.115198346631766
+      ],
+      "block_length": 26,
+      "effect_pct": -0.6361328439616453,
+      "holm_p": 1.0,
+      "raw_p": 0.7632999999999999,
+      "reference": "elasticnet__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    },
+    {
+      "basic_95_interval_pct": [
+        -1.6535200216749415,
+        1.860340056638564
+      ],
+      "block_length": 26,
+      "effect_pct": 0.0300400338597017,
+      "holm_p": 1.0,
+      "raw_p": 0.4737,
+      "reference": "pls__M-all__O-target",
+      "reject_adjusted": false,
+      "weighting": "equal"
+    }
+  ],
+  "results_sha256": "51bb06699f6bc2259452e2f535ce4609eee6a9996b20fe0f0e2077131dde71d5",
+  "rows_checked": 24,
+  "scope": "No model fits or new empirical bootstrap design; independently reconstructed saved RNG indices and recalculated declared statistics from saved Experiment1 forecasts.",
+  "status": "passed",
+  "targets": 6,
+  "weightings": [
+    "value",
+    "equal"
+  ]
+}
