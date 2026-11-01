@@ -1,0 +1,15 @@
+{"event": "refit_complete", "weighting": "value", "stage": "final", "refit_index": 1287, "n_origins": 10, "completed_blocks": 1, "total_blocks": 14, "elapsed_seconds": 3.7396044000051916}
+{"event": "refit_complete", "weighting": "value", "stage": "final", "refit_index": 1300, "n_origins": 13, "completed_blocks": 2, "total_blocks": 14, "elapsed_seconds": 7.445574899902567}
+{"event": "refit_complete", "weighting": "value", "stage": "final", "refit_index": 1313, "n_origins": 13, "completed_blocks": 3, "total_blocks": 14, "elapsed_seconds": 11.303850199794397}
+{"event": "refit_complete", "weighting": "value", "stage": "final", "refit_index": 1326, "n_origins": 13, "completed_blocks": 4, "total_blocks": 14, "elapsed_seconds": 14.960022900020704}
+{"event": "refit_complete", "weighting": "value", "stage": "final", "refit_index": 1339, "n_origins": 13, "completed_blocks": 5, "total_blocks": 14, "elapsed_seconds": 18.563719399971887}
+{"event": "refit_complete", "weighting": "value", "stage": "final", "refit_index": 1352, "n_origins": 13, "completed_blocks": 6, "total_blocks": 14, "elapsed_seconds": 22.333071899833158}
+{"event": "refit_complete", "weighting": "value", "stage": "final", "refit_index": 1365, "n_origins": 12, "completed_blocks": 7, "total_blocks": 14, "elapsed_seconds": 25.99662089999765}
+{"event": "refit_complete", "weighting": "equal", "stage": "final", "refit_index": 1287, "n_origins": 10, "completed_blocks": 8, "total_blocks": 14, "elapsed_seconds": 29.60791869997047}
+{"event": "refit_complete", "weighting": "equal", "stage": "final", "refit_index": 1300, "n_origins": 13, "completed_blocks": 9, "total_blocks": 14, "elapsed_seconds": 33.456470399862155}
+{"event": "refit_complete", "weighting": "equal", "stage": "final", "refit_index": 1313, "n_origins": 13, "completed_blocks": 10, "total_blocks": 14, "elapsed_seconds": 37.10113269998692}
+{"event": "refit_complete", "weighting": "equal", "stage": "final", "refit_index": 1326, "n_origins": 13, "completed_blocks": 11, "total_blocks": 14, "elapsed_seconds": 41.02710899990052}
+{"event": "refit_complete", "weighting": "equal", "stage": "final", "refit_index": 1339, "n_origins": 13, "completed_blocks": 12, "total_blocks": 14, "elapsed_seconds": 44.94077409990132}
+{"event": "refit_complete", "weighting": "equal", "stage": "final", "refit_index": 1352, "n_origins": 13, "completed_blocks": 13, "total_blocks": 14, "elapsed_seconds": 48.63899559993297}
+{"event": "refit_complete", "weighting": "equal", "stage": "final", "refit_index": 1365, "n_origins": 12, "completed_blocks": 14, "total_blocks": 14, "elapsed_seconds": 52.483659899793565}
+{"event": "stage_complete", "stage": "final", "timing": {"elapsed_seconds": 52.48370320000686, "blocks": 14, "prediction_rows": 75168, "tuning_rows": 6048, "pca_fits": 56, "per_weighting_seconds": {"value": 25.99609570018947, "equal": 26.487034999998286}, "histories": ["104", "260", "520", "expanding"]}, "time_utc": "2026-11-01T04:54:02.209209+00:00"}

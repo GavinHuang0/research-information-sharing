@@ -2,13 +2,13 @@
 
 This project asks when industries should play different roles in **measuring common conditions** and **estimating how those conditions predict a target's future risk**. A broad measurement panel may be useful even when forecast coefficients should remain target-specific. Separate donor selection is a research hypothesis, not an established result.
 
-## Current progress: October 31, 2026
+## Current progress: November 1, 2026
 
 - Archived and labeled the French 48-industry daily data, in value- and equal-weighted forms, with raw downloads, industry definitions, coverage, units, and checksums.
 - Constructed reproducible weekly variance/volatility features and causal own-history controls.
 - **Completed Experiment 1:** a fixed six-target pilot with two PCs and 18 prespecified procedures. Development selection was frozen before the 2022-2024 evaluation. Its selected all-48/common-slope factor procedure improved the equal-target MSE ratio by **4.27%** versus own-history regression; equal-weighted robustness improvement was **1.66%**, including a **2.95% deterioration for Banks**.
 - Broader measurement explains most of the main comparison: separate slopes improve 1.79% with six measurement industries and 4.12% with 48. Common slopes across all outcomes raise this to 4.27%. Narrower outcome sharing did not improve the primary aggregate; benefits differ by target.
-- **Experiment 2 is documented but not implemented or run.** It proposes paired bootstrap p-values/intervals and a coefficient-history study. No significance claim has been established, and no bootstrap results have been computed.
+- **Completed Experiment 2:** audited paired-bootstrap uncertainty and coefficient-history comparisons. At primary block length 13, no history establishes a factor advantage over matched own history or ridge in 2025–August 2026. L=104 passes the declared adjusted-p rule against elastic net (8.57% gain, p=0.0019) and PLS (13.74%, p=0.0019), while no finite history beats the expanding factor control. Bounded synthetic diagnostics showed adverse rejection/coverage behavior; nominal calibration is not established, so p-values and intervals remain approximate.
 
 ## Reading guide
 
@@ -19,7 +19,7 @@ This project asks when industries should play different roles in **measuring com
 | All experiment records | [Experiment index](experiments/README.md) |
 | What Experiment 1 actually did | [Overview](experiments/01-fixed-s6-pilot/README.md), [precise executed procedure](experiments/01-fixed-s6-pilot/protocol.md) |
 | Experiment 1 findings and caveats | [Interpretation](experiments/01-fixed-s6-pilot/results.md), [full result archive and figures](results/fixed-pilot-2026-10-27/README.md) |
-| Exact procedures proposed for Experiment 2 | [Overview](experiments/02-bootstrap-history/README.md), [detailed protocol](experiments/02-bootstrap-history/protocol.md), [non-executable planning TOML](configs/experiment_02_plan.toml) |
+| Experiment 2 procedures and execution status | [Overview](experiments/02-bootstrap-history/README.md), [frozen design](experiments/02-bootstrap-history/protocol.md), [execution record](experiments/02-bootstrap-history/executed.md), [results record](experiments/02-bootstrap-history/results.md) |
 | Inputs and feature definitions | [Data catalog](data/README.md), [input documentation](docs/data.md), [weekly features](data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md) |
 | Broader research toolkit and legacy grids | [Earlier experiment plan](docs/experiment_plan.md) |
 
@@ -35,15 +35,17 @@ The common calendar contains 1,290 aligned predictor/outcome pairs: 260 initiali
 
 The archive includes all six targets and all prespecified comparisons, forecast-level losses, tuning records, code/input hashes, freeze timestamps, 58-test validation, and independent timing/aggregation audits. Its findings are descriptive point estimates, not proof of latent-factor recovery, universal factor superiority, or trading value.
 
-## Experiment 2: planned uncertainty and history study
+## Experiment 2: completed uncertainty and history study
 
-Part A proposes a stationary bootstrap of saved Experiment 1 losses. Because 2022-2024 results have been inspected, its p-values would be exploratory post-pilot inference.
+Part A applies the frozen stationary-bootstrap design to saved Experiment 1 losses. Because 2022-2024 results have been inspected, its p-values remain exploratory post-pilot inference.
 
 Part B fixes Experiment 1's selected all-48/common-slope factor policy and varies supervised coefficient histories: **104, 260, 520 pairs, and expanding**. Predictor-only PCA history stays expanding and identical across these comparisons. Own-history, ridge, elastic net, and PLS references receive matched coefficient windows. A common 572-pair start permits 520 inner-training pairs plus 52 validation pairs.
 
-The proposed inference resamples joint date vectors across targets, methods, histories, and both weightings, recomputes target MSE ratios, and uses null-centered one-sided bootstrap p-values. A primary Holm family covers 16 factor-versus-reference comparisons and three direct history comparisons. The protocol fixes block lengths, draw count, seeds, intervals, hypotheses, validation gates, and interpretation limits. It permits unfavorable or inconclusive outcomes rather than requiring significance.
+The inference resamples joint date vectors across targets, methods, histories, and both weightings, recomputes target MSE ratios, and uses null-centered one-sided bootstrap p-values. A primary Holm family covers 16 factor-versus-reference comparisons and three direct history comparisons. The protocol fixes block lengths, draw count, seeds, intervals, hypotheses, validation gates, and interpretation limits. It permits unfavorable or inconclusive outcomes rather than requiring significance.
 
-The proposed new evaluation period is January 2025 through the last complete August 2026 week, conditional on verifying that its forecast scores are uninspected and freezing the procedure first. The plan is **not executable by the existing runners**; this update creates no new forecasts or statistical results.
+The new evaluation period is January 2025 through the last complete August 2026 week, with uninspected-loss evidence and procedure freezes recorded before scoring. A dedicated Experiment 2 runner and executable configuration implement the design; the original planning TOML and protocol remain unchanged. The [execution record](experiments/02-bootstrap-history/executed.md) documents completed gates, freezes, stage chronology, audits, and reproduction commands. Holm adjustment does not repair the unestablished marginal p-value calibration revealed by synthetic diagnostics.
+
+The exploratory Part A analysis passes the declared primary Holm rule only for value-weighted factor versus own history, not the direct references; equal-weighted Part A has no adjusted rejection. The new-period primary Part B gains are selective, and shortening the coefficient window does not establish an improvement over the same factor procedure with expanding history. A larger gain over a weaker short-history baseline is not evidence of a better factor forecast. [All contrasts, target heterogeneity, and sensitivities](experiments/02-bootstrap-history/results.md) remain visible, with no final winner reselection or universal factor claim.
 
 ## Data and feature conventions
 
@@ -69,9 +71,9 @@ python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output res
 python scripts/run_fixed_pilot.py --config configs/fixed_pilot.toml --output results/reproduction-01 --stage report
 ```
 
-The final/report stages verify the frozen code, configuration, inputs, and development artifacts. On Windows use `.\.venv\Scripts\python.exe` in place of `python`. These commands are documentation, not instructions to execute Experiment 2.
+The final/report stages verify the frozen code, configuration, inputs, and development artifacts. On Windows use `.\.venv\Scripts\python.exe` in place of `python`. These commands reproduce Experiment 1; Experiment 2 has its own [execution record](experiments/02-bootstrap-history/executed.md).
 
-A small synthetic pipeline check remains available with `factorcast simulate --config configs/smoke.toml --output results/smoke-new`. Synthetic checks are software validation, not additional empirical findings. The legacy `factorcast empirical` starter still uses prefix panels and adaptive searches; it is not the fixed first-pilot runner or a runner for Experiment 2.
+A small synthetic pipeline check remains available with `factorcast simulate --config configs/smoke.toml --output results/smoke-new`. Synthetic checks are software validation, not additional empirical findings. The legacy `factorcast empirical` starter still uses prefix panels and adaptive searches; the dedicated experiment runners implement the fixed scientific designs.
 
 ## Progress-report synchronization
 
@@ -89,8 +91,8 @@ The verification checks source/template/builder/output fingerprints to prevent s
 ```text
 proposal/       Current progress Markdown, generated LaTeX/PDF, historical proposal
 experiments/    Numbered experiment procedures, status, findings, and interpretations
-results/        Immutable curated Experiment 1 archive; other generated runs ignored
-configs/        Executable Experiment 1 settings and explicitly non-executable Exp2 plan
+results/        Curated experiment artifacts; uncurated generated runs ignored
+configs/        Executable experiment settings and preserved pre-execution planning record
 data/           Curated raw/daily/weekly snapshots, labels, coverage, provenance
 docs/           Input reference and broader/legacy experimental toolkit
 src/factorcast/ Shared feature, model, simulation, fitting, and reporting code

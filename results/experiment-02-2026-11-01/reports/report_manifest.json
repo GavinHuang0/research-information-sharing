@@ -1,0 +1,37 @@
+{
+  "aggregate_rows": 288,
+  "factor_policy": "factor_pooled__M-all__O-all",
+  "figures": [
+    "part_a_fixed_forecast_uncertainty.png",
+    "part_a_fixed_forecast_uncertainty.pdf",
+    "part_b_factor_vs_references.png",
+    "part_b_factor_vs_references.pdf",
+    "part_b_finite_vs_expanding.png",
+    "part_b_finite_vs_expanding.pdf",
+    "history_loss_curves.png",
+    "history_loss_curves.pdf",
+    "final_target_history_improvement.png",
+    "final_target_history_improvement.pdf",
+    "block_length_sensitivity.png",
+    "block_length_sensitivity.pdf"
+  ],
+  "histories": [
+    "104",
+    "260",
+    "520",
+    "expanding"
+  ],
+  "intervals": "marginal 95% basic bootstrap; not simultaneous confidence intervals",
+  "no_new_winner_selection": true,
+  "part_a_inference_rows": 24,
+  "part_b_inference_rows": 114,
+  "persistence": "same forecast repeated across history labels; not independent evidence",
+  "pvalues": "one-sided Holm adjustment: 4 contrasts in A, 19 in B; separate weight/block families",
+  "tables": [
+    "target_summary.csv",
+    "aggregate_summary.csv",
+    "part_a_inference.csv",
+    "part_b_inference.csv"
+  ],
+  "target_rows": 1728
+}

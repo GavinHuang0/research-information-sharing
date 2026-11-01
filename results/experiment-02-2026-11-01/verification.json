@@ -1,0 +1,27 @@
+{
+  "all_mutable_document_links_resolve": true,
+  "complete_table_rows": {
+    "aggregate_summary.csv": 288,
+    "part_a_inference.csv": 24,
+    "part_b_inference.csv": 114,
+    "target_summary.csv": 1728
+  },
+  "experiment_1_unchanged_files": 36,
+  "implementation_tests_passed": 91,
+  "independent_audit_files": [
+    "audit_part_a.json",
+    "audit_development.json",
+    "audit_final.json",
+    "audit_part_b.json"
+  ],
+  "nominal_statistical_calibration_established": false,
+  "pdf_visual_review": {
+    "experiment_figures": 6,
+    "progress_report_pages": 2,
+    "progress_synchronization_check": "passed",
+    "rendering": "Poppler PNGs inspected at 1500/1600 pixels"
+  },
+  "source_config_and_all_stage_hashes_match": true,
+  "status": "passed",
+  "verified_at_utc": "2026-11-01T05:01:24.251310+00:00"
+}

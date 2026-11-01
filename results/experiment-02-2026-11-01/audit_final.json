@@ -1,0 +1,59 @@
+{
+  "PCA_fits": 56,
+  "audit": "independent_saved_history_output_recomputation",
+  "audited_at_utc": "2026-11-01T04:54:24.007522+00:00",
+  "blocks": 14,
+  "checks": [
+    "frozen_inputs_code_and_output_hashes",
+    "original36_E1_artifacts_unchanged",
+    "exact_memberships_and_common_dates",
+    "responses_reconstructed_from_daily_inputs",
+    "all_losses_and_history_matched_aggregate_ratios",
+    "all_supervised_PCA_validation_and_response_availability_cutoffs",
+    "target_validation_grid_argmins",
+    "persistence_duplicates",
+    "anchored_refit_schedule",
+    "boundary1287_tuning_identical_to_development_replay",
+    "final_freeze_identical_to_pre_final_commit_and_commit_precedes_direct_stage_start"
+  ],
+  "dates_per_cell": 87,
+  "expanding_E1_overlap": null,
+  "final_freeze_commit": "2c15048a230eaa6dfe2e3611c2d6e4606f18bcf7",
+  "final_freeze_commit_time": "2026-11-01T00:53:01-04:00",
+  "final_freeze_sha256": "6d826814fb8be4b3ab67161ab0d45d00414faa70d08b51a99c4c6401f4411a2e",
+  "first_final_index": 1290,
+  "first_final_refit": 1287,
+  "histories": [
+    "104",
+    "260",
+    "520",
+    "expanding"
+  ],
+  "policies": 18,
+  "prediction_rows": 75168,
+  "refit_anchors": [
+    1287,
+    1300,
+    1313,
+    1326,
+    1339,
+    1352,
+    1365
+  ],
+  "stage": "final",
+  "stage_started_at_utc": "2026-11-01T04:53:07.718343+00:00",
+  "status": "passed",
+  "targets": [
+    "Food",
+    "Mach",
+    "Banks",
+    "Oil",
+    "Util",
+    "Hlth"
+  ],
+  "tuning_rows": 6048,
+  "weightings": [
+    "value",
+    "equal"
+  ]
+}

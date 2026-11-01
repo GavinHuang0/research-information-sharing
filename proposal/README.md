@@ -27,4 +27,4 @@ The [October 9, 2026 original proposal](archive/2026-10-09/proposal.pdf), [LaTeX
 ## Detailed experimental records
 
 - [Experiment 1: completed fixed S6 pilot](../experiments/01-fixed-s6-pilot/README.md).
-- [Experiment 2: planned bootstrap and coefficient-history study](../experiments/02-bootstrap-history/README.md). It has not been executed.
+- [Experiment 2: completed bootstrap and coefficient-history study](../experiments/02-bootstrap-history/README.md), including the new-period findings and unresolved calibration limits.
