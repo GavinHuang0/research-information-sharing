@@ -3,17 +3,17 @@
   "canonical_source": "proposal/progress.md",
   "check_command": "python scripts/build_progress_report.py --check",
   "inputs_sha256_lf": {
-    "proposal/progress.md": "27eaaa60f3966fb85d3968fdc5ecc0481a9cc1ab9a12a0d7adc64ebb13e9e735",
+    "proposal/progress.md": "88b46016f84b636875f784d7dc55119c14c38e9e8d127a97a67d803a3c043ac1",
     "proposal/repo-links.lua": "f7701cde1341e852f8860eee35cfd7f7e8af7e430f4d80ba90acb51d556c9334",
     "proposal/report-template.tex": "3685a255adf751a436c3f445e8073d69f01382861e6a9efe5ee155278ae1eda1",
     "scripts/build_progress_report.py": "344f7bc6ab367a8235c888d938bae3a7a2a1f509b3c6021f29b4cf0baa761937"
   },
   "outputs_sha256": {
-    "proposal/proposal.pdf": "ef0ac06d40b53b406439d54c8f533180701b35c069c079ad51f37ab570f4da3f",
-    "proposal/proposal.tex": "9afaaaa9c05f6380d4cc13da0989d3adf96a2135e9ce8f8ff8ac217c35cdb802"
+    "proposal/proposal.pdf": "6419200e588935c8e1294d543bfd4ce69677b123c1d38afbeb4d198b53c18f78",
+    "proposal/proposal.tex": "af0d649e227ce3c6f9b2418c58abe9eb026ef7af7d7d6a48c419132360d0e742"
   },
   "schema_version": 1,
-  "source_sha256_lf": "27eaaa60f3966fb85d3968fdc5ecc0481a9cc1ab9a12a0d7adc64ebb13e9e735",
+  "source_sha256_lf": "88b46016f84b636875f784d7dc55119c14c38e9e8d127a97a67d803a3c043ac1",
   "tools": {
     "pandoc": "pandoc.EXE 3.4",
     "pdflatex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)"
