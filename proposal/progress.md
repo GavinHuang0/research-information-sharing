@@ -5,45 +5,52 @@ date: "November 3, 2026"
 
 ## Research question and initial plan
 
-Industries can help measure common conditions or estimate how those conditions predict a target's future risk. Let $M$ denote measurement donors and $O$ coefficient-sharing donors. A useful measurement industry may have a different predictive relationship from the target. We ask when assigning these roles separately improves forecasts.
-
-We hypothesize that informative measurement expansion helps at fixed dimension, while coefficient sharing helps with limited histories and similar slopes. Heterogeneity, correlated noise, or instability can offset those gains. Principal-component forecasting [1] and panel-composition evidence [2] motivate the design. A linear factor forecast restricts the predictor space: its possible finite-sample benefit balances reduced estimation variance against discarded predictive directions. It cannot improve the unrestricted population optimum with identical information.
+Industries can measure common conditions ($M$) or help estimate predictive coefficients ($O$). We ask when assigning these roles separately improves risk forecasts. We hypothesize measurement expansion helps at fixed dimension, and sharing helps with short histories and similar slopes; heterogeneity, noise, or instability can offset gains. Motivated by principal-component forecasting [1] and panel-composition evidence [2], we study finite-sample variance/information tradeoffs. Dimension reduction cannot improve the unrestricted population optimum with identical information.
 
 ## Completed foundation and first two experiments
 
-We archived the French 48-industry daily returns, both weightings, downloads, labels, missingness, and hashes. Weekly features are $Q_{jt}=\sum_d r_{jd}^2$ and $v_{jt}=\log(Q_{jt}+10^{-8})$, requiring at least three daily returns. These are daily-return variation proxies, not intraday realized variance. Own controls are current $v$ and complete trailing four-/twelve-week means of weekly logs; the response is next calendar week's $v$.
+We archived French 48-industry daily returns, both weightings, provenance, missingness, and hashes. Weekly $Q_{jt}=\sum_d r_{jd}^2$ and $v_{jt}=\log(Q_{jt}+10^{-8})$ require at least three daily returns. These proxy daily-return variation. Own controls are current $v$ and complete trailing four-/twelve-week means; the response is next calendar week's $v$.
 
-Experiment 1 fixed Food, Mach, Banks, Oil, Util, and Hlth as targets and the small donor panel. Eighteen procedures compared measurement/outcome panels, separate/common/partial factor slopes, direct methods, own history, and persistence. Development selection was frozen before the 2022-2024 evaluation. The selected all-48/common-slope factor improved the equal-target MSE ratio by **4.27%** against own history; equal-weighted improvement was **1.66%**, including **2.95% worse Banks MSE**. Broadening measurement supplied most of the gain; common slopes added about 0.15 percentage points. No learned donor rule was established.
+Experiment 1 fixed Food, Mach, Banks, Oil, Util, and Hlth as targets and the small donor panel. Eighteen procedures compared panels, sharing, direct methods, and baselines. Selection preceded 2022-2024 evaluation. The selected all-48/common-slope factor gained **4.27%** against own history; equal-weighted gain was **1.66%**, including **2.95% worse Banks MSE**. Broader measurement supplied most of the gain.
 
-Experiment 2 added paired stationary-bootstrap inference [3] and coefficient histories 104/260/520/expanding, with PCA always expanding. In the 87-date 2025-August 2026 period, no history beat own history or ridge after Holm-19 adjustment. L=104 beat elastic net and PLS under the approximate rule (value gains 8.57% and 13.74%, each adjusted $p=0.0019$). No finite history showed an adjusted advantage over expanding coefficients. Exploratory inference on already inspected 2022-2024 losses favored value-weighted factor versus own history only (Holm-four $p=0.0028$).
+Experiment 2 added paired stationary bootstraps [3] and coefficient histories 104/260/520/expanding, with expanding PCA. In 2025-August 2026, no history beat own history or ridge after Holm-19 adjustment. L=104 beat elastic net and PLS under the approximate rule. No finite history showed an adjusted advantage over expanding coefficients.
 
 ## Experiment 3: completed November 3
 
-We mapped **K=1-8 factors** against **L=52,78,...,520 coefficient pairs**, plus expanding-coefficient controls, for separate, common, and partially pooled slopes. Part A fitted PCA, its scalers, and coefficients on the same recent L rows. Part B repeated the grid with expanding PCA and identical coefficient windows. Measurement was all 48 industries; common/partial outcome sharing used all 48. Intercepts and own-history slopes stayed industry-specific. Partial-pooling penalties used target-specific historical validation only.
+We mapped **K=1-8 factors** against **L=52,78,...,520 coefficient pairs**, plus expanding controls, for separate/common/partial slopes. Part A fitted PCA/scalers and coefficients on the same recent L rows; Part B used expanding PCA with identical coefficient windows. Measurement and common/partial outcome sharing used all 48 industries. Own coefficients stayed industry-specific; partial-pooling penalties used historical target validation.
 
-All cells shared the same 718 earlier dates through 2024 and 87 later dates through August 2026. Both periods were already inspected, so this is exploratory. There were 936 distinct factor configurations and 20 own-history references per weighting/period. The 9.23 million saved forecasts passed full window/loss/tuning audits; overlapping Experiment 2 forecasts and independent original-estimator checks agreed within numerical precision. All 118 implementation tests passed.
+All configurations shared 718 earlier dates (2011-2024) and 87 later dates (2025-August 2026), both already inspected. Results are exploratory; forecast windows, tuning, losses, and inference were independently audited.
 
-Each cell received a paired-bootstrap marginal interval from 9,999 draws, resampling complete date vectors in stationary blocks across targets, configurations, and weightings. Only 30 fixed later-period anchors received jointly Holm-adjusted p-values. **None passed the primary block-13 rule in either weighting.** Blocks 6/26 were sensitivities; two equal-weighted block-26 flags did not replace the primary result. Calibration and power studies were not run.
+For value-weighted portfolios, the table fixes K=2/common slopes. Gains average six targets' percentage MSE reductions against their matching-history own regressions.
 
-The table shows later value-weighted common-slope gains versus matching-history own regression at the fixed K=2 anchors:
+| Coefficient pairs | Earlier: matched PCA | Later: matched PCA | Later: expanding PCA |
+| --- | ---: | ---: | ---: |
+| 52 | 5.73% | 1.66% | 1.96% |
+| 104 | 4.15% | 3.53% | 3.97% |
+| 260 | 5.47% | -2.00% | -1.75% |
+| 520 | 5.08% | -0.75% | -0.41% |
 
-| Coefficient pairs | Part A: matched PCA | Part B: expanding PCA |
-| --- | ---: | ---: |
-| 104 | 3.53% | 3.97% |
-| 260 | -2.00% | -1.75% |
-| 520 | -0.75% | -0.41% |
+**History effects depend on period and weighting.** Later value gains favored roughly 78-104 pairs over 260-520, without falling monotonically. Earlier gains persisted with long histories. Later equal-weighted K=2/common gained 0.92% at matched L=104 and 3.01% with expanding coefficients/PCA. A universal short-history advantage is unsupported.
 
-Expanding coefficients gave a shared common-slope gain of 1.23%, nominal interval [-1.12%, 4.16%], adjusted $p=1$. A larger gain against a weaker short-history baseline does not imply lower factor MSE. Gains did not decline monotonically with L; earlier-period improvements were much more widespread than later-period improvements.
+**Relative edge differs from absolute accuracy.** Later value-weighted K=2/common MSE was 0.7516 at matched L=104, versus 0.7181 with expanding coefficients/PCA, although gains were 3.53% versus 1.23%. The longer-history own-regression benchmark was also stronger.
 
-High K was particularly costly with very short histories and separate slopes. At the declared L=52/K=8 corner, later value-weighted matched-PCA gains were -11.24% separate, +1.37% common, and -0.75% partial. Sharing cushioned deterioration, but partial pooling did not uniformly beat common slopes. Expanding PCA was not uniformly better across the grid. These descriptive patterns do not identify true factor dimension, causal slope heterogeneity, or a winning forecasting rule. Every unfavorable target remains included.
+**Pooling cushioned extra-factor costs.** At L=52, later value/matched-PCA gains changed from K=1 to K=8: separate +2.93% to -11.24%, common +3.40% to +1.37%, partial +3.29% to -0.75%. Longer history helped separate slopes catch up earlier. This is consistent with lower estimation variance from sharing. Partial pooling did not reliably improve on common slopes.
+
+**Longer PCA history was not uniformly beneficial.** Expanding PCA helped the K=2 value anchors, but reduced gains by a median 1.2-1.6 percentage points across finite histories in the later value grid. It changed scaling/loadings, downstream fits, and partial-pooling penalty choices. Neither this contrast nor the pooling pattern identifies a causal mechanism. All unfavorable configurations remain reported.
+
+Bootstraps used 9,999 draws of saved losses, without refitting/retuning. **None of 30 later-period anchors passed primary block-13 Holm adjustment in either weighting.** Later value/matched K=2/common/L=104 gained 3.53%, with nominal 95% marginal interval [-3.18%, 12.18%]. Two equal-weighted block-26 sensitivity flags did not replace the primary result.
 
 ## Inference limits and pending work
 
-**Bootstrap calibration remains unresolved.** The inherited 100-replication diagnostic rejected a nominal 5% null 11% of the time at 87 dates. Nominal 95% coverage was 90% at 87 dates and 81% at 156. Holm cannot repair marginal miscalibration; p-values remain approximate and intervals marginal, not simultaneous surface bands. Numerical audits verify computations, not coverage or full repeated-training validity. The short later period, dependence, nested models, fixed six targets, and source revisions constrain claims.
+**Bootstrap calibration remains unresolved.** The inherited 100-replication diagnostic rejected a nominal 5% null 11% of the time at 87 dates; nominal 95% coverage was 90% at 87 dates and 81% at 156. Holm cannot repair marginal miscalibration. Audits verify computations, not coverage. Dependence, nested models, fixed targets, source revisions, and short evaluation histories constrain claims; non-rejection does not establish equivalence.
 
-Calibration and power studies remain **deferred and pending**, as requested. Controlled simulations of measurement noise and slope heterogeneity, learned donor selection, adaptive dimension/history policies, and trading costs remain future work. Any empirical confirmation requires a newly designated uninspected period or market.
+## Next steps and questions for discussion
 
-Detailed protocols, all targets/cells, intervals, sensitivities, graphs, and audited records are in [Experiment 1](../experiments/01-fixed-s6-pilot/README.md), [Experiment 2](../experiments/02-bootstrap-history/README.md), and [Experiment 3](../experiments/03-pca-history-surface/README.md). The original proposal remains archived separately.
+Before another empirical grid, we propose agreeing on a narrow hypothesis and confirmation design: does pooling help most when coefficient history is short relative to model dimension? Experiment 3 fixed all 48 measurement industries; choosing different measurement and coefficient-sharing donor sets remains open.
+
+Calibration and power studies remain **deferred and pending**; their design is a priority for discussion. We propose comparing false-rejection rates, coverage, and power under controlled dependence and known forecast advantages, including repeated fitting/tuning. Measurement-noise/slope-heterogeneity experiments and learned donor selection remain later work. Empirical confirmation requires an uninspected period or market.
+
+Protocols, complete results, graphs, and audits: [Experiment 1](../experiments/01-fixed-s6-pilot/README.md), [Experiment 2](../experiments/02-bootstrap-history/README.md), [Experiment 3](../experiments/03-pca-history-surface/README.md). The original proposal remains archived.
 
 ## Selected references
 
