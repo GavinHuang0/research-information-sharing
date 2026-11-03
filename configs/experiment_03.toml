@@ -1,0 +1,202 @@
+# Executable copy of the immutable Experiment 3 scientific plan.
+# Use scripts/run_experiment_03.py; calibration and power remain deferred.
+[plan]
+experiment_id = "03-pca-history-surface"
+status = "implementation_ready_before_execution"
+executable = true
+protocol = "experiments/03-pca-history-surface/protocol.md"
+implementation_required = false
+forecasts_computed = false
+bootstrap_results_computed = false
+calibration_power_status = "pending_deferred_no_run"
+automatic_next_stage = false
+
+[design]
+targets = ["Food", "Mach", "Banks", "Oil", "Util", "Hlth"]
+primary_weighting = "value"
+robustness_weighting = "equal"
+measurement_panel = "all_48"
+sharing_rules = ["separate", "common", "partial"]
+separate_outcomes = "target_only"
+common_partial_outcomes = "all_48_including_target"
+learned_membership_search = false
+new_target_selection = false
+new_winner_selection = false
+
+[data]
+snapshot = "2026-10-16"
+value_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv"
+equal_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv"
+provenance = "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json"
+units = "decimal"
+weekly_frequency = "W-FRI"
+log_offset = 1e-8
+min_week_obs = 3
+own_history_weeks = [1, 4, 12]
+shared_complete_case = "all_48_industries_both_weightings_before_subsets"
+source_release_vintage_audit_required = true
+assume_response_year_2025_breakpoint = false
+
+[calendar]
+origin_start = "2000-01-01"
+response_end = "2026-08-28"
+first_outer_cutoff_pairs = 572
+validation_pairs = 52
+refit_every_pairs = 13
+refit_anchor = "572_plus_13k"
+restart_at_period_boundary = false
+earlier_seen_response_end = "2024-12-31"
+later_seen_response_start = "2025-01-03"
+later_seen_response_end = "2026-08-28"
+expected_inherited_earlier_dates = 718
+expected_inherited_later_dates = 87
+all_periods_already_inspected = true
+fresh_holdout_claim = false
+
+[grid]
+finite_coefficient_pairs = [52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312, 338, 364, 390, 416, 442, 468, 494, 520]
+finite_history_count = 19
+include_expanding_coefficient_control = true
+factor_counts = [1, 2, 3, 4, 5, 6, 7, 8]
+zero_factor_dimension = "own_history_reference_only_not_a_factor_policy"
+data_selected_K_or_L = false
+finite_factor_cells_per_weighting_period = 912
+deduplicated_expanding_factor_cells_per_weighting_period = 24
+distinct_factor_cells_per_weighting_period = 936
+distinct_own_history_references_per_weighting_period = 20
+paired_finite_mode_contrasts_per_weighting_period = 456
+descriptive_pooling_contrasts_per_weighting_period = 624
+
+[pca_part_a]
+mode = "matched"
+inner_window = "X[b-L:b)_same_pair_rows_as_inner_coefficient_fit"
+outer_window = "X[a-L:a)_same_pair_rows_as_outer_coefficient_fit"
+expanding_coefficient_control = "PCA_expanding_deduplicated_with_part_B"
+all_column_and_score_scalers_fit_on_pca_window = true
+
+[pca_part_b]
+mode = "expanding"
+inner_window = "X[0:b)"
+outer_window = "X[0:a)"
+column_and_score_scalers_fit_expanding_not_recent_L = true
+representation_common_across_finite_L = true
+
+[representation]
+fit_components_once_per_window = 8
+solver = "deterministic_full_SVD"
+smaller_K = "first_K_components_of_same_eight_component_fit"
+prefix_adapter_required = true
+prefix_train_and_prediction_width_must_equal_K = true
+existing_n_factors_label_alone_does_not_truncate_supplied_eight_PC_representation = true
+share_across_targets_sharing_rules_and_penalties = true
+no_extra_unlabeled_rows_in_matched_PCA = true
+validation_rows_fit_transformations = false
+rank_and_score_variance_audit_required = true
+
+[coefficients]
+inner_window = "pairs[b-L:b)_where_b_equals_a_minus_52"
+outer_window = "pairs[a-L:a)"
+expanding_control_window = "starts_at_zero"
+donor_history = "same_L_as_target"
+own_history_baseline = "same_L_and_evaluation_dates"
+prebuilt_causal_feature_history_may_precede_window = true
+industry_intercepts_and_local_slopes = "separate_unpenalized"
+direct_ridge_elasticnet_pls = "not_in_focused_experiment_3_grid"
+
+[partial_pooling]
+objective = "RSS/(n*J)+lambda*sum_j_squared_norm(theta_j-mean_theta)/J"
+divide_penalty_by_K = false
+penalties = [0.01, 0.1, 1.0, 10.0, 100.0]
+selection = "target_validation_MSE_for_each_target_mode_L_K_refit_cutoff"
+validation_pairs = 52
+tie_break = "first_declared_penalty"
+donor_average_validation_selection = false
+whole_surface_K_L_selection = false
+paired_mode_contrast_includes_mode_specific_lambda_selection = true
+
+[statistics]
+own_gain = "G_C_own_equals_1_minus_mean_target_MSE_C_divided_by_MSE_own_L"
+mode_gain_difference = "Delta_equals_G_expandingPCA_own_minus_G_matchedPCA_own_same_L_K_rule"
+positive_mode_difference_favors = "expanding_PCA"
+mode_difference_is_G_expanding_over_matched = false
+pooling_differences = ["G_common_own_minus_G_separate_own", "G_partial_own_minus_G_separate_own"]
+absolute_mean_MSE_is_separate_descriptive_statistic = true
+
+[bootstrap]
+status = "planned_approximate_exploratory_not_run"
+replicates = 9999
+expected_block_length_dates = 13
+sensitivity_block_lengths_dates = [6, 26]
+rng = "numpy_Generator_PCG64"
+seed = 20261102
+reset_seed_per_period_block_setting = true
+one_shared_matrix_across_weightings_targets_all_cells_contrasts = true
+resampling_unit = "whole_date_vector"
+recompute_all_candidate_and_reference_MSEs_each_draw = true
+refit_models_or_reselect_lambda_inside_bootstrap = false
+interval = "basic_nominal_95_marginal_[2That_minus_q975_Tb,2That_minus_q025_Tb]"
+quantile_method = "linear"
+clip_interval_endpoints = false
+invalid_denominator_policy = "deterministic_abort_no_epsilon_no_draw_or_target_dropping"
+cell_CIs = "all_936_own_gains_all_456_mode_differences_all_624_pooling_differences"
+simultaneous_surface_bands_claim = false
+calibration_established = false
+calibration_completion_required_for_future_descriptive_maps = false
+loadings_lambda_and_coefficient_CIs_claimed = false
+
+[anchors]
+evaluation_period = "later_seen_only_already_inspected_exploratory"
+factor_count = 2
+finite_histories = [104, 260, 520]
+all_three_sharing_rules = true
+finite_own_gain_count = 18
+deduplicated_expanding_own_gain_count = 3
+finite_mode_gain_difference_count = 9
+family_size_per_weighting_block_setting = 30
+primary_weighting = "value"
+primary_block_length = 13
+equal_weighted_family = "separate_robustness_not_combined_error_control"
+earlier_seen_pvalues = false
+null = "population_gain_or_difference_less_than_or_equal_to_zero"
+alternative = "population_gain_or_difference_greater_than_zero"
+centered_root = "D_b_equals_T_b_minus_T_hat"
+pvalue = "(1_plus_count_D_b_ge_T_hat)/(B_plus_1)_including_ties"
+multiplicity = "Holm_step_down_all_30_together"
+alpha = 0.05
+approximate_exploratory_evidence_only = true
+other_surface_or_pooling_pvalues = false
+unadjusted_significance_stars = false
+Holm_936_with_9999_draws = "not_planned_minimum_adjusted_p_0.0936_cannot_reject_0.05"
+
+[reporting]
+main_figures = ["K_by_L_gain_surfaces_three_rules_partA_vs_partB", "absolute_MSE_surfaces", "paired_PCA_mode_difference_maps", "common_and_partial_minus_separate_maps", "all_30_anchor_forest_table"]
+all_targets_and_adverse_cells = true
+common_color_limits_for_paired_gain_maps = true
+expanding_controls_displayed_separately_and_deduplicated = true
+complete_marginal_CI_tables = true
+best_cell_recommendation = false
+new_confirmatory_or_latent_factor_recovery_claim = false
+
+[execution]
+authorized_work = "implementation_and_experiment_execution_authorized_2026-11-03"
+run_authorized = true
+calibration_authorized = false
+power_authorized = false
+independent_window_objective_counts_contrast_audit_required = true
+runtime_benchmark_performed = false
+large_draw_date_cell_target_tensor = "forbidden_use_bounded_L_K_batches_and_cached_loss_means"
+full_grid_prediction_or_tuning_RAM = "forbidden_stream_deterministic_compressed_shards"
+shard_partition = "period_weighting_mode_L_then_stable_shard_sequence"
+completed_shard_bytes_must_be_less_than = 83886080
+hard_file_bytes_must_be_less_than = 100000000
+archive_all_raw_prediction_and_tuning_rows = true
+canonical_cell_metadata_and_deduplicated_expanding_storage = true
+checksum_inventory_with_row_and_byte_counts_required = true
+serialization_and_compression_metadata = "frozen_deterministic"
+total_storage_benchmark_performed = false
+preserve_experiment_1_and_2_artifacts = true
+
+source_plan = "configs/experiment_03_plan.toml"
+source_planning_commit = "abd4b2a734f7d309168eead4c735769550bbc92e"
+run_id = "experiment-03-2026-11-03"
+authorized_date = "2026-11-03"

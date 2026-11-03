@@ -8,6 +8,7 @@ src/factorcast/retrieval.py text eol=lf
 # Frozen experiment checksums must survive Windows and Unix checkouts.
 configs/fixed_pilot.toml text eol=lf
 configs/experiment_02.toml text eol=lf
+configs/experiment_03.toml text eol=lf
 results/**/*.csv text eol=lf
 results/**/*.json text eol=lf
 results/**/*.md text eol=lf
@@ -16,6 +17,7 @@ results/**/*.toml text eol=lf
 results/**/*.log binary
 *.gz binary
 *.npz binary
+*.npy binary
 # Canonical progress sources and generated LaTeX use stable line endings.
 proposal/progress.md text eol=lf
 proposal/*.tex text eol=lf
