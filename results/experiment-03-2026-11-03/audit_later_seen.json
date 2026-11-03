@@ -1,0 +1,28 @@
+{
+  "all_partial_penalty_candidates_and_argmins_checked": true,
+  "all_windows_and_scalers_checked": true,
+  "audited_at_utc": "2026-11-03T17:07:58.272108+00:00",
+  "calibration_established": false,
+  "daily_derived_actuals_match": true,
+  "dates_per_cell": 87,
+  "distinct_factor_cells": 936,
+  "experiment_2_overlap": {
+    "maximum_absolute_prediction_difference": 7.105427357601002e-14,
+    "rows": 16704
+  },
+  "own_references": 20,
+  "period": "later_seen",
+  "prediction_rows": 998064,
+  "raw_forecasts_match_NPY": true,
+  "refit_anchors": [
+    1287,
+    1300,
+    1313,
+    1326,
+    1339,
+    1352,
+    1365
+  ],
+  "status": "passed",
+  "tuning_rows": 185136
+}

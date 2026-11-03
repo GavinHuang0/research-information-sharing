@@ -28,4 +28,4 @@ The [October 9, 2026 original proposal](archive/2026-10-09/proposal.pdf), [LaTeX
 
 - [Experiment 1: completed fixed S6 pilot](../experiments/01-fixed-s6-pilot/README.md).
 - [Experiment 2: completed bootstrap and coefficient-history study](../experiments/02-bootstrap-history/README.md), including the new-period findings and unresolved calibration limits.
-- [Experiment 3: planned PCA-dimension/history surfaces](../experiments/03-pca-history-surface/README.md), with a [separate detailed protocol](../experiments/03-pca-history-surface/protocol.md); not implemented or run, with calibration/power work deferred.
+- [Experiment 3: completed PCA-dimension/history surfaces](../experiments/03-pca-history-surface/README.md), including [all primary anchor results and surface interpretations](../experiments/03-pca-history-surface/results.md), [execution/reproduction record](../experiments/03-pca-history-surface/executed.md), and the unchanged [scientific protocol](../experiments/03-pca-history-surface/protocol.md). All primary anchor decisions are non-rejections; both periods were already seen, and calibration/power research remains deferred.

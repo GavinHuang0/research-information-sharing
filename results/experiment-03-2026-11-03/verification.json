@@ -1,0 +1,16 @@
+{
+  "anchor_rows": 180,
+  "bootstrap_rows": 24192,
+  "calibration_and_power": "deferred_not_run",
+  "document_links": "all_resolve",
+  "figure_pairs_visually_reviewed": 19,
+  "frozen_source_files": 42,
+  "independently_recomputed_aggregate_rows": 3824,
+  "independently_recomputed_target_rows": 22944,
+  "inherited_diagnostic_unchanged": true,
+  "primary_adjusted_rejections": 0,
+  "prior_experiment_files_unchanged": 107,
+  "progress_report_pages": 2,
+  "status": "passed",
+  "verified_at_utc": "2026-11-03T17:22:57.183079+00:00"
+}

@@ -1,0 +1,201 @@
+{
+  "common_outcomes": [
+    "Agric",
+    "Food",
+    "Soda",
+    "Beer",
+    "Smoke",
+    "Toys",
+    "Fun",
+    "Books",
+    "Hshld",
+    "Clths",
+    "Hlth",
+    "MedEq",
+    "Drugs",
+    "Chems",
+    "Rubbr",
+    "Txtls",
+    "BldMt",
+    "Cnstr",
+    "Steel",
+    "FabPr",
+    "Mach",
+    "ElcEq",
+    "Autos",
+    "Aero",
+    "Ships",
+    "Guns",
+    "Gold",
+    "Mines",
+    "Coal",
+    "Oil",
+    "Util",
+    "Telcm",
+    "PerSv",
+    "BusSv",
+    "Comps",
+    "Chips",
+    "LabEq",
+    "Paper",
+    "Boxes",
+    "Trans",
+    "Whlsl",
+    "Rtail",
+    "Meals",
+    "Banks",
+    "Insur",
+    "RlEst",
+    "Fin",
+    "Other"
+  ],
+  "measurement_assets": [
+    "Agric",
+    "Food",
+    "Soda",
+    "Beer",
+    "Smoke",
+    "Toys",
+    "Fun",
+    "Books",
+    "Hshld",
+    "Clths",
+    "Hlth",
+    "MedEq",
+    "Drugs",
+    "Chems",
+    "Rubbr",
+    "Txtls",
+    "BldMt",
+    "Cnstr",
+    "Steel",
+    "FabPr",
+    "Mach",
+    "ElcEq",
+    "Autos",
+    "Aero",
+    "Ships",
+    "Guns",
+    "Gold",
+    "Mines",
+    "Coal",
+    "Oil",
+    "Util",
+    "Telcm",
+    "PerSv",
+    "BusSv",
+    "Comps",
+    "Chips",
+    "LabEq",
+    "Paper",
+    "Boxes",
+    "Trans",
+    "Whlsl",
+    "Rtail",
+    "Meals",
+    "Banks",
+    "Insur",
+    "RlEst",
+    "Fin",
+    "Other"
+  ],
+  "own_measurements": [],
+  "own_outcomes": {
+    "Banks": [
+      "Banks"
+    ],
+    "Food": [
+      "Food"
+    ],
+    "Hlth": [
+      "Hlth"
+    ],
+    "Mach": [
+      "Mach"
+    ],
+    "Oil": [
+      "Oil"
+    ],
+    "Util": [
+      "Util"
+    ]
+  },
+  "partial_outcomes": [
+    "Agric",
+    "Food",
+    "Soda",
+    "Beer",
+    "Smoke",
+    "Toys",
+    "Fun",
+    "Books",
+    "Hshld",
+    "Clths",
+    "Hlth",
+    "MedEq",
+    "Drugs",
+    "Chems",
+    "Rubbr",
+    "Txtls",
+    "BldMt",
+    "Cnstr",
+    "Steel",
+    "FabPr",
+    "Mach",
+    "ElcEq",
+    "Autos",
+    "Aero",
+    "Ships",
+    "Guns",
+    "Gold",
+    "Mines",
+    "Coal",
+    "Oil",
+    "Util",
+    "Telcm",
+    "PerSv",
+    "BusSv",
+    "Comps",
+    "Chips",
+    "LabEq",
+    "Paper",
+    "Boxes",
+    "Trans",
+    "Whlsl",
+    "Rtail",
+    "Meals",
+    "Banks",
+    "Insur",
+    "RlEst",
+    "Fin",
+    "Other"
+  ],
+  "separate_outcomes": {
+    "Banks": [
+      "Banks"
+    ],
+    "Food": [
+      "Food"
+    ],
+    "Hlth": [
+      "Hlth"
+    ],
+    "Mach": [
+      "Mach"
+    ],
+    "Oil": [
+      "Oil"
+    ],
+    "Util": [
+      "Util"
+    ]
+  },
+  "target_order": [
+    "Food",
+    "Mach",
+    "Banks",
+    "Oil",
+    "Util",
+    "Hlth"
+  ]
+}

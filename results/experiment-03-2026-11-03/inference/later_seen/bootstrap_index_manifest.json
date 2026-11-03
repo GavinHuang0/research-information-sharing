@@ -1,0 +1,7906 @@
+{
+  "alpha": 0.05,
+  "anchor_family_size": 30,
+  "canonical_cells": [
+    {
+      "K": 0,
+      "cell_id": "local_history__L-52",
+      "cell_index": 0,
+      "history": "52",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-78",
+      "cell_index": 1,
+      "history": "78",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-104",
+      "cell_index": 2,
+      "history": "104",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-130",
+      "cell_index": 3,
+      "history": "130",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-156",
+      "cell_index": 4,
+      "history": "156",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-182",
+      "cell_index": 5,
+      "history": "182",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-208",
+      "cell_index": 6,
+      "history": "208",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-234",
+      "cell_index": 7,
+      "history": "234",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-260",
+      "cell_index": 8,
+      "history": "260",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-286",
+      "cell_index": 9,
+      "history": "286",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-312",
+      "cell_index": 10,
+      "history": "312",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-338",
+      "cell_index": 11,
+      "history": "338",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-364",
+      "cell_index": 12,
+      "history": "364",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-390",
+      "cell_index": 13,
+      "history": "390",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-416",
+      "cell_index": 14,
+      "history": "416",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-442",
+      "cell_index": 15,
+      "history": "442",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-468",
+      "cell_index": 16,
+      "history": "468",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-494",
+      "cell_index": 17,
+      "history": "494",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-520",
+      "cell_index": 18,
+      "history": "520",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 0,
+      "cell_id": "local_history__L-expanding",
+      "cell_index": 19,
+      "history": "expanding",
+      "mode": "none",
+      "sharing": "own"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-1",
+      "cell_index": 20,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-52__K-1",
+      "cell_index": 21,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-1",
+      "cell_index": 22,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-2",
+      "cell_index": 23,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-52__K-2",
+      "cell_index": 24,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-2",
+      "cell_index": 25,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-3",
+      "cell_index": 26,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-52__K-3",
+      "cell_index": 27,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-3",
+      "cell_index": 28,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-4",
+      "cell_index": 29,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-52__K-4",
+      "cell_index": 30,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-4",
+      "cell_index": 31,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-5",
+      "cell_index": 32,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-52__K-5",
+      "cell_index": 33,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-5",
+      "cell_index": 34,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-6",
+      "cell_index": 35,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-52__K-6",
+      "cell_index": 36,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-6",
+      "cell_index": 37,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-7",
+      "cell_index": 38,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-52__K-7",
+      "cell_index": 39,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-7",
+      "cell_index": 40,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-52__K-8",
+      "cell_index": 41,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-52__K-8",
+      "cell_index": 42,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-52__K-8",
+      "cell_index": 43,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-1",
+      "cell_index": 44,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-78__K-1",
+      "cell_index": 45,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-1",
+      "cell_index": 46,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-2",
+      "cell_index": 47,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-78__K-2",
+      "cell_index": 48,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-2",
+      "cell_index": 49,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-3",
+      "cell_index": 50,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-78__K-3",
+      "cell_index": 51,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-3",
+      "cell_index": 52,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-4",
+      "cell_index": 53,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-78__K-4",
+      "cell_index": 54,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-4",
+      "cell_index": 55,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-5",
+      "cell_index": 56,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-78__K-5",
+      "cell_index": 57,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-5",
+      "cell_index": 58,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-6",
+      "cell_index": 59,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-78__K-6",
+      "cell_index": 60,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-6",
+      "cell_index": 61,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-7",
+      "cell_index": 62,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-78__K-7",
+      "cell_index": 63,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-7",
+      "cell_index": 64,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-78__K-8",
+      "cell_index": 65,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-78__K-8",
+      "cell_index": 66,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-78__K-8",
+      "cell_index": 67,
+      "history": "78",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-1",
+      "cell_index": 68,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-104__K-1",
+      "cell_index": 69,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-1",
+      "cell_index": 70,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-2",
+      "cell_index": 71,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-104__K-2",
+      "cell_index": 72,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-2",
+      "cell_index": 73,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-3",
+      "cell_index": 74,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-104__K-3",
+      "cell_index": 75,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-3",
+      "cell_index": 76,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-4",
+      "cell_index": 77,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-104__K-4",
+      "cell_index": 78,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-4",
+      "cell_index": 79,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-5",
+      "cell_index": 80,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-104__K-5",
+      "cell_index": 81,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-5",
+      "cell_index": 82,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-6",
+      "cell_index": 83,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-104__K-6",
+      "cell_index": 84,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-6",
+      "cell_index": 85,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-7",
+      "cell_index": 86,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-104__K-7",
+      "cell_index": 87,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-7",
+      "cell_index": 88,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-104__K-8",
+      "cell_index": 89,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-104__K-8",
+      "cell_index": 90,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-104__K-8",
+      "cell_index": 91,
+      "history": "104",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-1",
+      "cell_index": 92,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-130__K-1",
+      "cell_index": 93,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-1",
+      "cell_index": 94,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-2",
+      "cell_index": 95,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-130__K-2",
+      "cell_index": 96,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-2",
+      "cell_index": 97,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-3",
+      "cell_index": 98,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-130__K-3",
+      "cell_index": 99,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-3",
+      "cell_index": 100,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-4",
+      "cell_index": 101,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-130__K-4",
+      "cell_index": 102,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-4",
+      "cell_index": 103,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-5",
+      "cell_index": 104,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-130__K-5",
+      "cell_index": 105,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-5",
+      "cell_index": 106,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-6",
+      "cell_index": 107,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-130__K-6",
+      "cell_index": 108,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-6",
+      "cell_index": 109,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-7",
+      "cell_index": 110,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-130__K-7",
+      "cell_index": 111,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-7",
+      "cell_index": 112,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-130__K-8",
+      "cell_index": 113,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-130__K-8",
+      "cell_index": 114,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-130__K-8",
+      "cell_index": 115,
+      "history": "130",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-1",
+      "cell_index": 116,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-156__K-1",
+      "cell_index": 117,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-1",
+      "cell_index": 118,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-2",
+      "cell_index": 119,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-156__K-2",
+      "cell_index": 120,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-2",
+      "cell_index": 121,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-3",
+      "cell_index": 122,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-156__K-3",
+      "cell_index": 123,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-3",
+      "cell_index": 124,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-4",
+      "cell_index": 125,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-156__K-4",
+      "cell_index": 126,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-4",
+      "cell_index": 127,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-5",
+      "cell_index": 128,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-156__K-5",
+      "cell_index": 129,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-5",
+      "cell_index": 130,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-6",
+      "cell_index": 131,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-156__K-6",
+      "cell_index": 132,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-6",
+      "cell_index": 133,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-7",
+      "cell_index": 134,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-156__K-7",
+      "cell_index": 135,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-7",
+      "cell_index": 136,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-156__K-8",
+      "cell_index": 137,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-156__K-8",
+      "cell_index": 138,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-156__K-8",
+      "cell_index": 139,
+      "history": "156",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-1",
+      "cell_index": 140,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-182__K-1",
+      "cell_index": 141,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-1",
+      "cell_index": 142,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-2",
+      "cell_index": 143,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-182__K-2",
+      "cell_index": 144,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-2",
+      "cell_index": 145,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-3",
+      "cell_index": 146,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-182__K-3",
+      "cell_index": 147,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-3",
+      "cell_index": 148,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-4",
+      "cell_index": 149,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-182__K-4",
+      "cell_index": 150,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-4",
+      "cell_index": 151,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-5",
+      "cell_index": 152,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-182__K-5",
+      "cell_index": 153,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-5",
+      "cell_index": 154,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-6",
+      "cell_index": 155,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-182__K-6",
+      "cell_index": 156,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-6",
+      "cell_index": 157,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-7",
+      "cell_index": 158,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-182__K-7",
+      "cell_index": 159,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-7",
+      "cell_index": 160,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-182__K-8",
+      "cell_index": 161,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-182__K-8",
+      "cell_index": 162,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-182__K-8",
+      "cell_index": 163,
+      "history": "182",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-1",
+      "cell_index": 164,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-208__K-1",
+      "cell_index": 165,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-1",
+      "cell_index": 166,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-2",
+      "cell_index": 167,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-208__K-2",
+      "cell_index": 168,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-2",
+      "cell_index": 169,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-3",
+      "cell_index": 170,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-208__K-3",
+      "cell_index": 171,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-3",
+      "cell_index": 172,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-4",
+      "cell_index": 173,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-208__K-4",
+      "cell_index": 174,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-4",
+      "cell_index": 175,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-5",
+      "cell_index": 176,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-208__K-5",
+      "cell_index": 177,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-5",
+      "cell_index": 178,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-6",
+      "cell_index": 179,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-208__K-6",
+      "cell_index": 180,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-6",
+      "cell_index": 181,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-7",
+      "cell_index": 182,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-208__K-7",
+      "cell_index": 183,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-7",
+      "cell_index": 184,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-208__K-8",
+      "cell_index": 185,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-208__K-8",
+      "cell_index": 186,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-208__K-8",
+      "cell_index": 187,
+      "history": "208",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-1",
+      "cell_index": 188,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-234__K-1",
+      "cell_index": 189,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-1",
+      "cell_index": 190,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-2",
+      "cell_index": 191,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-234__K-2",
+      "cell_index": 192,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-2",
+      "cell_index": 193,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-3",
+      "cell_index": 194,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-234__K-3",
+      "cell_index": 195,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-3",
+      "cell_index": 196,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-4",
+      "cell_index": 197,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-234__K-4",
+      "cell_index": 198,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-4",
+      "cell_index": 199,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-5",
+      "cell_index": 200,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-234__K-5",
+      "cell_index": 201,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-5",
+      "cell_index": 202,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-6",
+      "cell_index": 203,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-234__K-6",
+      "cell_index": 204,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-6",
+      "cell_index": 205,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-7",
+      "cell_index": 206,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-234__K-7",
+      "cell_index": 207,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-7",
+      "cell_index": 208,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-234__K-8",
+      "cell_index": 209,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-234__K-8",
+      "cell_index": 210,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-234__K-8",
+      "cell_index": 211,
+      "history": "234",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-1",
+      "cell_index": 212,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-260__K-1",
+      "cell_index": 213,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-1",
+      "cell_index": 214,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-2",
+      "cell_index": 215,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-260__K-2",
+      "cell_index": 216,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-2",
+      "cell_index": 217,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-3",
+      "cell_index": 218,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-260__K-3",
+      "cell_index": 219,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-3",
+      "cell_index": 220,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-4",
+      "cell_index": 221,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-260__K-4",
+      "cell_index": 222,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-4",
+      "cell_index": 223,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-5",
+      "cell_index": 224,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-260__K-5",
+      "cell_index": 225,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-5",
+      "cell_index": 226,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-6",
+      "cell_index": 227,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-260__K-6",
+      "cell_index": 228,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-6",
+      "cell_index": 229,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-7",
+      "cell_index": 230,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-260__K-7",
+      "cell_index": 231,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-7",
+      "cell_index": 232,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-260__K-8",
+      "cell_index": 233,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-260__K-8",
+      "cell_index": 234,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-260__K-8",
+      "cell_index": 235,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-1",
+      "cell_index": 236,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-286__K-1",
+      "cell_index": 237,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-1",
+      "cell_index": 238,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-2",
+      "cell_index": 239,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-286__K-2",
+      "cell_index": 240,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-2",
+      "cell_index": 241,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-3",
+      "cell_index": 242,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-286__K-3",
+      "cell_index": 243,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-3",
+      "cell_index": 244,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-4",
+      "cell_index": 245,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-286__K-4",
+      "cell_index": 246,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-4",
+      "cell_index": 247,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-5",
+      "cell_index": 248,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-286__K-5",
+      "cell_index": 249,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-5",
+      "cell_index": 250,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-6",
+      "cell_index": 251,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-286__K-6",
+      "cell_index": 252,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-6",
+      "cell_index": 253,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-7",
+      "cell_index": 254,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-286__K-7",
+      "cell_index": 255,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-7",
+      "cell_index": 256,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-286__K-8",
+      "cell_index": 257,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-286__K-8",
+      "cell_index": 258,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-286__K-8",
+      "cell_index": 259,
+      "history": "286",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-1",
+      "cell_index": 260,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-312__K-1",
+      "cell_index": 261,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-1",
+      "cell_index": 262,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-2",
+      "cell_index": 263,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-312__K-2",
+      "cell_index": 264,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-2",
+      "cell_index": 265,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-3",
+      "cell_index": 266,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-312__K-3",
+      "cell_index": 267,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-3",
+      "cell_index": 268,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-4",
+      "cell_index": 269,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-312__K-4",
+      "cell_index": 270,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-4",
+      "cell_index": 271,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-5",
+      "cell_index": 272,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-312__K-5",
+      "cell_index": 273,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-5",
+      "cell_index": 274,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-6",
+      "cell_index": 275,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-312__K-6",
+      "cell_index": 276,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-6",
+      "cell_index": 277,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-7",
+      "cell_index": 278,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-312__K-7",
+      "cell_index": 279,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-7",
+      "cell_index": 280,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-312__K-8",
+      "cell_index": 281,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-312__K-8",
+      "cell_index": 282,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-312__K-8",
+      "cell_index": 283,
+      "history": "312",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-1",
+      "cell_index": 284,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-338__K-1",
+      "cell_index": 285,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-1",
+      "cell_index": 286,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-2",
+      "cell_index": 287,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-338__K-2",
+      "cell_index": 288,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-2",
+      "cell_index": 289,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-3",
+      "cell_index": 290,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-338__K-3",
+      "cell_index": 291,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-3",
+      "cell_index": 292,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-4",
+      "cell_index": 293,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-338__K-4",
+      "cell_index": 294,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-4",
+      "cell_index": 295,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-5",
+      "cell_index": 296,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-338__K-5",
+      "cell_index": 297,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-5",
+      "cell_index": 298,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-6",
+      "cell_index": 299,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-338__K-6",
+      "cell_index": 300,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-6",
+      "cell_index": 301,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-7",
+      "cell_index": 302,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-338__K-7",
+      "cell_index": 303,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-7",
+      "cell_index": 304,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-338__K-8",
+      "cell_index": 305,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-338__K-8",
+      "cell_index": 306,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-338__K-8",
+      "cell_index": 307,
+      "history": "338",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-1",
+      "cell_index": 308,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-364__K-1",
+      "cell_index": 309,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-1",
+      "cell_index": 310,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-2",
+      "cell_index": 311,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-364__K-2",
+      "cell_index": 312,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-2",
+      "cell_index": 313,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-3",
+      "cell_index": 314,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-364__K-3",
+      "cell_index": 315,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-3",
+      "cell_index": 316,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-4",
+      "cell_index": 317,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-364__K-4",
+      "cell_index": 318,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-4",
+      "cell_index": 319,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-5",
+      "cell_index": 320,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-364__K-5",
+      "cell_index": 321,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-5",
+      "cell_index": 322,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-6",
+      "cell_index": 323,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-364__K-6",
+      "cell_index": 324,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-6",
+      "cell_index": 325,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-7",
+      "cell_index": 326,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-364__K-7",
+      "cell_index": 327,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-7",
+      "cell_index": 328,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-364__K-8",
+      "cell_index": 329,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-364__K-8",
+      "cell_index": 330,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-364__K-8",
+      "cell_index": 331,
+      "history": "364",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-1",
+      "cell_index": 332,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-390__K-1",
+      "cell_index": 333,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-1",
+      "cell_index": 334,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-2",
+      "cell_index": 335,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-390__K-2",
+      "cell_index": 336,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-2",
+      "cell_index": 337,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-3",
+      "cell_index": 338,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-390__K-3",
+      "cell_index": 339,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-3",
+      "cell_index": 340,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-4",
+      "cell_index": 341,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-390__K-4",
+      "cell_index": 342,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-4",
+      "cell_index": 343,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-5",
+      "cell_index": 344,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-390__K-5",
+      "cell_index": 345,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-5",
+      "cell_index": 346,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-6",
+      "cell_index": 347,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-390__K-6",
+      "cell_index": 348,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-6",
+      "cell_index": 349,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-7",
+      "cell_index": 350,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-390__K-7",
+      "cell_index": 351,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-7",
+      "cell_index": 352,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-390__K-8",
+      "cell_index": 353,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-390__K-8",
+      "cell_index": 354,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-390__K-8",
+      "cell_index": 355,
+      "history": "390",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-1",
+      "cell_index": 356,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-416__K-1",
+      "cell_index": 357,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-1",
+      "cell_index": 358,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-2",
+      "cell_index": 359,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-416__K-2",
+      "cell_index": 360,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-2",
+      "cell_index": 361,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-3",
+      "cell_index": 362,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-416__K-3",
+      "cell_index": 363,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-3",
+      "cell_index": 364,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-4",
+      "cell_index": 365,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-416__K-4",
+      "cell_index": 366,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-4",
+      "cell_index": 367,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-5",
+      "cell_index": 368,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-416__K-5",
+      "cell_index": 369,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-5",
+      "cell_index": 370,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-6",
+      "cell_index": 371,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-416__K-6",
+      "cell_index": 372,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-6",
+      "cell_index": 373,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-7",
+      "cell_index": 374,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-416__K-7",
+      "cell_index": 375,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-7",
+      "cell_index": 376,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-416__K-8",
+      "cell_index": 377,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-416__K-8",
+      "cell_index": 378,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-416__K-8",
+      "cell_index": 379,
+      "history": "416",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-1",
+      "cell_index": 380,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-442__K-1",
+      "cell_index": 381,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-1",
+      "cell_index": 382,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-2",
+      "cell_index": 383,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-442__K-2",
+      "cell_index": 384,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-2",
+      "cell_index": 385,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-3",
+      "cell_index": 386,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-442__K-3",
+      "cell_index": 387,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-3",
+      "cell_index": 388,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-4",
+      "cell_index": 389,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-442__K-4",
+      "cell_index": 390,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-4",
+      "cell_index": 391,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-5",
+      "cell_index": 392,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-442__K-5",
+      "cell_index": 393,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-5",
+      "cell_index": 394,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-6",
+      "cell_index": 395,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-442__K-6",
+      "cell_index": 396,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-6",
+      "cell_index": 397,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-7",
+      "cell_index": 398,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-442__K-7",
+      "cell_index": 399,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-7",
+      "cell_index": 400,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-442__K-8",
+      "cell_index": 401,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-442__K-8",
+      "cell_index": 402,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-442__K-8",
+      "cell_index": 403,
+      "history": "442",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-1",
+      "cell_index": 404,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-468__K-1",
+      "cell_index": 405,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-1",
+      "cell_index": 406,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-2",
+      "cell_index": 407,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-468__K-2",
+      "cell_index": 408,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-2",
+      "cell_index": 409,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-3",
+      "cell_index": 410,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-468__K-3",
+      "cell_index": 411,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-3",
+      "cell_index": 412,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-4",
+      "cell_index": 413,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-468__K-4",
+      "cell_index": 414,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-4",
+      "cell_index": 415,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-5",
+      "cell_index": 416,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-468__K-5",
+      "cell_index": 417,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-5",
+      "cell_index": 418,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-6",
+      "cell_index": 419,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-468__K-6",
+      "cell_index": 420,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-6",
+      "cell_index": 421,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-7",
+      "cell_index": 422,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-468__K-7",
+      "cell_index": 423,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-7",
+      "cell_index": 424,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-468__K-8",
+      "cell_index": 425,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-468__K-8",
+      "cell_index": 426,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-468__K-8",
+      "cell_index": 427,
+      "history": "468",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-1",
+      "cell_index": 428,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-494__K-1",
+      "cell_index": 429,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-1",
+      "cell_index": 430,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-2",
+      "cell_index": 431,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-494__K-2",
+      "cell_index": 432,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-2",
+      "cell_index": 433,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-3",
+      "cell_index": 434,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-494__K-3",
+      "cell_index": 435,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-3",
+      "cell_index": 436,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-4",
+      "cell_index": 437,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-494__K-4",
+      "cell_index": 438,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-4",
+      "cell_index": 439,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-5",
+      "cell_index": 440,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-494__K-5",
+      "cell_index": 441,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-5",
+      "cell_index": 442,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-6",
+      "cell_index": 443,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-494__K-6",
+      "cell_index": 444,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-6",
+      "cell_index": 445,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-7",
+      "cell_index": 446,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-494__K-7",
+      "cell_index": 447,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-7",
+      "cell_index": 448,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-494__K-8",
+      "cell_index": 449,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-494__K-8",
+      "cell_index": 450,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-494__K-8",
+      "cell_index": 451,
+      "history": "494",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-1",
+      "cell_index": 452,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-matched__L-520__K-1",
+      "cell_index": 453,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-1",
+      "cell_index": 454,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-2",
+      "cell_index": 455,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-matched__L-520__K-2",
+      "cell_index": 456,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-2",
+      "cell_index": 457,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-3",
+      "cell_index": 458,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-matched__L-520__K-3",
+      "cell_index": 459,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-3",
+      "cell_index": 460,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-4",
+      "cell_index": 461,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-matched__L-520__K-4",
+      "cell_index": 462,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-4",
+      "cell_index": 463,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-5",
+      "cell_index": 464,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-matched__L-520__K-5",
+      "cell_index": 465,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-5",
+      "cell_index": 466,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-6",
+      "cell_index": 467,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-matched__L-520__K-6",
+      "cell_index": 468,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-6",
+      "cell_index": 469,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-7",
+      "cell_index": 470,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-matched__L-520__K-7",
+      "cell_index": 471,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-7",
+      "cell_index": 472,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-matched__L-520__K-8",
+      "cell_index": 473,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-matched__L-520__K-8",
+      "cell_index": 474,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-matched__L-520__K-8",
+      "cell_index": 475,
+      "history": "520",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-1",
+      "cell_index": 476,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-1",
+      "cell_index": 477,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-1",
+      "cell_index": 478,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-2",
+      "cell_index": 479,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-2",
+      "cell_index": 480,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-2",
+      "cell_index": 481,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-3",
+      "cell_index": 482,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-3",
+      "cell_index": 483,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-3",
+      "cell_index": 484,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-4",
+      "cell_index": 485,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-4",
+      "cell_index": 486,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-4",
+      "cell_index": 487,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-5",
+      "cell_index": 488,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-5",
+      "cell_index": 489,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-5",
+      "cell_index": 490,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-6",
+      "cell_index": 491,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-6",
+      "cell_index": 492,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-6",
+      "cell_index": 493,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-7",
+      "cell_index": 494,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-7",
+      "cell_index": 495,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-7",
+      "cell_index": 496,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-52__K-8",
+      "cell_index": 497,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-52__K-8",
+      "cell_index": 498,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-52__K-8",
+      "cell_index": 499,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-1",
+      "cell_index": 500,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-1",
+      "cell_index": 501,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-1",
+      "cell_index": 502,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-2",
+      "cell_index": 503,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-2",
+      "cell_index": 504,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-2",
+      "cell_index": 505,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-3",
+      "cell_index": 506,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-3",
+      "cell_index": 507,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-3",
+      "cell_index": 508,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-4",
+      "cell_index": 509,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-4",
+      "cell_index": 510,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-4",
+      "cell_index": 511,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-5",
+      "cell_index": 512,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-5",
+      "cell_index": 513,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-5",
+      "cell_index": 514,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-6",
+      "cell_index": 515,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-6",
+      "cell_index": 516,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-6",
+      "cell_index": 517,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-7",
+      "cell_index": 518,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-7",
+      "cell_index": 519,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-7",
+      "cell_index": 520,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-78__K-8",
+      "cell_index": 521,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-78__K-8",
+      "cell_index": 522,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-78__K-8",
+      "cell_index": 523,
+      "history": "78",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-1",
+      "cell_index": 524,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-1",
+      "cell_index": 525,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-1",
+      "cell_index": 526,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-2",
+      "cell_index": 527,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-2",
+      "cell_index": 528,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-2",
+      "cell_index": 529,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-3",
+      "cell_index": 530,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-3",
+      "cell_index": 531,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-3",
+      "cell_index": 532,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-4",
+      "cell_index": 533,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-4",
+      "cell_index": 534,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-4",
+      "cell_index": 535,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-5",
+      "cell_index": 536,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-5",
+      "cell_index": 537,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-5",
+      "cell_index": 538,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-6",
+      "cell_index": 539,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-6",
+      "cell_index": 540,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-6",
+      "cell_index": 541,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-7",
+      "cell_index": 542,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-7",
+      "cell_index": 543,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-7",
+      "cell_index": 544,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-104__K-8",
+      "cell_index": 545,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-104__K-8",
+      "cell_index": 546,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-104__K-8",
+      "cell_index": 547,
+      "history": "104",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-1",
+      "cell_index": 548,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-1",
+      "cell_index": 549,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-1",
+      "cell_index": 550,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-2",
+      "cell_index": 551,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-2",
+      "cell_index": 552,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-2",
+      "cell_index": 553,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-3",
+      "cell_index": 554,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-3",
+      "cell_index": 555,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-3",
+      "cell_index": 556,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-4",
+      "cell_index": 557,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-4",
+      "cell_index": 558,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-4",
+      "cell_index": 559,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-5",
+      "cell_index": 560,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-5",
+      "cell_index": 561,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-5",
+      "cell_index": 562,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-6",
+      "cell_index": 563,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-6",
+      "cell_index": 564,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-6",
+      "cell_index": 565,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-7",
+      "cell_index": 566,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-7",
+      "cell_index": 567,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-7",
+      "cell_index": 568,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-130__K-8",
+      "cell_index": 569,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-130__K-8",
+      "cell_index": 570,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-130__K-8",
+      "cell_index": 571,
+      "history": "130",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-1",
+      "cell_index": 572,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-1",
+      "cell_index": 573,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-1",
+      "cell_index": 574,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-2",
+      "cell_index": 575,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-2",
+      "cell_index": 576,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-2",
+      "cell_index": 577,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-3",
+      "cell_index": 578,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-3",
+      "cell_index": 579,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-3",
+      "cell_index": 580,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-4",
+      "cell_index": 581,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-4",
+      "cell_index": 582,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-4",
+      "cell_index": 583,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-5",
+      "cell_index": 584,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-5",
+      "cell_index": 585,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-5",
+      "cell_index": 586,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-6",
+      "cell_index": 587,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-6",
+      "cell_index": 588,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-6",
+      "cell_index": 589,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-7",
+      "cell_index": 590,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-7",
+      "cell_index": 591,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-7",
+      "cell_index": 592,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-156__K-8",
+      "cell_index": 593,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-156__K-8",
+      "cell_index": 594,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-156__K-8",
+      "cell_index": 595,
+      "history": "156",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-1",
+      "cell_index": 596,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-1",
+      "cell_index": 597,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-1",
+      "cell_index": 598,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-2",
+      "cell_index": 599,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-2",
+      "cell_index": 600,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-2",
+      "cell_index": 601,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-3",
+      "cell_index": 602,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-3",
+      "cell_index": 603,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-3",
+      "cell_index": 604,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-4",
+      "cell_index": 605,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-4",
+      "cell_index": 606,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-4",
+      "cell_index": 607,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-5",
+      "cell_index": 608,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-5",
+      "cell_index": 609,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-5",
+      "cell_index": 610,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-6",
+      "cell_index": 611,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-6",
+      "cell_index": 612,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-6",
+      "cell_index": 613,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-7",
+      "cell_index": 614,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-7",
+      "cell_index": 615,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-7",
+      "cell_index": 616,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-182__K-8",
+      "cell_index": 617,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-182__K-8",
+      "cell_index": 618,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-182__K-8",
+      "cell_index": 619,
+      "history": "182",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-1",
+      "cell_index": 620,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-1",
+      "cell_index": 621,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-1",
+      "cell_index": 622,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-2",
+      "cell_index": 623,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-2",
+      "cell_index": 624,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-2",
+      "cell_index": 625,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-3",
+      "cell_index": 626,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-3",
+      "cell_index": 627,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-3",
+      "cell_index": 628,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-4",
+      "cell_index": 629,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-4",
+      "cell_index": 630,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-4",
+      "cell_index": 631,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-5",
+      "cell_index": 632,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-5",
+      "cell_index": 633,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-5",
+      "cell_index": 634,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-6",
+      "cell_index": 635,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-6",
+      "cell_index": 636,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-6",
+      "cell_index": 637,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-7",
+      "cell_index": 638,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-7",
+      "cell_index": 639,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-7",
+      "cell_index": 640,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-208__K-8",
+      "cell_index": 641,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-208__K-8",
+      "cell_index": 642,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-208__K-8",
+      "cell_index": 643,
+      "history": "208",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-1",
+      "cell_index": 644,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-1",
+      "cell_index": 645,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-1",
+      "cell_index": 646,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-2",
+      "cell_index": 647,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-2",
+      "cell_index": 648,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-2",
+      "cell_index": 649,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-3",
+      "cell_index": 650,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-3",
+      "cell_index": 651,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-3",
+      "cell_index": 652,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-4",
+      "cell_index": 653,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-4",
+      "cell_index": 654,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-4",
+      "cell_index": 655,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-5",
+      "cell_index": 656,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-5",
+      "cell_index": 657,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-5",
+      "cell_index": 658,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-6",
+      "cell_index": 659,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-6",
+      "cell_index": 660,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-6",
+      "cell_index": 661,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-7",
+      "cell_index": 662,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-7",
+      "cell_index": 663,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-7",
+      "cell_index": 664,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-234__K-8",
+      "cell_index": 665,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-234__K-8",
+      "cell_index": 666,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-234__K-8",
+      "cell_index": 667,
+      "history": "234",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-1",
+      "cell_index": 668,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-1",
+      "cell_index": 669,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-1",
+      "cell_index": 670,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-2",
+      "cell_index": 671,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-2",
+      "cell_index": 672,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-2",
+      "cell_index": 673,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-3",
+      "cell_index": 674,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-3",
+      "cell_index": 675,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-3",
+      "cell_index": 676,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-4",
+      "cell_index": 677,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-4",
+      "cell_index": 678,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-4",
+      "cell_index": 679,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-5",
+      "cell_index": 680,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-5",
+      "cell_index": 681,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-5",
+      "cell_index": 682,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-6",
+      "cell_index": 683,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-6",
+      "cell_index": 684,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-6",
+      "cell_index": 685,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-7",
+      "cell_index": 686,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-7",
+      "cell_index": 687,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-7",
+      "cell_index": 688,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-260__K-8",
+      "cell_index": 689,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-260__K-8",
+      "cell_index": 690,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-260__K-8",
+      "cell_index": 691,
+      "history": "260",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-1",
+      "cell_index": 692,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-1",
+      "cell_index": 693,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-1",
+      "cell_index": 694,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-2",
+      "cell_index": 695,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-2",
+      "cell_index": 696,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-2",
+      "cell_index": 697,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-3",
+      "cell_index": 698,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-3",
+      "cell_index": 699,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-3",
+      "cell_index": 700,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-4",
+      "cell_index": 701,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-4",
+      "cell_index": 702,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-4",
+      "cell_index": 703,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-5",
+      "cell_index": 704,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-5",
+      "cell_index": 705,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-5",
+      "cell_index": 706,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-6",
+      "cell_index": 707,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-6",
+      "cell_index": 708,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-6",
+      "cell_index": 709,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-7",
+      "cell_index": 710,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-7",
+      "cell_index": 711,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-7",
+      "cell_index": 712,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-286__K-8",
+      "cell_index": 713,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-286__K-8",
+      "cell_index": 714,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-286__K-8",
+      "cell_index": 715,
+      "history": "286",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-1",
+      "cell_index": 716,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-1",
+      "cell_index": 717,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-1",
+      "cell_index": 718,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-2",
+      "cell_index": 719,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-2",
+      "cell_index": 720,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-2",
+      "cell_index": 721,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-3",
+      "cell_index": 722,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-3",
+      "cell_index": 723,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-3",
+      "cell_index": 724,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-4",
+      "cell_index": 725,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-4",
+      "cell_index": 726,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-4",
+      "cell_index": 727,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-5",
+      "cell_index": 728,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-5",
+      "cell_index": 729,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-5",
+      "cell_index": 730,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-6",
+      "cell_index": 731,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-6",
+      "cell_index": 732,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-6",
+      "cell_index": 733,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-7",
+      "cell_index": 734,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-7",
+      "cell_index": 735,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-7",
+      "cell_index": 736,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-312__K-8",
+      "cell_index": 737,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-312__K-8",
+      "cell_index": 738,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-312__K-8",
+      "cell_index": 739,
+      "history": "312",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-1",
+      "cell_index": 740,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-1",
+      "cell_index": 741,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-1",
+      "cell_index": 742,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-2",
+      "cell_index": 743,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-2",
+      "cell_index": 744,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-2",
+      "cell_index": 745,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-3",
+      "cell_index": 746,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-3",
+      "cell_index": 747,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-3",
+      "cell_index": 748,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-4",
+      "cell_index": 749,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-4",
+      "cell_index": 750,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-4",
+      "cell_index": 751,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-5",
+      "cell_index": 752,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-5",
+      "cell_index": 753,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-5",
+      "cell_index": 754,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-6",
+      "cell_index": 755,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-6",
+      "cell_index": 756,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-6",
+      "cell_index": 757,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-7",
+      "cell_index": 758,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-7",
+      "cell_index": 759,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-7",
+      "cell_index": 760,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-338__K-8",
+      "cell_index": 761,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-338__K-8",
+      "cell_index": 762,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-338__K-8",
+      "cell_index": 763,
+      "history": "338",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-1",
+      "cell_index": 764,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-1",
+      "cell_index": 765,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-1",
+      "cell_index": 766,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-2",
+      "cell_index": 767,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-2",
+      "cell_index": 768,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-2",
+      "cell_index": 769,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-3",
+      "cell_index": 770,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-3",
+      "cell_index": 771,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-3",
+      "cell_index": 772,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-4",
+      "cell_index": 773,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-4",
+      "cell_index": 774,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-4",
+      "cell_index": 775,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-5",
+      "cell_index": 776,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-5",
+      "cell_index": 777,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-5",
+      "cell_index": 778,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-6",
+      "cell_index": 779,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-6",
+      "cell_index": 780,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-6",
+      "cell_index": 781,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-7",
+      "cell_index": 782,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-7",
+      "cell_index": 783,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-7",
+      "cell_index": 784,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-364__K-8",
+      "cell_index": 785,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-364__K-8",
+      "cell_index": 786,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-364__K-8",
+      "cell_index": 787,
+      "history": "364",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-1",
+      "cell_index": 788,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-1",
+      "cell_index": 789,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-1",
+      "cell_index": 790,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-2",
+      "cell_index": 791,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-2",
+      "cell_index": 792,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-2",
+      "cell_index": 793,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-3",
+      "cell_index": 794,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-3",
+      "cell_index": 795,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-3",
+      "cell_index": 796,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-4",
+      "cell_index": 797,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-4",
+      "cell_index": 798,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-4",
+      "cell_index": 799,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-5",
+      "cell_index": 800,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-5",
+      "cell_index": 801,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-5",
+      "cell_index": 802,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-6",
+      "cell_index": 803,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-6",
+      "cell_index": 804,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-6",
+      "cell_index": 805,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-7",
+      "cell_index": 806,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-7",
+      "cell_index": 807,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-7",
+      "cell_index": 808,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-390__K-8",
+      "cell_index": 809,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-390__K-8",
+      "cell_index": 810,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-390__K-8",
+      "cell_index": 811,
+      "history": "390",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-1",
+      "cell_index": 812,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-1",
+      "cell_index": 813,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-1",
+      "cell_index": 814,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-2",
+      "cell_index": 815,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-2",
+      "cell_index": 816,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-2",
+      "cell_index": 817,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-3",
+      "cell_index": 818,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-3",
+      "cell_index": 819,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-3",
+      "cell_index": 820,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-4",
+      "cell_index": 821,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-4",
+      "cell_index": 822,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-4",
+      "cell_index": 823,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-5",
+      "cell_index": 824,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-5",
+      "cell_index": 825,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-5",
+      "cell_index": 826,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-6",
+      "cell_index": 827,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-6",
+      "cell_index": 828,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-6",
+      "cell_index": 829,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-7",
+      "cell_index": 830,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-7",
+      "cell_index": 831,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-7",
+      "cell_index": 832,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-416__K-8",
+      "cell_index": 833,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-416__K-8",
+      "cell_index": 834,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-416__K-8",
+      "cell_index": 835,
+      "history": "416",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-1",
+      "cell_index": 836,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-1",
+      "cell_index": 837,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-1",
+      "cell_index": 838,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-2",
+      "cell_index": 839,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-2",
+      "cell_index": 840,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-2",
+      "cell_index": 841,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-3",
+      "cell_index": 842,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-3",
+      "cell_index": 843,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-3",
+      "cell_index": 844,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-4",
+      "cell_index": 845,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-4",
+      "cell_index": 846,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-4",
+      "cell_index": 847,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-5",
+      "cell_index": 848,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-5",
+      "cell_index": 849,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-5",
+      "cell_index": 850,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-6",
+      "cell_index": 851,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-6",
+      "cell_index": 852,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-6",
+      "cell_index": 853,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-7",
+      "cell_index": 854,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-7",
+      "cell_index": 855,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-7",
+      "cell_index": 856,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-442__K-8",
+      "cell_index": 857,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-442__K-8",
+      "cell_index": 858,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-442__K-8",
+      "cell_index": 859,
+      "history": "442",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-1",
+      "cell_index": 860,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-1",
+      "cell_index": 861,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-1",
+      "cell_index": 862,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-2",
+      "cell_index": 863,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-2",
+      "cell_index": 864,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-2",
+      "cell_index": 865,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-3",
+      "cell_index": 866,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-3",
+      "cell_index": 867,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-3",
+      "cell_index": 868,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-4",
+      "cell_index": 869,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-4",
+      "cell_index": 870,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-4",
+      "cell_index": 871,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-5",
+      "cell_index": 872,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-5",
+      "cell_index": 873,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-5",
+      "cell_index": 874,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-6",
+      "cell_index": 875,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-6",
+      "cell_index": 876,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-6",
+      "cell_index": 877,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-7",
+      "cell_index": 878,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-7",
+      "cell_index": 879,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-7",
+      "cell_index": 880,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-468__K-8",
+      "cell_index": 881,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-468__K-8",
+      "cell_index": 882,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-468__K-8",
+      "cell_index": 883,
+      "history": "468",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-1",
+      "cell_index": 884,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-1",
+      "cell_index": 885,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-1",
+      "cell_index": 886,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-2",
+      "cell_index": 887,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-2",
+      "cell_index": 888,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-2",
+      "cell_index": 889,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-3",
+      "cell_index": 890,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-3",
+      "cell_index": 891,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-3",
+      "cell_index": 892,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-4",
+      "cell_index": 893,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-4",
+      "cell_index": 894,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-4",
+      "cell_index": 895,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-5",
+      "cell_index": 896,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-5",
+      "cell_index": 897,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-5",
+      "cell_index": 898,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-6",
+      "cell_index": 899,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-6",
+      "cell_index": 900,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-6",
+      "cell_index": 901,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-7",
+      "cell_index": 902,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-7",
+      "cell_index": 903,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-7",
+      "cell_index": 904,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-494__K-8",
+      "cell_index": 905,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-494__K-8",
+      "cell_index": 906,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-494__K-8",
+      "cell_index": 907,
+      "history": "494",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-1",
+      "cell_index": 908,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-1",
+      "cell_index": 909,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-1",
+      "cell_index": 910,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-2",
+      "cell_index": 911,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-2",
+      "cell_index": 912,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-2",
+      "cell_index": 913,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-3",
+      "cell_index": 914,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-3",
+      "cell_index": 915,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-3",
+      "cell_index": 916,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-4",
+      "cell_index": 917,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-4",
+      "cell_index": 918,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-4",
+      "cell_index": 919,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-5",
+      "cell_index": 920,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-5",
+      "cell_index": 921,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-5",
+      "cell_index": 922,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-6",
+      "cell_index": 923,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-6",
+      "cell_index": 924,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-6",
+      "cell_index": 925,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-7",
+      "cell_index": 926,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-7",
+      "cell_index": 927,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-7",
+      "cell_index": 928,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-expanding__L-520__K-8",
+      "cell_index": 929,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-expanding__L-520__K-8",
+      "cell_index": 930,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-expanding__L-520__K-8",
+      "cell_index": 931,
+      "history": "520",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-1",
+      "cell_index": 932,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-1",
+      "cell_index": 933,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 1,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-1",
+      "cell_index": 934,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-2",
+      "cell_index": 935,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-2",
+      "cell_index": 936,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 2,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-2",
+      "cell_index": 937,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-3",
+      "cell_index": 938,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-3",
+      "cell_index": 939,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 3,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-3",
+      "cell_index": 940,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-4",
+      "cell_index": 941,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-4",
+      "cell_index": 942,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 4,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-4",
+      "cell_index": 943,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-5",
+      "cell_index": 944,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-5",
+      "cell_index": 945,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 5,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-5",
+      "cell_index": 946,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-6",
+      "cell_index": 947,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-6",
+      "cell_index": 948,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 6,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-6",
+      "cell_index": 949,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-7",
+      "cell_index": 950,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-7",
+      "cell_index": 951,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 7,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-7",
+      "cell_index": 952,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_separate__PCA-shared__L-expanding__K-8",
+      "cell_index": 953,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "separate"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_common__PCA-shared__L-expanding__K-8",
+      "cell_index": 954,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cell_id": "factor_partial__PCA-shared__L-expanding__K-8",
+      "cell_index": 955,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    }
+  ],
+  "canonical_cells_sha256": "10810c3a37b742cab6b8c46043ead8bd6761aebb85fec48c5697f2a6fcf830c0",
+  "comparison_counts_per_weighting_block": {
+    "mode_difference": 456,
+    "own_gain": 936,
+    "pooling_difference": 624
+  },
+  "evidence_status": "approximate_exploratory_seen_period_not_calibration_validated",
+  "experiment": "03-pca-history-surface",
+  "index_hash_format": "sha256(shape_as_little_endian_int64_then_C_order_little_endian_int64_data)",
+  "interval_rule": "basic marginal 95%, linear quantiles, no clipping",
+  "loss_array_hash_format": "sha256(shape_as_little_endian_int64_then_C_order_little_endian_float64_data)",
+  "loss_array_sha256": {
+    "equal": "a1642cd61f7355d235415dc6730aef9e8dc73b03a6d158e823150badec6784de",
+    "value": "e34112f7b3644306c5e7f5de8d78bfad8242a1f46f884d40dfb5046eb05da360"
+  },
+  "matrices": {
+    "13": {
+      "block_length": 13,
+      "dtype": "<i8",
+      "file": "indices_b13.npz",
+      "file_sha256": "839b2497eb46d1f372dc5921fd19744ae21402951b6265008f6474390b5298e4",
+      "is_primary_block": true,
+      "sha256": "6dc979b76330df44c83bf7a68d6e4fa3bdd6cc6e977b05e68f4e258ecda0a193",
+      "shape": [
+        9999,
+        87
+      ]
+    },
+    "26": {
+      "block_length": 26,
+      "dtype": "<i8",
+      "file": "indices_b26.npz",
+      "file_sha256": "a12845df816885a3550a8a230d5b1bf272e43c39196b2969c04550bdd1a06085",
+      "is_primary_block": false,
+      "sha256": "cc1d8e1ba9a173c3273fce69d7bb9910d483b3f070867f30f8866171bead02de",
+      "shape": [
+        9999,
+        87
+      ]
+    },
+    "6": {
+      "block_length": 6,
+      "dtype": "<i8",
+      "file": "indices_b6.npz",
+      "file_sha256": "8dd070e1062c725b6bbd9c4ec1a39a98eedbfa0ca7c1a7d96567bd92f5f49d7e",
+      "is_primary_block": false,
+      "sha256": "349bba43f5463c9f9024c9800e8aa2fca48b346c63a10cc2eb63dcaf5410a29e",
+      "shape": [
+        9999,
+        87
+      ]
+    }
+  },
+  "maximum_cells_per_loss_mean_batch": 49,
+  "models_refitted": false,
+  "n_cells": 956,
+  "n_dates": 87,
+  "n_targets": 6,
+  "one_shared_matrix_across_weightings_targets_all_cells_contrasts": true,
+  "origin_dates": [
+    "2024-12-27",
+    "2025-01-03",
+    "2025-01-10",
+    "2025-01-17",
+    "2025-01-24",
+    "2025-01-31",
+    "2025-02-07",
+    "2025-02-14",
+    "2025-02-21",
+    "2025-02-28",
+    "2025-03-07",
+    "2025-03-14",
+    "2025-03-21",
+    "2025-03-28",
+    "2025-04-04",
+    "2025-04-11",
+    "2025-04-18",
+    "2025-04-25",
+    "2025-05-02",
+    "2025-05-09",
+    "2025-05-16",
+    "2025-05-23",
+    "2025-05-30",
+    "2025-06-06",
+    "2025-06-13",
+    "2025-06-20",
+    "2025-06-27",
+    "2025-07-04",
+    "2025-07-11",
+    "2025-07-18",
+    "2025-07-25",
+    "2025-08-01",
+    "2025-08-08",
+    "2025-08-15",
+    "2025-08-22",
+    "2025-08-29",
+    "2025-09-05",
+    "2025-09-12",
+    "2025-09-19",
+    "2025-09-26",
+    "2025-10-03",
+    "2025-10-10",
+    "2025-10-17",
+    "2025-10-24",
+    "2025-10-31",
+    "2025-11-07",
+    "2025-11-14",
+    "2025-11-21",
+    "2025-11-28",
+    "2025-12-05",
+    "2025-12-12",
+    "2025-12-19",
+    "2025-12-26",
+    "2026-01-02",
+    "2026-01-09",
+    "2026-01-16",
+    "2026-01-23",
+    "2026-01-30",
+    "2026-02-06",
+    "2026-02-13",
+    "2026-02-20",
+    "2026-02-27",
+    "2026-03-06",
+    "2026-03-13",
+    "2026-03-20",
+    "2026-03-27",
+    "2026-04-03",
+    "2026-04-10",
+    "2026-04-17",
+    "2026-04-24",
+    "2026-05-01",
+    "2026-05-08",
+    "2026-05-15",
+    "2026-05-22",
+    "2026-05-29",
+    "2026-06-05",
+    "2026-06-12",
+    "2026-06-19",
+    "2026-06-26",
+    "2026-07-03",
+    "2026-07-10",
+    "2026-07-17",
+    "2026-07-24",
+    "2026-07-31",
+    "2026-08-07",
+    "2026-08-14",
+    "2026-08-21"
+  ],
+  "period": "later_seen",
+  "pvalue_rule": "(1+count(T_b-T_hat>=T_hat))/(B+1), anchors only, including ties",
+  "rejection_rule": "effect>0 and Holm-adjusted p strictly less than alpha",
+  "replicates": 9999,
+  "reset_seed_per_period_block_setting": true,
+  "response_dates": [
+    "2025-01-03",
+    "2025-01-10",
+    "2025-01-17",
+    "2025-01-24",
+    "2025-01-31",
+    "2025-02-07",
+    "2025-02-14",
+    "2025-02-21",
+    "2025-02-28",
+    "2025-03-07",
+    "2025-03-14",
+    "2025-03-21",
+    "2025-03-28",
+    "2025-04-04",
+    "2025-04-11",
+    "2025-04-18",
+    "2025-04-25",
+    "2025-05-02",
+    "2025-05-09",
+    "2025-05-16",
+    "2025-05-23",
+    "2025-05-30",
+    "2025-06-06",
+    "2025-06-13",
+    "2025-06-20",
+    "2025-06-27",
+    "2025-07-04",
+    "2025-07-11",
+    "2025-07-18",
+    "2025-07-25",
+    "2025-08-01",
+    "2025-08-08",
+    "2025-08-15",
+    "2025-08-22",
+    "2025-08-29",
+    "2025-09-05",
+    "2025-09-12",
+    "2025-09-19",
+    "2025-09-26",
+    "2025-10-03",
+    "2025-10-10",
+    "2025-10-17",
+    "2025-10-24",
+    "2025-10-31",
+    "2025-11-07",
+    "2025-11-14",
+    "2025-11-21",
+    "2025-11-28",
+    "2025-12-05",
+    "2025-12-12",
+    "2025-12-19",
+    "2025-12-26",
+    "2026-01-02",
+    "2026-01-09",
+    "2026-01-16",
+    "2026-01-23",
+    "2026-01-30",
+    "2026-02-06",
+    "2026-02-13",
+    "2026-02-20",
+    "2026-02-27",
+    "2026-03-06",
+    "2026-03-13",
+    "2026-03-20",
+    "2026-03-27",
+    "2026-04-03",
+    "2026-04-10",
+    "2026-04-17",
+    "2026-04-24",
+    "2026-05-01",
+    "2026-05-08",
+    "2026-05-15",
+    "2026-05-22",
+    "2026-05-29",
+    "2026-06-05",
+    "2026-06-12",
+    "2026-06-19",
+    "2026-06-26",
+    "2026-07-03",
+    "2026-07-10",
+    "2026-07-17",
+    "2026-07-24",
+    "2026-07-31",
+    "2026-08-07",
+    "2026-08-14",
+    "2026-08-21",
+    "2026-08-28"
+  ],
+  "rng": "numpy.Generator(PCG64)",
+  "seed": 20261102,
+  "target_order": [
+    "Food",
+    "Mach",
+    "Banks",
+    "Oil",
+    "Util",
+    "Hlth"
+  ]
+}

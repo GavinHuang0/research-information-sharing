@@ -1,0 +1,10 @@
+{
+  "audited_at_utc": "2026-11-03T17:10:13.713230+00:00",
+  "calibration_established": false,
+  "checked_rows": 24192,
+  "exact_anchor_tail_counts": 180,
+  "exact_index_matrices": 6,
+  "independent_Holm_families": 6,
+  "maximum_absolute_effect_or_interval_difference": 1.1102230246251565e-16,
+  "status": "passed"
+}

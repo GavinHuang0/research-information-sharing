@@ -2,14 +2,14 @@
 
 This project asks when industries should play different roles in **measuring common conditions** and **estimating how those conditions predict a target's future risk**. A broad measurement panel may be useful even when forecast coefficients should remain target-specific. Separate donor selection is a research hypothesis, not an established result.
 
-## Current progress: November 2, 2026
+## Current progress: November 3, 2026
 
 - Archived and labeled the French 48-industry daily data, in value- and equal-weighted forms, with raw downloads, industry definitions, coverage, units, and checksums.
 - Constructed reproducible weekly variance/volatility features and causal own-history controls.
 - **Completed Experiment 1:** a fixed six-target pilot with two PCs and 18 prespecified procedures. Development selection was frozen before the 2022-2024 evaluation. Its selected all-48/common-slope factor procedure improved the equal-target MSE ratio by **4.27%** versus own-history regression; equal-weighted robustness improvement was **1.66%**, including a **2.95% deterioration for Banks**.
 - Broader measurement explains most of the main comparison: separate slopes improve 1.79% with six measurement industries and 4.12% with 48. Common slopes across all outcomes raise this to 4.27%. Narrower outcome sharing did not improve the primary aggregate; benefits differ by target.
 - **Completed Experiment 2:** audited paired-bootstrap uncertainty and coefficient-history comparisons. At primary block length 13, no history establishes a factor advantage over matched own history or ridge in 2025–August 2026. L=104 passes the declared adjusted-p rule against elastic net (8.57% gain, p=0.0019) and PLS (13.74%, p=0.0019), while no finite history beats the expanding factor control. Bounded synthetic diagnostics showed adverse rejection/coverage behavior; nominal calibration is not established, so p-values and intervals remain approximate.
-- **Experiment 3 is planned, not implemented or run.** It will describe PCA-dimension/history surfaces for separate, common, and partially pooled slopes, comparing matched finite PCA/coefficient histories with expanding PCA at the same coefficient history. Previously inspected periods remain exploratory; calibration and power work is deferred.
+- **Completed Experiment 3:** audited K-by-L surfaces for separate/common/partial slopes under matched versus expanding PCA. Short-history high-K separate forecasts can deteriorate sharply, and pooling can cushion that cost without a universal best rule. All 30 primary block-13 anchors are non-rejections in both weightings; two equal-weighted block-26 sensitivity anchors cross the approximate adjusted threshold. Both periods are already seen, no new winner was selected, and calibration/power research remains deferred.
 
 ## Reading guide
 
@@ -21,7 +21,7 @@ This project asks when industries should play different roles in **measuring com
 | What Experiment 1 actually did | [Overview](experiments/01-fixed-s6-pilot/README.md), [precise executed procedure](experiments/01-fixed-s6-pilot/protocol.md) |
 | Experiment 1 findings and caveats | [Interpretation](experiments/01-fixed-s6-pilot/results.md), [full result archive and figures](results/fixed-pilot-2026-10-27/README.md) |
 | Experiment 2 procedures and execution status | [Overview](experiments/02-bootstrap-history/README.md), [frozen design](experiments/02-bootstrap-history/protocol.md), [execution record](experiments/02-bootstrap-history/executed.md), [results record](experiments/02-bootstrap-history/results.md) |
-| Experiment 3 planned dimension/history surfaces | [Brief overview](experiments/03-pca-history-surface/README.md), [detailed planned protocol](experiments/03-pca-history-surface/protocol.md), [non-executable settings](configs/experiment_03_plan.toml) |
+| Experiment 3 surfaces and execution status | [Overview](experiments/03-pca-history-surface/README.md), [frozen design](experiments/03-pca-history-surface/protocol.md), [execution record](experiments/03-pca-history-surface/executed.md), [results record](experiments/03-pca-history-surface/results.md) |
 | Inputs and feature definitions | [Data catalog](data/README.md), [input documentation](docs/data.md), [weekly features](data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md) |
 | Broader research toolkit and legacy grids | [Earlier experiment plan](docs/experiment_plan.md) |
 
@@ -49,11 +49,13 @@ The new evaluation period is January 2025 through the last complete August 2026 
 
 The exploratory Part A analysis passes the declared primary Holm rule only for value-weighted factor versus own history, not the direct references; equal-weighted Part A has no adjusted rejection. The new-period primary Part B gains are selective, and shortening the coefficient window does not establish an improvement over the same factor procedure with expanding history. A larger gain over a weaker short-history baseline is not evidence of a better factor forecast. [All contrasts, target heterogeneity, and sensitivities](experiments/02-bootstrap-history/results.md) remain visible, with no final winner reselection or universal factor claim.
 
-## Experiment 3: planned PCA-dimension and history surfaces
+## Experiment 3: completed PCA-dimension and history surfaces
 
-Part A proposes matched finite histories for PCA and supervised coefficients; Part B repeats the comparison with expanding predictor-only PCA and the same coefficient windows. Heatmaps will span K=1–8 PCs and L=52, 78, ..., 520 pairs, with an expanding-coefficient control and K=0 own-history reference. Separate, common, and partially pooled slopes use the six existing targets and all 48 measurement industries; common/partial pooling use all 48 outcomes.
+Part A uses matched finite histories for PCA and supervised coefficients; Part B repeats the comparison with expanding predictor-only PCA and the same coefficient windows. The frozen grid spans K=1–8 PCs and L=52, 78, ..., 520 pairs, with an expanding-coefficient control and K=0 own-history reference. Separate, common, and partially pooled slopes use the six existing targets and all 48 measurement industries; common/partial pooling use all 48 outcomes.
 
-This is a documented exploratory design, with no implementation or execution authorized by the plan itself. Earlier evaluation periods have already been inspected, and no new favorable surface cell is a fresh holdout result. Partial pooling can support saved-loss resampling after historical penalty tuning, but that does not establish full-pipeline validity. Calibration and power analyses are deferred; the existing adverse calibration caveat remains. See the [separate protocol](experiments/03-pca-history-surface/protocol.md) for the exact planned procedures.
+The source/input freeze preceded execution, and both forecast stages and all 24,192 saved-loss interval rows passed independent audits. The [complete results](experiments/03-pca-history-surface/results.md) retain all 936 factor cells and 20 own references, target heterogeneity, all 60 primary weighting/anchor rows, block sensitivities, and 19 PNG/PDF figure pairs. No primary anchor passes the declared Holm-30 rule in either weighting. These non-rejections are not equivalence findings, and sensitivity crossings do not replace the primary setting.
+
+Both evaluation periods were already inspected, so a favorable surface cell is not a fresh holdout result. The grid remains descriptive, with p-values confined to fixed later-seen anchors. Saved-loss resampling includes historically tuned partial pooling without establishing full-pipeline validity. Calibration and power research is still deferred; the adverse calibration caveat remains. See the [execution/reproduction record](experiments/03-pca-history-surface/executed.md) and unchanged [scientific protocol](experiments/03-pca-history-surface/protocol.md).
 
 ## Data and feature conventions
 

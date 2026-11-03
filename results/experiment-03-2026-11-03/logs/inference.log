@@ -1,0 +1,2 @@
+{"time_utc": "2026-11-03T17:08:43.591520+00:00", "event": "inference_period_complete", "period": "earlier_seen", "rows": 12096}
+{"time_utc": "2026-11-03T17:08:56.745778+00:00", "event": "inference_period_complete", "period": "later_seen", "rows": 12096}

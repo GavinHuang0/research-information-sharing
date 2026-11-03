@@ -1,0 +1,11 @@
+{
+  "completed_at_utc": "2026-11-03T17:08:56.744278+00:00",
+  "files": {
+    "anchor_table.csv": "ee878c4f37b67c0e741ebc89caec494ac6b2aa34da5fcb97ef0b9e35eca86888",
+    "bootstrap_index_manifest.json": "896941f3d5e2436afb5b5c913924a39faa9dc683263cb697bffe0b5c1c84d814",
+    "bootstrap_results.csv": "92989198e4b5751924a9dc55872ea194b3972187ee0c69771bbfb15158334650",
+    "indices_b13.npz": "839b2497eb46d1f372dc5921fd19744ae21402951b6265008f6474390b5298e4",
+    "indices_b26.npz": "a12845df816885a3550a8a230d5b1bf272e43c39196b2969c04550bdd1a06085",
+    "indices_b6.npz": "8dd070e1062c725b6bbd9c4ec1a39a98eedbfa0ca7c1a7d96567bd92f5f49d7e"
+  }
+}
