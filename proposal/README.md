@@ -2,6 +2,8 @@
 
 The current professor-facing document includes the original research question, completed work, first empirical findings, limitations, and next steps. It is a concise progress report, separate from the detailed experiment protocols.
 
+The PDF keeps a two-page narrative and adds two landscape pages with the existing earlier- and later-period Experiment 3 gain maps. Markdown displays the archived PNGs; the PDF embeds the corresponding vector figures without changing the experimental results.
+
 - **[Read the Markdown report](progress.md)**: canonical content, directly readable on GitHub.
 - **[Read the PDF](proposal.pdf)**: generated from the same Markdown for sharing.
 - [Generated LaTeX](proposal.tex): retained for transparency; edit the Markdown rather than this file.
@@ -18,7 +20,7 @@ python scripts/build_progress_report.py --check
 
 On Windows use `.\.venv\Scripts\python.exe` in place of `python`. From this folder, `make -B` builds and `make check` verifies. The PDF is compiled twice with shell escape disabled; intermediate files remain in an ignored scratch directory. Markdown links stay repository-relative; generated PDF links point to GitHub.
 
-After changing the Markdown, rebuild all outputs and visually inspect the PDF pages. The check refuses stale or modified outputs. Compiler/Pandoc versions are recorded; a different version can change PDF bytes without changing report content.
+After changing the Markdown, rebuild all outputs and visually inspect the PDF pages. The check refuses stale or modified outputs and verifies the four PNG/PDF figure-input hashes. Compiler/Pandoc versions are recorded; a different version can change PDF bytes without changing report content.
 
 ## Historical proposal
 

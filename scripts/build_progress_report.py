@@ -19,6 +19,11 @@ PROPOSAL = ROOT / "proposal"
 INPUTS = ("proposal/progress.md", "proposal/report-template.tex", "proposal/repo-links.lua",
           "scripts/build_progress_report.py")
 OUTPUTS = ("proposal/proposal.tex", "proposal/proposal.pdf")
+FIGURE_INPUTS = tuple(
+    f"results/experiment-03-2026-11-03/reports/{period}_value_gain.{extension}"
+    for period in ("earlier_seen", "later_seen")
+    for extension in ("png", "pdf")
+)
 
 
 def digest(raw: bytes) -> str:
@@ -33,6 +38,10 @@ def fingerprints() -> dict:
     return {name: digest(normalized(ROOT / name)) for name in INPUTS}
 
 
+def figure_fingerprints() -> dict:
+    return {name: digest((ROOT / name).read_bytes()) for name in FIGURE_INPUTS}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
@@ -43,6 +52,8 @@ def main() -> None:
         manifest = json.loads(manifest_path.read_bytes())
         if manifest["inputs_sha256_lf"] != fingerprints():
             parser.error("Progress source/template/build inputs changed; rebuild the report")
+        if manifest.get("figure_inputs_sha256") != figure_fingerprints():
+            parser.error("Progress figure inputs changed; rebuild the report")
         for name, expected in manifest["outputs_sha256"].items():
             contents = (ROOT / name).read_bytes()
             if name.endswith(".tex"):
@@ -57,7 +68,7 @@ def main() -> None:
     pandoc, pdflatex = shutil.which("pandoc"), shutil.which("pdflatex")
     if not pandoc or not pdflatex:
         parser.error("Install Pandoc and PDFLaTeX (TeX Live), or use --check to verify existing outputs")
-    command = [pandoc, "--from=markdown", "--to=latex", "--standalone", "--wrap=none", "--eol=lf",
+    command = [pandoc, "--from=markdown-implicit_figures", "--to=latex", "--standalone", "--wrap=none", "--eol=lf",
                "--shift-heading-level-by=-1", f"--template={PROPOSAL / 'report-template.tex'}",
                f"--lua-filter={PROPOSAL / 'repo-links.lua'}", f"--metadata=source_hash:{source_hash}"]
     body = subprocess.run(command, input=normalized(PROPOSAL / "progress.md"), cwd=ROOT,
@@ -67,9 +78,17 @@ def main() -> None:
     scratch = ROOT / ".venv/progress-build"
     scratch.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="report-", dir=scratch) as directory:
-        build = Path(directory).resolve()
-        if not build.is_relative_to(scratch.resolve()):
+        staging = Path(directory).resolve()
+        if not staging.is_relative_to(scratch.resolve()):
             raise ValueError("Build directory must stay within the repository's scratch directory")
+        # Mirror repository paths so the generated LaTeX stays portable from proposal/.
+        build = staging / "proposal"
+        build.mkdir()
+        for name in FIGURE_INPUTS:
+            if name.endswith(".pdf"):
+                target = staging / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(ROOT / name, target)
         (build / "proposal.tex").write_bytes(generated)
         for _ in range(2):
             result = subprocess.run([pdflatex, "-no-shell-escape", "-interaction=nonstopmode", "-halt-on-error", "proposal.tex"],
@@ -82,8 +101,9 @@ def main() -> None:
         pdf = (build / "proposal.pdf").read_bytes()
         (PROPOSAL / "proposal.tex").write_bytes(generated)
         (PROPOSAL / "proposal.pdf").write_bytes(pdf)
-    manifest = dict(schema_version=1, canonical_source="proposal/progress.md", source_sha256_lf=source_hash,
+    manifest = dict(schema_version=2, canonical_source="proposal/progress.md", source_sha256_lf=source_hash,
                     inputs_sha256_lf=fingerprints(),
+                    figure_inputs_sha256=figure_fingerprints(),
                     outputs_sha256={name: digest(normalized(ROOT / name) if name.endswith(".tex") else (ROOT / name).read_bytes()) for name in OUTPUTS},
                     tools={"pandoc": subprocess.check_output([pandoc, "--version"]).decode().splitlines()[0],
                            "pdflatex": subprocess.check_output([pdflatex, "--version"]).decode().splitlines()[0]},

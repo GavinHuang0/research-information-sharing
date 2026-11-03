@@ -1,5 +1,5 @@
 % GENERATED from proposal/progress.md; do not edit manually.
-% Source SHA-256 (LF): 4bac8bfe9ac2b079a0c2027dc3d2091a0416d456cc87b20d5f3afe0c2b140f69
+% Source SHA-256 (LF): 8b9ca8509c2ecd4ffe2ebc098573cf1e8ff71e5655b5866001b1d8c146216a81
 % Progress report template. Body and title are generated from progress.md.
 \documentclass[11pt,letterpaper]{article}
 \usepackage[margin=0.85in]{geometry}
@@ -7,12 +7,13 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs,longtable,array,calc}
+\usepackage{graphicx,pdflscape}
 \usepackage{microtype}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 \hypersetup{pdftitle={Research progress: factor measurement and forecast sharing},pdfsubject={Research progress on factor measurement and forecast sharing}}
-\pdfinfo{/ProgressSourceSHA256 (4bac8bfe9ac2b079a0c2027dc3d2091a0416d456cc87b20d5f3afe0c2b140f69)}
+\pdfinfo{/ProgressSourceSHA256 (8b9ca8509c2ecd4ffe2ebc098573cf1e8ff71e5655b5866001b1d8c146216a81)}
 \urlstyle{same}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.3em}
@@ -110,4 +111,23 @@ Protocols, complete results, graphs, and audits: \href{https://github.com/GavinH
 \item
   Politis and Romano (1994), \emph{The Stationary Bootstrap}. \href{https://doi.org/10.1080/01621459.1994.10476870}{DOI}.
 \end{enumerate}
+
+\clearpage
+\begin{landscape}
+
+\section{Figure 1: earlier-period forecasting gains}\label{figure-1-earlier-period-forecasting-gains}
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../results/experiment-03-2026-11-03/reports/earlier_seen_value_gain.pdf}
+
+\textbf{2011-2024, 718 forecast dates; exploratory, previously inspected.} Horizontal axes show coefficient-history pairs L; vertical axes show factors K. Rows compare separate/common/partial slopes; columns compare matched/expanding PCA. Blue indicates lower MSE than matching-history own regression, averaged equally across six targets. Expanding-coefficient controls appear separately at right. Longer histories retain broadly favorable gains; sharing cushions high-K/short-history deterioration. Colors show point estimates, not significance.
+
+\clearpage
+
+\section{Figure 2: later-period forecasting gains}\label{figure-2-later-period-forecasting-gains}
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../results/experiment-03-2026-11-03/reports/later_seen_value_gain.pdf}
+
+\textbf{2025-August 2026, 87 forecast dates; exploratory, previously inspected.} Axes, rules, and reference definitions match Figure 1. Short windows often show a larger relative edge, while additional factors particularly hurt separate slopes. Partial pooling and expanding PCA are not uniformly superior. The changing own-history benchmark means these maps do not rank absolute accuracy. Color limits differ across periods: compare cell values, not shades. No primary Holm-adjusted anchor rejects.
+
+\end{landscape}
 \end{document}

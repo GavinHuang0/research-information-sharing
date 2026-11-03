@@ -57,3 +57,21 @@ Protocols, complete results, graphs, and audits: [Experiment 1](../experiments/0
 1. Stock and Watson (2002), *Forecasting Using Principal Components from a Large Number of Predictors*. [DOI](https://doi.org/10.1198/016214502388618960).
 2. Boivin and Ng (2006), *Are More Data Always Better for Factor Analysis?* [DOI](https://doi.org/10.1016/j.jeconom.2005.01.027).
 3. Politis and Romano (1994), *The Stationary Bootstrap*. [DOI](https://doi.org/10.1080/01621459.1994.10476870).
+
+<!-- progress-landscape-begin -->
+
+## Figure 1: earlier-period forecasting gains
+
+![Earlier-period value-weighted MSE gain surfaces for separate, common, and partially pooled factor slopes under matched and expanding PCA.](../results/experiment-03-2026-11-03/reports/earlier_seen_value_gain.png)
+
+**2011-2024, 718 forecast dates; exploratory, previously inspected.** Horizontal axes show coefficient-history pairs L; vertical axes show factors K. Rows compare separate/common/partial slopes; columns compare matched/expanding PCA. Blue indicates lower MSE than matching-history own regression, averaged equally across six targets. Expanding-coefficient controls appear separately at right. Longer histories retain broadly favorable gains; sharing cushions high-K/short-history deterioration. Colors show point estimates, not significance.
+
+<!-- progress-landscape-next -->
+
+## Figure 2: later-period forecasting gains
+
+![Later-period value-weighted MSE gain surfaces for separate, common, and partially pooled factor slopes under matched and expanding PCA.](../results/experiment-03-2026-11-03/reports/later_seen_value_gain.png)
+
+**2025-August 2026, 87 forecast dates; exploratory, previously inspected.** Axes, rules, and reference definitions match Figure 1. Short windows often show a larger relative edge, while additional factors particularly hurt separate slopes. Partial pooling and expanding PCA are not uniformly superior. The changing own-history benchmark means these maps do not rank absolute accuracy. Color limits differ across periods: compare cell values, not shades. No primary Holm-adjusted anchor rejects.
+
+<!-- progress-landscape-end -->
