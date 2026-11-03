@@ -1,0 +1,723 @@
+{
+  "audited_at_utc": "2026-11-03T17:05:18.552120+00:00",
+  "calibration_or_power_study": false,
+  "candidate_loss_atol": 2e-09,
+  "candidate_loss_rtol": 2e-08,
+  "committed_freeze_exact_bytes": true,
+  "forecast_atol": 2e-09,
+  "forecast_rtol": 2e-08,
+  "freeze_commit": "358636450c282ec902d95827cf333f68aa047599",
+  "freeze_commit_time": "2026-11-03T11:59:36-05:00",
+  "oracle": "original FactorForecaster and PCARepresentation(8), independently defined immutable K-prefix; no FactorWindow/Schur calls",
+  "oracle_entries": [
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.0,
+        "Food": 0.0,
+        "Hlth": 0.0,
+        "Mach": 0.0,
+        "Oil": 0.0,
+        "Util": 0.0
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        468,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 4.440892098500626e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 2.220446049250313e-16,
+      "maximum_validation_MSE_absolute_difference": 1.2212453270876722e-15,
+      "mode": "matched",
+      "outer_PCA_window": [
+        520,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "common",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "value"
+    },
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.0,
+        "Food": 0.0,
+        "Hlth": 0.0,
+        "Mach": 0.0,
+        "Oil": 0.0,
+        "Util": 0.0
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        0,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 4.440892098500626e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 2.220446049250313e-16,
+      "maximum_validation_MSE_absolute_difference": 1.2212453270876722e-15,
+      "mode": "expanding",
+      "outer_PCA_window": [
+        0,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "common",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "value"
+    },
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "chosen_penalties": {
+        "Banks": 10.0,
+        "Food": 10.0,
+        "Hlth": 10.0,
+        "Mach": 1.0,
+        "Oil": 100.0,
+        "Util": 0.01
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        468,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 7.993605777301127e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 2.220446049250313e-16,
+      "maximum_validation_MSE_absolute_difference": 2.4424906541753444e-15,
+      "mode": "matched",
+      "outer_PCA_window": [
+        520,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "partial",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "value"
+    },
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "chosen_penalties": {
+        "Banks": 100.0,
+        "Food": 100.0,
+        "Hlth": 10.0,
+        "Mach": 100.0,
+        "Oil": 0.01,
+        "Util": 0.01
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        0,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 3.9968028886505635e-14,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 2.220446049250313e-16,
+      "maximum_validation_MSE_absolute_difference": 3.4416913763379853e-15,
+      "mode": "expanding",
+      "outer_PCA_window": [
+        0,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "partial",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "value"
+    },
+    {
+      "K": 2,
+      "candidate_penalties": [
+        0.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.0,
+        "Food": 0.0,
+        "Hlth": 0.0,
+        "Mach": 0.0,
+        "Oil": 0.0,
+        "Util": 0.0
+      },
+      "computed_components": 8,
+      "cut": 923,
+      "forecast_dates": 13,
+      "history": "260",
+      "inner_PCA_window": [
+        611,
+        871
+      ],
+      "inner_coefficient_window": [
+        611,
+        871
+      ],
+      "maximum_forecast_absolute_difference": 7.105427357601002e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 4.440892098500626e-16,
+      "maximum_validation_MSE_absolute_difference": 1.887379141862766e-15,
+      "mode": "matched",
+      "outer_PCA_window": [
+        663,
+        923
+      ],
+      "outer_coefficient_window": [
+        663,
+        923
+      ],
+      "sharing": "separate",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 2,
+      "validation_pairs": 52,
+      "weighting": "value"
+    },
+    {
+      "K": 1,
+      "candidate_penalties": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "chosen_penalties": {
+        "Banks": 1.0,
+        "Food": 1.0,
+        "Hlth": 0.01,
+        "Mach": 100.0,
+        "Oil": 100.0,
+        "Util": 100.0
+      },
+      "computed_components": 8,
+      "cut": 923,
+      "forecast_dates": 13,
+      "history": "expanding",
+      "inner_PCA_window": [
+        0,
+        871
+      ],
+      "inner_coefficient_window": [
+        0,
+        871
+      ],
+      "maximum_forecast_absolute_difference": 7.105427357601002e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 2.220446049250313e-16,
+      "maximum_validation_MSE_absolute_difference": 1.4432899320127035e-15,
+      "mode": "shared",
+      "outer_PCA_window": [
+        0,
+        923
+      ],
+      "outer_coefficient_window": [
+        0,
+        923
+      ],
+      "sharing": "partial",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 1,
+      "validation_pairs": 52,
+      "weighting": "value"
+    },
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.0,
+        "Food": 0.0,
+        "Hlth": 0.0,
+        "Mach": 0.0,
+        "Oil": 0.0,
+        "Util": 0.0
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        468,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 3.552713678800501e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 6.661338147750939e-16,
+      "maximum_validation_MSE_absolute_difference": 6.661338147750939e-16,
+      "mode": "matched",
+      "outer_PCA_window": [
+        520,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "common",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "equal"
+    },
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.0,
+        "Food": 0.0,
+        "Hlth": 0.0,
+        "Mach": 0.0,
+        "Oil": 0.0,
+        "Util": 0.0
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        0,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 5.329070518200751e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 6.661338147750939e-16,
+      "maximum_validation_MSE_absolute_difference": 4.218847493575595e-15,
+      "mode": "expanding",
+      "outer_PCA_window": [
+        0,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "common",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "equal"
+    },
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.01,
+        "Food": 100.0,
+        "Hlth": 10.0,
+        "Mach": 100.0,
+        "Oil": 100.0,
+        "Util": 100.0
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        468,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 1.0658141036401503e-14,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 6.661338147750939e-16,
+      "maximum_validation_MSE_absolute_difference": 3.3306690738754696e-15,
+      "mode": "matched",
+      "outer_PCA_window": [
+        520,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "partial",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "equal"
+    },
+    {
+      "K": 8,
+      "candidate_penalties": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "chosen_penalties": {
+        "Banks": 100.0,
+        "Food": 0.1,
+        "Hlth": 10.0,
+        "Mach": 100.0,
+        "Oil": 100.0,
+        "Util": 100.0
+      },
+      "computed_components": 8,
+      "cut": 572,
+      "forecast_dates": 13,
+      "history": "52",
+      "inner_PCA_window": [
+        0,
+        520
+      ],
+      "inner_coefficient_window": [
+        468,
+        520
+      ],
+      "maximum_forecast_absolute_difference": 3.9968028886505635e-14,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 6.661338147750939e-16,
+      "maximum_validation_MSE_absolute_difference": 3.774758283725532e-15,
+      "mode": "expanding",
+      "outer_PCA_window": [
+        0,
+        572
+      ],
+      "outer_coefficient_window": [
+        520,
+        572
+      ],
+      "sharing": "partial",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 8,
+      "validation_pairs": 52,
+      "weighting": "equal"
+    },
+    {
+      "K": 2,
+      "candidate_penalties": [
+        0.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.0,
+        "Food": 0.0,
+        "Hlth": 0.0,
+        "Mach": 0.0,
+        "Oil": 0.0,
+        "Util": 0.0
+      },
+      "computed_components": 8,
+      "cut": 923,
+      "forecast_dates": 13,
+      "history": "260",
+      "inner_PCA_window": [
+        611,
+        871
+      ],
+      "inner_coefficient_window": [
+        611,
+        871
+      ],
+      "maximum_forecast_absolute_difference": 6.217248937900877e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 3.3306690738754696e-16,
+      "maximum_validation_MSE_absolute_difference": 3.9968028886505635e-15,
+      "mode": "matched",
+      "outer_PCA_window": [
+        663,
+        923
+      ],
+      "outer_coefficient_window": [
+        663,
+        923
+      ],
+      "sharing": "separate",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 2,
+      "validation_pairs": 52,
+      "weighting": "equal"
+    },
+    {
+      "K": 1,
+      "candidate_penalties": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "chosen_penalties": {
+        "Banks": 0.01,
+        "Food": 0.01,
+        "Hlth": 100.0,
+        "Mach": 1.0,
+        "Oil": 0.1,
+        "Util": 1.0
+      },
+      "computed_components": 8,
+      "cut": 923,
+      "forecast_dates": 13,
+      "history": "expanding",
+      "inner_PCA_window": [
+        0,
+        871
+      ],
+      "inner_coefficient_window": [
+        0,
+        871
+      ],
+      "maximum_forecast_absolute_difference": 8.881784197001252e-15,
+      "maximum_own_forecast_absolute_difference": 0.0,
+      "maximum_own_validation_MSE_absolute_difference": 3.3306690738754696e-16,
+      "maximum_validation_MSE_absolute_difference": 1.887379141862766e-15,
+      "mode": "shared",
+      "outer_PCA_window": [
+        0,
+        923
+      ],
+      "outer_coefficient_window": [
+        0,
+        923
+      ],
+      "sharing": "partial",
+      "targets": [
+        "Food",
+        "Mach",
+        "Banks",
+        "Oil",
+        "Util",
+        "Hlth"
+      ],
+      "used_components": 1,
+      "validation_pairs": 52,
+      "weighting": "equal"
+    }
+  ],
+  "own_atol": 2e-12,
+  "own_rtol": 2e-11,
+  "runtime_inventory": {
+    "all_stage_files_below_80MiB": true,
+    "first_block_per_weighting_PCA_fits": 39,
+    "maximum_gzip_shard_bytes": 3925120,
+    "maximum_stage_file_bytes": 32947712,
+    "other_block_PCA_fits": 40,
+    "pca_fits": 4478,
+    "prediction_rows": 8236896,
+    "raw_gzip_shards": 236,
+    "refit_blocks": 112,
+    "stage_files_hashed": 245,
+    "tuning_rows": 1481088
+  },
+  "settings_selected": false,
+  "source_files_verified": 42,
+  "specifications": [
+    {
+      "K": 8,
+      "cut": 572,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cut": 572,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "common"
+    },
+    {
+      "K": 8,
+      "cut": 572,
+      "history": "52",
+      "mode": "matched",
+      "sharing": "partial"
+    },
+    {
+      "K": 8,
+      "cut": 572,
+      "history": "52",
+      "mode": "expanding",
+      "sharing": "partial"
+    },
+    {
+      "K": 2,
+      "cut": 923,
+      "history": "260",
+      "mode": "matched",
+      "sharing": "separate"
+    },
+    {
+      "K": 1,
+      "cut": 923,
+      "history": "expanding",
+      "mode": "shared",
+      "sharing": "partial"
+    }
+  ],
+  "specifications_prespecified_before_completion_utc": "2026-11-03T17:04:21+00:00",
+  "stage_started_utc": "2026-11-03T16:59:40.102526+00:00",
+  "status": "passed",
+  "target_order": [
+    "Food",
+    "Mach",
+    "Banks",
+    "Oil",
+    "Util",
+    "Hlth"
+  ],
+  "weighting_groups": 12
+}
