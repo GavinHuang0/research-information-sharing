@@ -1,0 +1,88 @@
+{
+  "distinct_factor_cells": 936,
+  "earlier_seen_dates": 718,
+  "fingerprint": {
+    "code_and_protocol_sha256_lf": {
+      "configs/experiment_03_plan.toml": "e1790b9a0e09635b3d2ecb714da6a8c1fcdd9ca5fb2fbd5b8d750510aa68b8c8",
+      "experiments/03-pca-history-surface/protocol.md": "c6ad3a68143dbe042047cc1ee32563cb33b3133619ac524b745261ab89ad8aeb",
+      "requirements-analysis-lock.txt": "b31eb3010807afdb2b1cd61802a417065ad1955a46333be3753db8eb6c689325",
+      "requirements-lock.txt": "250b752b39ba71f6b256a916b33ca8a8b4dba91c13083d711095b6e900ef36af",
+      "scripts/audit_experiment_03.py": "47c014f64de64f657dec46ca04bbd976592e3a456e94576be5d3e824b6ff6132",
+      "scripts/run_experiment_03.py": "6ef47d3332939a37e266b85ee5ec8c844582fb33afb959e479dd7d55b285f9ef",
+      "src/factorcast/__init__.py": "c09da4796c766bbe6addb2692cd8e95eca8873a236e1b034ea34344ed96a1a3f",
+      "src/factorcast/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "src/factorcast/bootstrap.py": "decf2b0e38258779bfaf41dfa6b8066bc0c27ab4a0237cd39887a2e418a5ad33",
+      "src/factorcast/cli.py": "f69aa1286be93059c68e578a6132fc68c40b091d6726975274dd8bce990b3e0e",
+      "src/factorcast/data.py": "ab58d230603314a8fbead8ae37926797ca0242906d40050c717ce4c0b9230119",
+      "src/factorcast/evaluation.py": "8a01aafc5e440b9786d7b923e56b2b5b8a9d0fe4e3b405d14be3f4cbd6e575ac",
+      "src/factorcast/experiments.py": "4ac5401b3acc7a463f44b2656c0069ea0c40a46f54f1b23dccfd462e08b8a2fb",
+      "src/factorcast/features.py": "5a66d4d978d9175873b904306ad84a268593215277f77e16e547aea1e323a963",
+      "src/factorcast/history.py": "0884acfd8320851e65b989692f9f89c911de453a5046ce187dc493806c1b6f19",
+      "src/factorcast/history_reporting.py": "3ab1f0858b9fb002ce70c74a1ceff3c036e4bf5393693ee68d189178df99d254",
+      "src/factorcast/models.py": "8f4ec4bb06531843970a343ffc089ca1ee1d84af066c8acc5ecbc919709fdfab",
+      "src/factorcast/pilot.py": "1157955785f981a868a84a644fd14312cb3374592685abaf3fc7a565daa70dc5",
+      "src/factorcast/pilot_reporting.py": "9b25c9ffa1cdd7d296820f61ea01600abd4b39444e1d51fadcae233dfe74397e",
+      "src/factorcast/retrieval.py": "774252b581a98324a21acf867d110c38291b081efeec6a25f64b702e504a227f",
+      "src/factorcast/simulation.py": "06157570e07fafe08eabed4602721512ad74b263882d75e1d2d8d62f010f7d5e",
+      "src/factorcast/surface.py": "300c61b7cae794c48581cc7ba174cde5d90cd8098d39619b97bf9fb4aaf38707",
+      "src/factorcast/surface_bootstrap.py": "fe2f4369c301c9f6fbde11a80592b1aa0ccd78d16d1ba4175367d2552ae7e7bd",
+      "src/factorcast/surface_reporting.py": "a41a2306dc1ea60a88d0a550ec3e3fb014b264dc8caf44a8d8b00d4bc35763b7",
+      "tests/test_bootstrap.py": "7a9c6efea5b187a4eb49755cdc2f0580fac4f6377565895bab0c6dd4f88940be",
+      "tests/test_cli.py": "278b39866256196dc7ac3ff6bba434159224b4bab48fc21ada00c98e168ac3c7",
+      "tests/test_data.py": "b50586d5f8cde40b0638df0e4a987a15b5c3f3c642fae9d50c146d4682e5d39a",
+      "tests/test_evaluation.py": "4bb125704690e955b080c047634688aba00a7545ca224479ccb3c160c47a398a",
+      "tests/test_experiment_03_orchestration.py": "49cecf02cd68a3b0fb8d61dab17e976d52b3945af10cb8f612c1bbfb5aa95e3b",
+      "tests/test_experiments.py": "131b036d3798236b2a378ad0815a2aa7b1a075893e62052bd4ca6155e744699e",
+      "tests/test_history.py": "7325dd4f81d6beca00458397728fdbeff69f08574e73e05fa78a97a6b70b9494",
+      "tests/test_history_reporting.py": "ad0fbd551236d130c51a5bd58825d866adc18746e10adfad494b800a12a3b3f5",
+      "tests/test_history_timing.py": "2f78d84bf079ead10994539e0a3b89581625c77776908f041b454c8e6c5f6850",
+      "tests/test_models.py": "870a2240330752f04f12380dae57d14ba1ca1f867e424a729ad21f345266462e",
+      "tests/test_pilot.py": "19e391f7da34bb80f4e7424a5dec5e92808684ec89bdc422aeeac29516658b7c",
+      "tests/test_pilot_reporting.py": "df141f783b6607fb577c81a343c8fc44e35421fc56fef4b7971f5e5057a96abd",
+      "tests/test_pilot_timing.py": "828d7c817b0f2dfd1cfc2770c5914d0425426f360f5c11e440f5f94d34eb6c8c",
+      "tests/test_retrieval.py": "eee8422891a349ea4a83192cbd822b4a9edcd714f58618e15f6fb0e034ae3ee0",
+      "tests/test_simulation.py": "a13987977904b15ef51b3e22a8c1d16ac123de89efeca1f14007349d1606d684",
+      "tests/test_surface.py": "63134f1501482cc2c5a9cb6fb8c4c569a033c263dc04e0f853bd7ebfa7dd056c",
+      "tests/test_surface_bootstrap.py": "1d065f67aa149ef1c3da9652390713611316a0e07457f0d3911a3eb74d1c9b9a",
+      "tests/test_surface_reporting.py": "9fe4055f22126c641a0167cf6b6e261bba0d1f14ea81291fb06d35379e775892"
+    },
+    "config_sha256_lf": "f9bc0b86b0fbdff83835acbe29a27e77c6548efd70c026381fd12a855a3561e5",
+    "versions": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.0"
+    }
+  },
+  "implementation_commit": "a1db310f1f15dd08c545a72165c04d2f992a0030",
+  "inputs": {
+    "equal": {
+      "bytes": 9171931,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv",
+      "sha256": "72b10111b3c8cd8d253edb8f17c6c7abd8ad87cabad7f7cc517ce39fac3d6232"
+    },
+    "experiment-02-2026-11-01": {
+      "manifest_sha256": "0a428c30ef30b79b1269266625eb0742b10bfdf27898b635293fd64daa6532d6",
+      "verified_files": 71
+    },
+    "fixed-pilot-2026-10-27": {
+      "manifest_sha256": "b6d529946ebc2c3acfc862b1a1e0417dc0f4984a9553861b28576d097e23a140",
+      "verified_files": 36
+    },
+    "provenance": {
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json",
+      "sha256": "7843fdf47a51489d4fb9b6ff2089222bb31695a51c4ceb6e0d8fcf822b028c9e"
+    },
+    "value": {
+      "bytes": 9190339,
+      "path": "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv",
+      "sha256": "5ea6269369a30c3274eb930f386c4a1f1f67619cb66013fa83c21f2ecee0ab6f"
+    }
+  },
+  "later_seen_dates": 87,
+  "loss": "squared next-week log-variance proxy forecast error",
+  "own_references": 20,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "started_at_utc": "2026-11-03T16:59:19.071977+00:00"
+}
