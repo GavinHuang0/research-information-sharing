@@ -1,8 +1,8 @@
 # Current research progress
 
-The current professor-facing document includes the original research question, completed work, first empirical findings, limitations, and next steps. It is a concise progress report, separate from the detailed experiment protocols.
+The current professor-facing document reconciles the original proposal with current progress: project purpose and hypotheses, summaries of related research, each experiment's purpose/brief procedure/results, and planned next steps including calibration. It is separate from the detailed experiment protocols.
 
-The PDF keeps a two-page narrative and adds two landscape pages with the existing earlier- and later-period Experiment 3 gain maps. Markdown displays the archived PNGs; the PDF embeds the corresponding vector figures without changing the experimental results.
+The PDF has three pages of proposal, progress, and references, followed by two landscape pages with the existing earlier- and later-period Experiment 3 gain maps. Markdown displays the archived PNGs; the PDF embeds the corresponding vector figures without changing the experimental results.
 
 - **[Read the Markdown report](progress.md)**: canonical content, directly readable on GitHub.
 - **[Read the PDF](proposal.pdf)**: generated from the same Markdown for sharing.

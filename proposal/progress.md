@@ -1,62 +1,70 @@
 ---
-title: "Research progress: factor measurement and forecast sharing"
-date: "November 3, 2026"
+title: "Factor measurement and forecast sharing"
+date: "Proposal and progress | November 4, 2026"
 ---
 
-## Research question and initial plan
+## Project proposal and purpose
 
-Industries can measure common conditions ($M$) or help estimate predictive coefficients ($O$). We ask when assigning these roles separately improves risk forecasts. We hypothesize measurement expansion helps at fixed dimension, and sharing helps with short histories and similar slopes; heterogeneity, noise, or instability can offset gains. Motivated by principal-component forecasting [1] and panel-composition evidence [2], we study finite-sample variance/information tradeoffs. Dimension reduction cannot improve the unrestricted population optimum with identical information.
+A larger panel can help forecast an industry's risk in two different ways: other industries provide measurements of common conditions, and their outcomes help estimate how those conditions predict future risk. These roles require different similarities. An industry can measure the common state well while having a predictive response unlike the target's. We ask **when choosing measurement donors and coefficient-sharing donors separately improves forecasts**, particularly with short target histories.
 
-## Completed foundation and first two experiments
+$$
+x_{jt}=\ell_j'f_t+u_{jt},\quad j\in M;\qquad
+y_{i,t+1}=a_i+b_i'z_{it}+\theta_i'f_t+\varepsilon_{i,t+1}.
+$$
 
-We archived French 48-industry daily returns, both weightings, provenance, missingness, and hashes. Weekly $Q_{jt}=\sum_d r_{jd}^2$ and $v_{jt}=\log(Q_{jt}+10^{-8})$ require at least three daily returns. These proxy daily-return variation. Own controls are current $v$ and complete trailing four-/twelve-week means; the response is next calendar week's $v$.
+Measurement industries $M$ estimate common factors $f_t$; outcome donors $O$ help estimate the target's factor slopes $\theta_i$. Own-history controls $z_{it}$ retain industry-specific coefficients. Sharing ranges from separate slopes through partial pooling to common slopes. We hypothesize that broad, informative measurement and selective coefficient sharing can complement each other when measurement quality and slope similarity differ. Correlated noise, heterogeneity, and instability can offset the gains.
 
-Experiment 1 fixed Food, Mach, Banks, Oil, Util, and Hlth as targets and the small donor panel. Eighteen procedures compared panels, sharing, direct methods, and baselines. Selection preceded 2022-2024 evaluation. The selected all-48/common-slope factor gained **4.27%** against own history; equal-weighted gain was **1.66%**, including **2.95% worse Banks MSE**. Broader measurement supplied most of the gain.
+At fixed factor count K, expanding M does not itself add target regression coefficients. The relevant tradeoffs must therefore come from measurement quality, sharing bias, instability, or fitted dimension. A supporting question is which components predict the target: the dominant variance directions need not be the useful predictive directions. Factors restrict a direct regression's coefficient space; any benefit is finite-sample regularization rather than an information advantage over unrestricted population prediction. Ridge, elastic net, and supervised dimension reduction are essential comparisons.
 
-Experiment 2 added paired stationary bootstraps [3] and coefficient histories 104/260/520/expanding, with expanding PCA. In 2025-August 2026, no history beat own history or ridge after Holm-19 adjustment. L=104 beat elastic net and PLS under the approximate rule. No finite history showed an adjusted advantage over expanding coefficients.
+The intended contribution is an interpretable rule for assigning donor roles and predictive dimension, evaluated chronologically and then supported by mechanism simulations and appropriately scoped theory. Industry volatility offers shared conditions with heterogeneous transmission. Moreira and Muir [7] motivate volatility-based exposure scaling. We would assess a feasible single-asset or fixed-portfolio decision rule after turnover/costs; no economic-utility evaluation has been performed.
 
-## Experiment 3: completed November 3
+## Related research and positioning
 
-We mapped **K=1-8 factors** against **L=52,78,...,520 coefficient pairs**, plus expanding controls, for separate/common/partial slopes. Part A fitted PCA/scalers and coefficients on the same recent L rows; Part B used expanding PCA with identical coefficient windows. Measurement and common/partial outcome sharing used all 48 industries. Own coefficients stayed industry-specific; partial-pooling penalties used historical target validation.
+**Factor measurement and targeting.** Stock and Watson [1] establish conditions under which PCA-based forecasts approach forecasts using observed factors as panel and history grow. Boivin and Ng [2] show that adding series can worsen factor forecasts when idiosyncratic errors are correlated or predictive factors become obscured. Bai and Ng [3] select predictors for the target before extracting components, demonstrating why variance-based compression alone can miss predictive information. These studies motivate careful measurement-panel composition and forecast-oriented dimension choice.
 
-All configurations shared 718 earlier dates (2011-2024) and 87 later dates (2025-August 2026), both already inspected. Results are exploratory; forecast windows, tuning, losses, and inference were independently audited.
+**Pooling and selective transfer.** Pesaran, Pick, and Timmermann [4] formalize the forecasting tradeoff between parameter heterogeneity and estimation uncertainty. Teller, Pigorsch, and Pigorsch [5] transfer selected source-series subsequences to volatility forecasting for new issues and spin-offs with limited histories. Fu and Jiang [6] develop factor-augmented sparse transfer regression with data-driven identification of informative auxiliary datasets. Our proposed emphasis is the joint assignment of synchronized industries to measurement and coefficient-sharing roles under dependent-data forecasting. Pooling and selective transfer are established ideas; a distinct contribution from this role separation remains to be demonstrated.
 
-For value-weighted portfolios, the table fixes K=2/common slopes. Gains average six targets' percentage MSE reductions against their matching-history own regressions.
+<!-- progress-page-break -->
 
-| Coefficient pairs | Earlier: matched PCA | Later: matched PCA | Later: expanding PCA |
-| --- | ---: | ---: | ---: |
-| 52 | 5.73% | 1.66% | 1.96% |
-| 104 | 4.15% | 3.53% | 3.97% |
-| 260 | 5.47% | -2.00% | -1.75% |
-| 520 | 5.08% | -0.75% | -0.41% |
+## Common empirical setup
 
-**History effects depend on period and weighting.** Later value gains favored roughly 78-104 pairs over 260-520, without falling monotonically. Earlier gains persisted with long histories. Later equal-weighted K=2/common gained 0.92% at matched L=104 and 3.01% with expanding coefficients/PCA. A universal short-history advantage is unsupported.
+We archived French 48-industry daily returns, both portfolio weightings, provenance, and hashes. Weekly $Q_{jt}=\sum_d r_{jd}^2$ requires at least three daily returns; $v_{jt}=\log(Q_{jt}+10^{-8})$ is a daily-return variation proxy, not intraday realized variance. We forecast next week's v using current v, trailing four-/twelve-week means of weekly logs, and cross-industry factors or direct predictors. Targets are Food, Mach, Banks, Oil, Util, and Hlth. Transformations and tuning use historical data only. Reported gains average target-specific percentage MSE reductions against the stated reference; positive favors the factor procedure. Value-weighted portfolios are primary, with equal-weighted robustness.
 
-**Relative edge differs from absolute accuracy.** Later value-weighted K=2/common MSE was 0.7516 at matched L=104, versus 0.7181 with expanding coefficients/PCA, although gains were 3.53% versus 1.23%. The longer-history own-regression benchmark was also stronger.
+## Experiment 1: measurement breadth and coefficient sharing
 
-**Pooling cushioned extra-factor costs.** At L=52, later value/matched-PCA gains changed from K=1 to K=8: separate +2.93% to -11.24%, common +3.40% to +1.37%, partial +3.29% to -0.75%. Longer history helped separate slopes catch up earlier. This is consistent with lower estimation variance from sharing. Partial pooling did not reliably improve on common slopes.
+**Purpose and procedure.** Test whether a broader measurement panel and outcome sharing improve forecasts. Eighteen fixed procedures compared six versus 48 measurement industries, target/six/all-48 outcome panels, separate/common/partial slopes, two PCA components, and direct/own-history baselines. Selection used 2005-2021 forecasts and was frozen before 156 evaluation dates in 2022-2024.
 
-**Longer PCA history was not uniformly beneficial.** Expanding PCA helped the K=2 value anchors, but reduced gains by a median 1.2-1.6 percentage points across finite histories in the later value grid. It changed scaling/loadings, downstream fits, and partial-pooling penalty choices. Neither this contrast nor the pooling pattern identifies a causal mechanism. All unfavorable configurations remain reported.
+**Results.** The selected all-48 measurement/common-slope procedure reduced MSE relative to own regression by **4.27%** (value weighted) and **1.66%** (equal weighted). With separate target slopes, expanding measurement from six to 48 raised gains from 1.79% to 4.12%; common slopes then added only 0.15 percentage points. Broader measurement supplied most of this pilot's benefit. Narrowing outcome donors to the fixed six did not help overall; equal-weighted Banks worsened 2.95%, and equal-weighted ridge outperformed the selected factor procedure. This experiment supplied descriptive results, without uncertainty estimates or a learned donor selector.
 
-Bootstraps used 9,999 draws of saved losses, without refitting/retuning. **None of 30 later-period anchors passed primary block-13 Holm adjustment in either weighting.** Later value/matched K=2/common/L=104 gained 3.53%, with nominal 95% marginal interval [-3.18%, 12.18%]. Two equal-weighted block-26 sensitivity flags did not replace the primary result.
+## Experiment 2: uncertainty and coefficient-history length
 
-## Inference limits and pending work
+**Purpose and procedure.** Quantify uncertainty and test whether shorter coefficient histories help the fixed two-factor/all-48/common-slope procedure. PCA remained expanding; coefficient windows were 104/260/520/expanding pairs. Paired stationary bootstraps used 9,999 draws, primary expected block length 13, and Holm adjustment against own regression and direct methods, plus finite-versus-expanding factor comparisons.
 
-**Bootstrap calibration remains unresolved.** The inherited 100-replication diagnostic rejected a nominal 5% null 11% of the time at 87 dates; nominal 95% coverage was 90% at 87 dates and 81% at 156. Holm cannot repair marginal miscalibration. Audits verify computations, not coverage. Dependence, nested models, fixed targets, source revisions, and short evaluation histories constrain claims; non-rejection does not establish equivalence.
+**Results.** Reanalysis of already-seen 2022-2024 losses gave the 4.27% own-history gain a nominal 95% interval [1.71%, 6.92%] and adjusted p=0.0028; direct-reference comparisons did not pass. On 87 retrospectively evaluated dates in 2025-August 2026, with previously uninspected forecast losses, no history established an advantage over own history or ridge. L=104 beat elastic net and PLS under the approximate rule (8.57% and 13.74%; adjusted p=0.0019 each), but no finite history beat expanding coefficients. Calibration was unresolved: a 100-replication diagnostic rejected a nominal 5% null 11 times at 87 dates; nominal 95% coverage was 90/100 there and 81/100 at 156 dates. Holm cannot repair marginal miscalibration.
 
-## Next steps and questions for discussion
+<!-- progress-page-break -->
 
-Before another empirical grid, we propose agreeing on a narrow hypothesis and confirmation design: does pooling help most when coefficient history is short relative to model dimension? Experiment 3 fixed all 48 measurement industries; choosing different measurement and coefficient-sharing donor sets remains open.
+## Experiment 3: dimension, history, pooling, and PCA history
 
-Calibration and power studies remain **deferred and pending**; their design is a priority for discussion. We propose comparing false-rejection rates, coverage, and power under controlled dependence and known forecast advantages, including repeated fitting/tuning. Measurement-noise/slope-heterogeneity experiments and learned donor selection remain later work. Empirical confirmation requires an uninspected period or market.
+**Purpose and procedure.** Examine whether pooling's benefit depends on model size and history, and distinguish PCA history from coefficient history. We crossed K=1-8 with 19 windows L=52,78,...,520 plus expanding controls, under separate/common/partial slopes. Part A matched PCA/scaler and coefficient windows; Part B used expanding PCA with the same coefficient windows. Measurement and pooled outcomes used all 48 industries. Both evaluation periods were now already inspected.
 
-Protocols, complete results, graphs, and audits: [Experiment 1](../experiments/01-fixed-s6-pilot/README.md), [Experiment 2](../experiments/02-bootstrap-history/README.md), [Experiment 3](../experiments/03-pca-history-surface/README.md). The original proposal remains archived.
+**Results.** Figures 1-2 show strong period dependence. Later value-weighted matched-PCA K=2/common gains were **3.53%, -2.00%, -0.75%** at L=104/260/520; earlier gains persisted with long histories. At L=52, increasing K from 1 to 8 changed gains from +2.93% to -11.24% with separate slopes, versus +3.40% to +1.37% with common slopes and +3.29% to -0.75% with partial pooling. Pooling cushioned dimension costs; partial pooling and expanding PCA were not uniformly superior. None of 30 prespecified comparisons passed the primary block-13 Holm rule in either weighting; the 3.53% example's nominal 95% marginal interval was [-3.18%, 12.18%]. Saved-loss bootstraps did not refit models. Relative gains use a changing own-history benchmark and therefore do not rank absolute accuracy or establish a universal short-history advantage.
+
+## Planned next steps
+
+The next priority is a **calibration and power study**, still pending: measure false-rejection rates and interval coverage under known nulls, and detection rates under known forecast advantages, varying sample length and dependence. Include simulations that repeat factor estimation and tuning to assess the complete procedure and its multiple-comparison rule. We then propose controlled measurement-noise/slope-heterogeneity experiments to test the donor-role mechanism, followed by a narrow rule evaluated on an uninspected period or market. Learned donor selection, theory, and economic utility remain prospective contributions.
+
+Detailed procedures, complete results, and audits: [Experiment 1](../experiments/01-fixed-s6-pilot/README.md), [Experiment 2](../experiments/02-bootstrap-history/README.md), [Experiment 3](../experiments/03-pca-history-surface/README.md). The [original proposal](archive/2026-10-09/proposal.pdf) remains preserved.
 
 ## Selected references
 
-1. Stock and Watson (2002), *Forecasting Using Principal Components from a Large Number of Predictors*. [DOI](https://doi.org/10.1198/016214502388618960).
-2. Boivin and Ng (2006), *Are More Data Always Better for Factor Analysis?* [DOI](https://doi.org/10.1016/j.jeconom.2005.01.027).
-3. Politis and Romano (1994), *The Stationary Bootstrap*. [DOI](https://doi.org/10.1080/01621459.1994.10476870).
+1. Stock and Watson (2002), [*Forecasting Using Principal Components from a Large Number of Predictors*](https://doi.org/10.1198/016214502388618960).
+2. Boivin and Ng (2006), [*Are More Data Always Better for Factor Analysis?*](https://doi.org/10.1016/j.jeconom.2005.01.027).
+3. Bai and Ng (2008), [*Forecasting Economic Time Series Using Targeted Predictors*](https://doi.org/10.1016/j.jeconom.2008.08.010).
+4. Pesaran, Pick, and Timmermann (2026), [*Forecasting with Panel Data: Estimation Uncertainty versus Parameter Heterogeneity*](https://doi.org/10.3982/QE2589).
+5. Teller, Pigorsch, and Pigorsch (2026), [*Realized Volatility Forecasting for New Issues and Spin-Offs Using Multi-Source Transfer Learning*](https://doi.org/10.1016/j.ijforecast.2026.02.004).
+6. Fu and Jiang (2025; revised 2026), [*Transfer Learning for High-Dimensional Factor-Augmented Sparse Linear Model*](https://arxiv.org/abs/2511.12435v3), preprint.
+7. Moreira and Muir (2017), [*Volatility-Managed Portfolios*](https://doi.org/10.1111/jofi.12513).
 
 <!-- progress-landscape-begin -->
 

@@ -9,17 +9,17 @@
     "results/experiment-03-2026-11-03/reports/later_seen_value_gain.png": "c4bf52e1903f5874580506d8a4c3ef51cb75474850ebc79aa6b692fc50a9602b"
   },
   "inputs_sha256_lf": {
-    "proposal/progress.md": "8b9ca8509c2ecd4ffe2ebc098573cf1e8ff71e5655b5866001b1d8c146216a81",
-    "proposal/repo-links.lua": "18b6def62479ced31b48ec1143fa9c87077fe51308b092fbcd20fd5825e7dc06",
+    "proposal/progress.md": "9c5cbfb20d14a8bd991e2a873c0ebea7b7ae29a1ceddd5554b4eab9ebd47075f",
+    "proposal/repo-links.lua": "10a68aed6b5df1fc82b8f012a9dbe7f7e76c2c3b0bceffd6d35d2f725bef6d1f",
     "proposal/report-template.tex": "2568f92d1836f2b9f76a1694d07537269f6c2618559c4c57136cc6bca6056d43",
     "scripts/build_progress_report.py": "aaddb2669487706f34fa8ce993be9467c9592a74a4d3b2fa51df6854dd561722"
   },
   "outputs_sha256": {
-    "proposal/proposal.pdf": "f3f14e34e79122e6d64b959add813f25c488356d9cf13fd8662c7673777933f3",
-    "proposal/proposal.tex": "de670c48ef467dd8ac4cac5d58ad7c890b57952115d961a9450434954fc4caf6"
+    "proposal/proposal.pdf": "21c55ea735353659a9ec1d10fb8521ced640a5619b614ca28428a1105a00bc14",
+    "proposal/proposal.tex": "454b43a62121c44f98a713f91136a11b75d5128709ed5dc2d080181305ffbd78"
   },
   "schema_version": 2,
-  "source_sha256_lf": "8b9ca8509c2ecd4ffe2ebc098573cf1e8ff71e5655b5866001b1d8c146216a81",
+  "source_sha256_lf": "9c5cbfb20d14a8bd991e2a873c0ebea7b7ae29a1ceddd5554b4eab9ebd47075f",
   "tools": {
     "pandoc": "pandoc.EXE 3.4",
     "pdflatex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024)"

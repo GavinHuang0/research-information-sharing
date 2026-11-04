@@ -3,6 +3,9 @@ function Link(link)
   if link.target:match('^%.%./') then
     link.target = 'https://github.com/GavinHuang0/research-information-sharing/blob/main/'
       .. link.target:gsub('^%.%./', '')
+  elseif link.target:match('^archive/') then
+    link.target = 'https://github.com/GavinHuang0/research-information-sharing/blob/main/proposal/'
+      .. link.target
   end
   return link
 end
@@ -19,7 +22,9 @@ end
 -- HTML comments are invisible on GitHub and delimit landscape PDF pages.
 function RawBlock(block)
   if block.format == 'html' then
-    if block.text == '<!-- progress-landscape-begin -->' then
+    if block.text == '<!-- progress-page-break -->' then
+      return pandoc.RawBlock('latex', '\\clearpage')
+    elseif block.text == '<!-- progress-landscape-begin -->' then
       return pandoc.RawBlock('latex', '\\clearpage\n\\begin{landscape}')
     elseif block.text == '<!-- progress-landscape-next -->' then
       return pandoc.RawBlock('latex', '\\clearpage')
