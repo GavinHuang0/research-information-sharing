@@ -1,5 +1,5 @@
 % GENERATED from proposal/progress.md; do not edit manually.
-% Source SHA-256 (LF): 9c5cbfb20d14a8bd991e2a873c0ebea7b7ae29a1ceddd5554b4eab9ebd47075f
+% Source SHA-256 (LF): 8c0fc77f9372c7cc23e8a9de401b58f3df64cff9cf920e3497b3bf61442a79c4
 % Progress report template. Body and title are generated from progress.md.
 \documentclass[11pt,letterpaper]{article}
 \usepackage[margin=0.85in]{geometry}
@@ -13,7 +13,7 @@
 \usepackage{titlesec}
 \usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 \hypersetup{pdftitle={Factor measurement and forecast sharing},pdfsubject={Research progress on factor measurement and forecast sharing}}
-\pdfinfo{/ProgressSourceSHA256 (9c5cbfb20d14a8bd991e2a873c0ebea7b7ae29a1ceddd5554b4eab9ebd47075f)}
+\pdfinfo{/ProgressSourceSHA256 (8c0fc77f9372c7cc23e8a9de401b58f3df64cff9cf920e3497b3bf61442a79c4)}
 \urlstyle{same}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.3em}
@@ -29,19 +29,25 @@
 \begin{center}
 {\Large\bfseries Factor measurement and forecast sharing\par}
 \vspace{0.35em}
-{Proposal and progress \textbar{} November 4, 2026\par}
+{Proposal and progress \textbar{} November 23, 2026\par}
 \end{center}
 \vspace{0.25em}
 \section{Project proposal and purpose}\label{project-proposal-and-purpose}
 
 A larger panel can help forecast an industry's risk in two different ways: other industries provide measurements of common conditions, and their outcomes help estimate how those conditions predict future risk. These roles require different similarities. An industry can measure the common state well while having a predictive response unlike the target's. We ask \textbf{when choosing measurement donors and coefficient-sharing donors separately improves forecasts}, particularly with short target histories.
 
+Both equations use the same weekly log variance proxy \(v_{jt}=\log(\sum_{d\in t}r_{jd}^2+10^{-8})\), where \(r_{jd}\) is the return for industry \(j\) on day \(d\).
+
 \[
-x_{jt}=\ell_j'f_t+u_{jt},\quad j\in M;\qquad
-y_{i,t+1}=a_i+b_i'z_{it}+\theta_i'f_t+\varepsilon_{i,t+1}.
+v_{jt}=\mu_j+\ell_j^{\top}f_t+u_{jt},\quad j\in M,\qquad
+v_{i,t+1}=a_i+b_i^{\top}z_{it}+\theta_i^{\top}f_t+\varepsilon_{i,t+1}.
 \]
 
-Measurement industries \(M\) estimate common factors \(f_t\); outcome donors \(O\) help estimate the target's factor slopes \(\theta_i\). Own-history controls \(z_{it}\) retain industry-specific coefficients. Sharing ranges from separate slopes through partial pooling to common slopes. We hypothesize that broad, informative measurement and selective coefficient sharing can complement each other when measurement quality and slope similarity differ. Correlated noise, heterogeneity, and instability can offset the gains.
+The latent factors \(f_t\) enter the measurement equation linearly. We fit scaling and PCA on training weeks and apply them to the week-\(t\) panel to obtain scores \(\hat f_t\). The controls \(z_{it}\) contain \(v_{it}\) and its trailing four- and twelve-week averages through week \(t\).
+
+We assume finite second moments. The measurement error \(u_{jt}\) has mean zero and is uncorrelated with \(f_t\). The unrestricted best linear predictor under squared loss has a mean-zero population error \(\varepsilon_{i,t+1}\) orthogonal to \(z_{it}\) and \(f_t\). These conditions permit dependent, non-Gaussian errors with varying variance.
+
+Outcome donors \(O\) help estimate the target's factor slopes \(\theta_i\). Own-history coefficients remain industry-specific. We compare separate, partially pooled, and common factor slopes. We hypothesize that broad, informative measurement and selective coefficient sharing can complement each other when measurement quality and slope similarity differ. Correlated noise, heterogeneity, and instability can offset the gains.
 
 At fixed factor count K, expanding M does not itself add target regression coefficients. The relevant tradeoffs must therefore come from measurement quality, sharing bias, instability, or fitted dimension. A supporting question is which components predict the target: the dominant variance directions need not be the useful predictive directions. Factors restrict a direct regression's coefficient space; any benefit is finite-sample regularization rather than an information advantage over unrestricted population prediction. Ridge, elastic net, and supervised dimension reduction are essential comparisons.
 
@@ -51,13 +57,15 @@ The intended contribution is an interpretable rule for assigning donor roles and
 
 \textbf{Factor measurement and targeting.} Stock and Watson {[}1{]} establish conditions under which PCA-based forecasts approach forecasts using observed factors as panel and history grow. Boivin and Ng {[}2{]} show that adding series can worsen factor forecasts when idiosyncratic errors are correlated or predictive factors become obscured. Bai and Ng {[}3{]} select predictors for the target before extracting components, demonstrating why variance-based compression alone can miss predictive information. These studies motivate careful measurement-panel composition and forecast-oriented dimension choice.
 
+\clearpage
+
 \textbf{Pooling and selective transfer.} Pesaran, Pick, and Timmermann {[}4{]} formalize the forecasting tradeoff between parameter heterogeneity and estimation uncertainty. Teller, Pigorsch, and Pigorsch {[}5{]} transfer selected source-series subsequences to volatility forecasting for new issues and spin-offs with limited histories. Fu and Jiang {[}6{]} develop factor-augmented sparse transfer regression with data-driven identification of informative auxiliary datasets. Our proposed emphasis is the joint assignment of synchronized industries to measurement and coefficient-sharing roles under dependent-data forecasting. Pooling and selective transfer are established ideas; a distinct contribution from this role separation remains to be demonstrated.
 
-\clearpage
+\textbf{Data perturbation.} Zhang and Shen {[}8{]} perturb fixed-design regression responses to assess model-selection uncertainty. This motivates checking the stability of donor and component choices with perturbations that respect the weekly panel's dependence.
 
 \section{Common empirical setup}\label{common-empirical-setup}
 
-We archived French 48-industry daily returns, both portfolio weightings, provenance, and hashes. Weekly \(Q_{jt}=\sum_d r_{jd}^2\) requires at least three daily returns; \(v_{jt}=\log(Q_{jt}+10^{-8})\) is a daily-return variation proxy, not intraday realized variance. We forecast next week's v using current v, trailing four-/twelve-week means of weekly logs, and cross-industry factors or direct predictors. Targets are Food, Mach, Banks, Oil, Util, and Hlth. Transformations and tuning use historical data only. Reported gains average target-specific percentage MSE reductions against the stated reference; positive favors the factor procedure. Value-weighted portfolios are primary, with equal-weighted robustness.
+We archived French 48-industry daily returns, both portfolio weightings, provenance, and hashes. Each weekly proxy requires at least three observed daily returns. We compare forecasts based on own history, cross-industry factors, and direct predictors. Targets are Food, Mach, Banks, Oil, Util, and Hlth. Transformations and tuning use historical data only. Reported gains average target-specific percentage MSE reductions against the stated reference. Positive gains favor the factor procedure. Value-weighted portfolios are primary, with equal-weighted robustness.
 
 \section{Experiment 1: measurement breadth and coefficient sharing}\label{experiment-1-measurement-breadth-and-coefficient-sharing}
 
@@ -79,11 +87,15 @@ We archived French 48-industry daily returns, both portfolio weightings, provena
 
 \textbf{Results.} Figures 1-2 show strong period dependence. Later value-weighted matched-PCA K=2/common gains were \textbf{3.53\%, -2.00\%, -0.75\%} at L=104/260/520; earlier gains persisted with long histories. At L=52, increasing K from 1 to 8 changed gains from +2.93\% to -11.24\% with separate slopes, versus +3.40\% to +1.37\% with common slopes and +3.29\% to -0.75\% with partial pooling. Pooling cushioned dimension costs; partial pooling and expanding PCA were not uniformly superior. None of 30 prespecified comparisons passed the primary block-13 Holm rule in either weighting; the 3.53\% example's nominal 95\% marginal interval was {[}-3.18\%, 12.18\%{]}. Saved-loss bootstraps did not refit models. Relative gains use a changing own-history benchmark and therefore do not rank absolute accuracy or establish a universal short-history advantage.
 
+\section{Experiment 4: panel compression and ridge}\label{experiment-4-panel-compression-and-ridge}
+
+\textbf{Procedure and results.} We crossed full-panel and two-PC predictors with OLS and ridge at matched histories and added penalized own-history fits. Two-PC OLS and full-panel ridge each beat full-panel OLS in all 20 settings across periods, weightings and histories. Two-PC ridge beat full-panel ridge in \textbf{16 of 20}. Gains over own history varied by period and history. These comparisons use previously inspected periods.
+
 \section{Planned next steps}\label{planned-next-steps}
 
-The next priority is a \textbf{calibration and power study}, still pending: measure false-rejection rates and interval coverage under known nulls, and detection rates under known forecast advantages, varying sample length and dependence. Include simulations that repeat factor estimation and tuning to assess the complete procedure and its multiple-comparison rule. We then propose controlled measurement-noise/slope-heterogeneity experiments to test the donor-role mechanism, followed by a narrow rule evaluated on an uninspected period or market. Learned donor selection, theory, and economic utility remain prospective contributions.
+\textbf{Experiment 5 on calibration and power is proposed and awaits authorization.} It will compare inference methods using simulated losses with known gains, then repeat factor estimation and tuning on simulated weekly panels. We also propose controlled measurement-noise and slope-heterogeneity experiments and evaluation on an uninspected period or market. Learned donor selection, theory, and economic utility remain prospective contributions.
 
-Detailed procedures, complete results, and audits: \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/01-fixed-s6-pilot/README.md}{Experiment 1}, \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/02-bootstrap-history/README.md}{Experiment 2}, \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/03-pca-history-surface/README.md}{Experiment 3}. The \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/proposal/archive/2026-10-09/proposal.pdf}{original proposal} remains preserved.
+Detailed procedures, results, and audits: \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/01-fixed-s6-pilot/README.md}{Experiment 1}, \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/02-bootstrap-history/README.md}{Experiment 2}, \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/03-pca-history-surface/README.md}{Experiment 3}, and \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/04-panel-vs-pc-regularization/README.md}{Experiment 4}. See the \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/experiments/05-calibration-power/protocol.md}{Experiment 5 plan} and the \href{https://github.com/GavinHuang0/research-information-sharing/blob/main/proposal/archive/2026-10-09/proposal.pdf}{original proposal}.
 
 \section{Selected references}\label{selected-references}
 
@@ -104,6 +116,8 @@ Detailed procedures, complete results, and audits: \href{https://github.com/Gavi
   Fu and Jiang (2025; revised 2026), \href{https://arxiv.org/abs/2511.12435v3}{\emph{Transfer Learning for High-Dimensional Factor-Augmented Sparse Linear Model}}, preprint.
 \item
   Moreira and Muir (2017), \href{https://doi.org/10.1111/jofi.12513}{\emph{Volatility-Managed Portfolios}}.
+\item
+  Zhang and Shen (2015), \href{https://doi.org/10.1080/07350015.2014.965307}{\emph{Adaptive Modeling Procedure Selection by Data Perturbation}}.
 \end{enumerate}
 
 \clearpage

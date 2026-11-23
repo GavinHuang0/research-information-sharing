@@ -10,6 +10,8 @@ This project asks when industries should play different roles in **measuring com
 - Broader measurement explains most of the main comparison: separate slopes improve 1.79% with six measurement industries and 4.12% with 48. Common slopes across all outcomes raise this to 4.27%. Narrower outcome sharing did not improve the primary aggregate; benefits differ by target.
 - **Completed Experiment 2:** audited paired-bootstrap uncertainty and coefficient-history comparisons. At primary block length 13, no history establishes a factor advantage over matched own history or ridge in 2025–August 2026. L=104 passes the declared adjusted-p rule against elastic net (8.57% gain, p=0.0019) and PLS (13.74%, p=0.0019), while no finite history beats the expanding factor control. Bounded synthetic diagnostics showed adverse rejection/coverage behavior; nominal calibration is not established, so p-values and intervals remain approximate.
 - **Completed Experiment 3:** audited K-by-L surfaces for separate/common/partial slopes under matched versus expanding PCA. Short-history high-K separate forecasts can deteriorate sharply, and pooling can cushion that cost without a universal best rule. All 30 primary block-13 anchors are non-rejections in both weightings; two equal-weighted block-26 sensitivity anchors cross the approximate adjusted threshold. Both periods are already seen, no new winner was selected, and calibration/power research remains deferred.
+- **Completed Experiment 4:** audited full-panel and two-PC OLS and ridge, with penalized own-history baselines. Two-PC ridge beat full-panel ridge in 16 of 20 descriptive settings on previously inspected periods.
+- **Proposed Experiment 5:** calibration and power simulations. The procedure is recorded for review and awaits authorization before execution.
 
 ## Reading guide
 
@@ -22,6 +24,8 @@ This project asks when industries should play different roles in **measuring com
 | Experiment 1 findings and caveats | [Interpretation](experiments/01-fixed-s6-pilot/results.md), [full result archive and figures](results/fixed-pilot-2026-10-27/README.md) |
 | Experiment 2 procedures and execution status | [Overview](experiments/02-bootstrap-history/README.md), [frozen design](experiments/02-bootstrap-history/protocol.md), [execution record](experiments/02-bootstrap-history/executed.md), [results record](experiments/02-bootstrap-history/results.md) |
 | Experiment 3 surfaces and execution status | [Overview](experiments/03-pca-history-surface/README.md), [frozen design](experiments/03-pca-history-surface/protocol.md), [execution record](experiments/03-pca-history-surface/executed.md), [results record](experiments/03-pca-history-surface/results.md) |
+| Experiment 4 full-panel and two-PC comparisons | [Design, execution, and results](experiments/04-panel-vs-pc-regularization/README.md) |
+| Experiment 5 calibration and power | [Proposed procedure](experiments/05-calibration-power/protocol.md) |
 | Inputs and feature definitions | [Data catalog](data/README.md), [input documentation](docs/data.md), [weekly features](data/features/kenneth-french/48-industry-daily/2026-10-16/weekly-v1/README.md) |
 | Broader research toolkit and legacy grids | [Earlier experiment plan](docs/experiment_plan.md) |
 

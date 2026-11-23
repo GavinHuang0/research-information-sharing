@@ -1,0 +1,30 @@
+[design]
+protocol = "experiments/04-panel-vs-pc-regularization/protocol.md"
+targets = ["Food", "Mach", "Banks", "Oil", "Util", "Hlth"]
+finite_histories = [52, 104, 260, 520]
+ridge = [0.0, 0.01, 0.1, 1.0, 10.0]
+elasticnet = [0.0, 0.001, 0.01, 0.1]
+elasticnet_l1_ratio = 0.5
+
+[data]
+snapshot = "2026-10-16"
+value_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/value_weighted_returns_decimal.csv"
+equal_returns = "data/processed/kenneth-french/48-industry-daily/2026-10-16/equal_weighted_returns_decimal.csv"
+provenance = "data/processed/kenneth-french/48-industry-daily/2026-10-16/provenance.json"
+units = "decimal"
+weekly_frequency = "W-FRI"
+log_offset = 1e-8
+min_week_obs = 3
+own_history_weeks = [1, 4, 12]
+shared_complete_case = "all_48_industries_both_weightings_before_subsets"
+
+[calendar]
+origin_start = "2000-01-01"
+response_end = "2026-08-28"
+first_outer_cutoff_pairs = 572
+validation_pairs = 52
+refit_every_pairs = 13
+earlier_seen_response_end = "2024-12-31"
+later_seen_response_start = "2025-01-03"
+expected_inherited_earlier_dates = 718
+expected_inherited_later_dates = 87

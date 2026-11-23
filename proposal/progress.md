@@ -1,18 +1,24 @@
 ---
 title: "Factor measurement and forecast sharing"
-date: "Proposal and progress | November 4, 2026"
+date: "Proposal and progress | November 23, 2026"
 ---
 
 ## Project proposal and purpose
 
 A larger panel can help forecast an industry's risk in two different ways: other industries provide measurements of common conditions, and their outcomes help estimate how those conditions predict future risk. These roles require different similarities. An industry can measure the common state well while having a predictive response unlike the target's. We ask **when choosing measurement donors and coefficient-sharing donors separately improves forecasts**, particularly with short target histories.
 
+Both equations use the same weekly log variance proxy $v_{jt}=\log(\sum_{d\in t}r_{jd}^2+10^{-8})$, where $r_{jd}$ is the return for industry $j$ on day $d$.
+
 $$
-x_{jt}=\ell_j'f_t+u_{jt},\quad j\in M;\qquad
-y_{i,t+1}=a_i+b_i'z_{it}+\theta_i'f_t+\varepsilon_{i,t+1}.
+v_{jt}=\mu_j+\ell_j^{\top}f_t+u_{jt},\quad j\in M,\qquad
+v_{i,t+1}=a_i+b_i^{\top}z_{it}+\theta_i^{\top}f_t+\varepsilon_{i,t+1}.
 $$
 
-Measurement industries $M$ estimate common factors $f_t$; outcome donors $O$ help estimate the target's factor slopes $\theta_i$. Own-history controls $z_{it}$ retain industry-specific coefficients. Sharing ranges from separate slopes through partial pooling to common slopes. We hypothesize that broad, informative measurement and selective coefficient sharing can complement each other when measurement quality and slope similarity differ. Correlated noise, heterogeneity, and instability can offset the gains.
+The latent factors $f_t$ enter the measurement equation linearly. We fit scaling and PCA on training weeks and apply them to the week-$t$ panel to obtain scores $\hat f_t$. The controls $z_{it}$ contain $v_{it}$ and its trailing four- and twelve-week averages through week $t$.
+
+We assume finite second moments. The measurement error $u_{jt}$ has mean zero and is uncorrelated with $f_t$. The unrestricted best linear predictor under squared loss has a mean-zero population error $\varepsilon_{i,t+1}$ orthogonal to $z_{it}$ and $f_t$. These conditions permit dependent, non-Gaussian errors with varying variance.
+
+Outcome donors $O$ help estimate the target's factor slopes $\theta_i$. Own-history coefficients remain industry-specific. We compare separate, partially pooled, and common factor slopes. We hypothesize that broad, informative measurement and selective coefficient sharing can complement each other when measurement quality and slope similarity differ. Correlated noise, heterogeneity, and instability can offset the gains.
 
 At fixed factor count K, expanding M does not itself add target regression coefficients. The relevant tradeoffs must therefore come from measurement quality, sharing bias, instability, or fitted dimension. A supporting question is which components predict the target: the dominant variance directions need not be the useful predictive directions. Factors restrict a direct regression's coefficient space; any benefit is finite-sample regularization rather than an information advantage over unrestricted population prediction. Ridge, elastic net, and supervised dimension reduction are essential comparisons.
 
@@ -22,13 +28,15 @@ The intended contribution is an interpretable rule for assigning donor roles and
 
 **Factor measurement and targeting.** Stock and Watson [1] establish conditions under which PCA-based forecasts approach forecasts using observed factors as panel and history grow. Boivin and Ng [2] show that adding series can worsen factor forecasts when idiosyncratic errors are correlated or predictive factors become obscured. Bai and Ng [3] select predictors for the target before extracting components, demonstrating why variance-based compression alone can miss predictive information. These studies motivate careful measurement-panel composition and forecast-oriented dimension choice.
 
+<!-- progress-page-break -->
+
 **Pooling and selective transfer.** Pesaran, Pick, and Timmermann [4] formalize the forecasting tradeoff between parameter heterogeneity and estimation uncertainty. Teller, Pigorsch, and Pigorsch [5] transfer selected source-series subsequences to volatility forecasting for new issues and spin-offs with limited histories. Fu and Jiang [6] develop factor-augmented sparse transfer regression with data-driven identification of informative auxiliary datasets. Our proposed emphasis is the joint assignment of synchronized industries to measurement and coefficient-sharing roles under dependent-data forecasting. Pooling and selective transfer are established ideas; a distinct contribution from this role separation remains to be demonstrated.
 
-<!-- progress-page-break -->
+**Data perturbation.** Zhang and Shen [8] perturb fixed-design regression responses to assess model-selection uncertainty. This motivates checking the stability of donor and component choices with perturbations that respect the weekly panel's dependence.
 
 ## Common empirical setup
 
-We archived French 48-industry daily returns, both portfolio weightings, provenance, and hashes. Weekly $Q_{jt}=\sum_d r_{jd}^2$ requires at least three daily returns; $v_{jt}=\log(Q_{jt}+10^{-8})$ is a daily-return variation proxy, not intraday realized variance. We forecast next week's v using current v, trailing four-/twelve-week means of weekly logs, and cross-industry factors or direct predictors. Targets are Food, Mach, Banks, Oil, Util, and Hlth. Transformations and tuning use historical data only. Reported gains average target-specific percentage MSE reductions against the stated reference; positive favors the factor procedure. Value-weighted portfolios are primary, with equal-weighted robustness.
+We archived French 48-industry daily returns, both portfolio weightings, provenance, and hashes. Each weekly proxy requires at least three observed daily returns. We compare forecasts based on own history, cross-industry factors, and direct predictors. Targets are Food, Mach, Banks, Oil, Util, and Hlth. Transformations and tuning use historical data only. Reported gains average target-specific percentage MSE reductions against the stated reference. Positive gains favor the factor procedure. Value-weighted portfolios are primary, with equal-weighted robustness.
 
 ## Experiment 1: measurement breadth and coefficient sharing
 
@@ -50,11 +58,15 @@ We archived French 48-industry daily returns, both portfolio weightings, provena
 
 **Results.** Figures 1-2 show strong period dependence. Later value-weighted matched-PCA K=2/common gains were **3.53%, -2.00%, -0.75%** at L=104/260/520; earlier gains persisted with long histories. At L=52, increasing K from 1 to 8 changed gains from +2.93% to -11.24% with separate slopes, versus +3.40% to +1.37% with common slopes and +3.29% to -0.75% with partial pooling. Pooling cushioned dimension costs; partial pooling and expanding PCA were not uniformly superior. None of 30 prespecified comparisons passed the primary block-13 Holm rule in either weighting; the 3.53% example's nominal 95% marginal interval was [-3.18%, 12.18%]. Saved-loss bootstraps did not refit models. Relative gains use a changing own-history benchmark and therefore do not rank absolute accuracy or establish a universal short-history advantage.
 
+## Experiment 4: panel compression and ridge
+
+**Procedure and results.** We crossed full-panel and two-PC predictors with OLS and ridge at matched histories and added penalized own-history fits. Two-PC OLS and full-panel ridge each beat full-panel OLS in all 20 settings across periods, weightings and histories. Two-PC ridge beat full-panel ridge in **16 of 20**. Gains over own history varied by period and history. These comparisons use previously inspected periods.
+
 ## Planned next steps
 
-The next priority is a **calibration and power study**, still pending: measure false-rejection rates and interval coverage under known nulls, and detection rates under known forecast advantages, varying sample length and dependence. Include simulations that repeat factor estimation and tuning to assess the complete procedure and its multiple-comparison rule. We then propose controlled measurement-noise/slope-heterogeneity experiments to test the donor-role mechanism, followed by a narrow rule evaluated on an uninspected period or market. Learned donor selection, theory, and economic utility remain prospective contributions.
+**Experiment 5 on calibration and power is proposed and awaits authorization.** It will compare inference methods using simulated losses with known gains, then repeat factor estimation and tuning on simulated weekly panels. We also propose controlled measurement-noise and slope-heterogeneity experiments and evaluation on an uninspected period or market. Learned donor selection, theory, and economic utility remain prospective contributions.
 
-Detailed procedures, complete results, and audits: [Experiment 1](../experiments/01-fixed-s6-pilot/README.md), [Experiment 2](../experiments/02-bootstrap-history/README.md), [Experiment 3](../experiments/03-pca-history-surface/README.md). The [original proposal](archive/2026-10-09/proposal.pdf) remains preserved.
+Detailed procedures, results, and audits: [Experiment 1](../experiments/01-fixed-s6-pilot/README.md), [Experiment 2](../experiments/02-bootstrap-history/README.md), [Experiment 3](../experiments/03-pca-history-surface/README.md), and [Experiment 4](../experiments/04-panel-vs-pc-regularization/README.md). See the [Experiment 5 plan](../experiments/05-calibration-power/protocol.md) and the [original proposal](archive/2026-10-09/proposal.pdf).
 
 ## Selected references
 
@@ -65,6 +77,7 @@ Detailed procedures, complete results, and audits: [Experiment 1](../experiments
 5. Teller, Pigorsch, and Pigorsch (2026), [*Realized Volatility Forecasting for New Issues and Spin-Offs Using Multi-Source Transfer Learning*](https://doi.org/10.1016/j.ijforecast.2026.02.004).
 6. Fu and Jiang (2025; revised 2026), [*Transfer Learning for High-Dimensional Factor-Augmented Sparse Linear Model*](https://arxiv.org/abs/2511.12435v3), preprint.
 7. Moreira and Muir (2017), [*Volatility-Managed Portfolios*](https://doi.org/10.1111/jofi.12513).
+8. Zhang and Shen (2015), [*Adaptive Modeling Procedure Selection by Data Perturbation*](https://doi.org/10.1080/07350015.2014.965307).
 
 <!-- progress-landscape-begin -->
 

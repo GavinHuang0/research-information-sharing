@@ -1,0 +1,18 @@
+{
+  "predictions_sha256": "5c75cd3cbe0dd0626b1d835e4161658885d70b3a790d71be73db95d6ce4a8086",
+  "report_code_sha256_lf": "40bff062a2c0fd4f4f551cd1e8ba0327e51b4d3da57beeb0c7a2db67bd81e76c",
+  "files": {
+    "target_summary.csv": {
+      "rows": 1200,
+      "sha256": "c76ab986d89f802d7fb331f8ab1d5bcc42f8a5ae54ce524a5bc4501ac0634294"
+    },
+    "summary.csv": {
+      "rows": 200,
+      "sha256": "389ee4a3487a5bb066143783f9dd7fa118d00c18daf88a9b167293d71f6da8f0"
+    },
+    "contrasts.csv": {
+      "rows": 200,
+      "sha256": "aae953325b6a32098f7abd91c8b1d4a3bc4059ce4da15e28e4246af6f7f7fd3e"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "actual_rows_checked": 483000,
+  "archive_files_verified": 5,
+  "experiment_02_legacy_ridge_forecast_rows": 38640,
+  "experiment_02_legacy_ridge_max_absolute_difference": 6.128431095930864e-14,
+  "experiment_03_forecast_rows": {
+    "own_ols": 48300,
+    "pc_common": 48300,
+    "pc_ols": 48300
+  },
+  "experiment_03_max_absolute_forecast_differences": {
+    "own_ols": 0.0,
+    "pc_common": 7.105427357601002e-15,
+    "pc_ols": 8.881784197001252e-15
+  },
+  "input_hashes_verified": 5,
+  "max_absolute_squared_error_difference": 0.0,
+  "panel_rank_diagnostics": {
+    "inner": {
+      "104": {
+        "maximum_finite_condition_number": 33.932572920458675,
+        "minimum_residual_df": 53,
+        "rank_deficient_target_windows": 0
+      },
+      "260": {
+        "maximum_finite_condition_number": 19.156192774168073,
+        "minimum_residual_df": 209,
+        "rank_deficient_target_windows": 0
+      },
+      "52": {
+        "maximum_finite_condition_number": 6588.132733378836,
+        "minimum_residual_df": 1,
+        "rank_deficient_target_windows": 0
+      },
+      "520": {
+        "maximum_finite_condition_number": 17.271940148001534,
+        "minimum_residual_df": 469,
+        "rank_deficient_target_windows": 0
+      },
+      "expanding": {
+        "maximum_finite_condition_number": 16.90866996766176,
+        "minimum_residual_df": 469,
+        "rank_deficient_target_windows": 0
+      }
+    },
+    "outer": {
+      "104": {
+        "maximum_finite_condition_number": 33.39566418666357,
+        "minimum_residual_df": 53,
+        "rank_deficient_target_windows": 0
+      },
+      "260": {
+        "maximum_finite_condition_number": 19.156192774168073,
+        "minimum_residual_df": 209,
+        "rank_deficient_target_windows": 0
+      },
+      "52": {
+        "maximum_finite_condition_number": 6588.132733378836,
+        "minimum_residual_df": 1,
+        "rank_deficient_target_windows": 0
+      },
+      "520": {
+        "maximum_finite_condition_number": 16.375746321986565,
+        "minimum_residual_df": 469,
+        "rank_deficient_target_windows": 0
+      },
+      "expanding": {
+        "maximum_finite_condition_number": 16.485469623673378,
+        "minimum_residual_df": 521,
+        "rank_deficient_target_windows": 0
+      }
+    }
+  },
+  "prediction_rows": 483000,
+  "refit_anchors": 62,
+  "selected_penalties": 37200,
+  "status": "passed",
+  "tuning_candidates": 119040,
+  "windows_checked": 620,
+  "zero_penalty_nesting": {
+    "own_elasticnet": {
+      "forecast_rows": 11897,
+      "max_absolute_difference": 0.0
+    },
+    "own_ridge": {
+      "forecast_rows": 11237,
+      "max_absolute_difference": 0.0
+    },
+    "own_ridge_plus_pcs": {
+      "forecast_rows": 11237,
+      "max_absolute_difference": 0.0
+    },
+    "panel_ridge": {
+      "forecast_rows": 1040,
+      "max_absolute_difference": 0.0
+    },
+    "pc_ridge": {
+      "forecast_rows": 17880,
+      "max_absolute_difference": 0.0
+    }
+  }
+}
